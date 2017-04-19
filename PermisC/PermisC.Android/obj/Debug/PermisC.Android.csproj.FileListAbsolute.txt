@@ -61,7 +61,6 @@ c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC
 c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\mscorlib.dll.mdb
 c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\PermisC.Android.dll.mdb
 c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\PermisC.dll.mdb
-c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb
 c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Core.dll.mdb
 c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.dll.mdb
 c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Net.Http.dll.mdb
@@ -71,7 +70,6 @@ c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC
 c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
 c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
-c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\PermisC.Android.dll.mdb
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\PermisC.Android.dll
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\PermisC.Android.pdb
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\com.companyname.PermisC.apk
@@ -150,4 +148,11 @@ C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\System.ComponentModel.DataAnnotations.dll.mdb
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\android\assets\System.ComponentModel.DataAnnotations.dll.mdb
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\PermisC.Android.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\PermisC.Android.dll.mdb
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\System.ComponentModel.DataAnnotations.dll
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\System.ComponentModel.DataAnnotations.dll.mdb
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\System.Xml.Linq.dll.mdb
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.ComponentModel.DataAnnotations.dll.mdb
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\PermisC.Android.dll.mdb
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\PermisC.Android.dll.mdb

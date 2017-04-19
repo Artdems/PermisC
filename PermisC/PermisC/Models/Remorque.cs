@@ -11,21 +11,33 @@ namespace PermisC.Models
         public string Immatriculation
         {
             get { return immatriculation; }
-            set { immatriculation = value; }
+            set
+            {
+                immatriculation = value;
+                OnPropertyChanged();
+            }
         }
 
         string poidRemorque;
         public string PoidRemorque
         {
             get { return poidRemorque; }
-            set { poidRemorque = value; }
+            set
+            {
+                poidRemorque = value;
+                OnPropertyChanged();
+            }
         }
 
         string essieux;
         public string Essieux
         {
             get { return essieux; }
-            set { essieux = value; }
+            set
+            {
+                essieux = value;
+                OnPropertyChanged();
+            }
         }
     }
 }
