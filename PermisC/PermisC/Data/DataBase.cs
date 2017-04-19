@@ -6,7 +6,7 @@ using System.Linq;
 
 using PermisC.Models;
  
-namespace Permis.Data
+namespace PermisC.Data
 {
     public class TracteurDatabase
     {

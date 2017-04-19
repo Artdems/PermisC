@@ -1,7 +1,7 @@
 ﻿using System;
 using SQLite.Net;
 
-namespace Permis.Data
+namespace PermisC.Data
 {
     public interface ISQLite
     {
