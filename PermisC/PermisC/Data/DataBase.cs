@@ -40,4 +40,37 @@ namespace PermisC.Data
             _connection.Insert(item);
         }
     }
+
+    public class RemorqueDatabase
+    {
+        private SQLiteConnection _connection;
+
+        public RemorqueDatabase()
+        {
+            _connection = DependencyService.Get<ISQLite>().GetConnection();
+            _connection.CreateTable<Remorque>();
+        }
+
+        public IEnumerable<Remorque> GetRemorque()
+        {
+            return (from t in _connection.Table<Remorque>()
+                    select t).ToList();
+        }
+
+        public Remorque GetRemorque(int id)
+        {
+            return _connection.Table<Remorque>().FirstOrDefault(t => t.ID == id);
+        }
+
+        public void DeleteRemorque(int id)
+        {
+            _connection.Delete<Remorque>(id);
+        }
+
+        public void AddRemorque(Remorque item)
+        {
+
+            _connection.Insert(item);
+        }
+    }
 }

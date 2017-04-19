@@ -29,5 +29,11 @@ namespace PermisC.Views
         {
             await Navigation.PushAsync(new RemorquePage());
         }
+
+        async void Delet_Clicked(object sender, EventArgs e)
+        {
+            this.viewModel.delet();
+            await Navigation.PopToRootAsync();
+        }
     }
 }
