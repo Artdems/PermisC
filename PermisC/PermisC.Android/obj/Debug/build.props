@@ -6,7 +6,7 @@ EnableProguard=False
 UseSharedRuntime=True
 EmbedAssembliesIntoApk=False
 AndroidLinkMode=SdkOnly
-AndroidLinkSkip=
+AndroidLinkSkip=--linkskip=SQLite-net
 AndroidSdkBuildToolsVersion=23.0.0
 AndroidSdkPath=
 AndroidNdkPath=

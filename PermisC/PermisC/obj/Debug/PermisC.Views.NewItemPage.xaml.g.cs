@@ -11,8 +11,8 @@
 namespace PermisC.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Stagiaire\\Documents\\Visual Studio 2017\\Projects\\PermisC - Copie\\PermisC\\" +
-        "PermisC\\Views\\NewItemPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Stagiaire\\Documents\\Visual Studio 2017\\Projects\\PermisC\\PermisC\\PermisC\\" +
+        "Views\\NewItemPage.xaml")]
     public partial class NewItemPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

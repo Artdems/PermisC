@@ -41,7 +41,7 @@ namespace PermisC.Test
         {
             NewRemorqueViewModel test = new NewRemorqueViewModel();
             test.Item.Immatriculation = "Coucou";
-            test.Item.Poid = "Re-coucou";
+            test.Item.PoidRemorque = "Re-coucou";
             test.Save();
         }
     }

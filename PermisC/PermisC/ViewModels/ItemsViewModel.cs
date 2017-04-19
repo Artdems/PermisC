@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using PermisC.Helpers;
 using PermisC.Models;
 using PermisC.Views;
+using PermisC.Data;
 
 using Xamarin.Forms;
 
@@ -17,52 +18,47 @@ namespace PermisC.ViewModels
         public ObservableRangeCollection<Tracteur> Items { get; set; }
         public ObservableRangeCollection<Tracteur> Rech { get; set; }
         public Command LoadItemsCommand { get; set; }
-        
-        
+        public TracteurDatabase _database;
+        public System.Collections.Generic.IEnumerable<PermisC.Models.Tracteur> tracteur;
+
+
+
 
         public ItemsViewModel()
         {
+            TracteurDatabase database = new TracteurDatabase();
+            _database = database;
             Title = "Véhicle répértorier";
-            Items = new ObservableRangeCollection<Tracteur>();
-            LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
+           tracteur = _database.GetTracteurs();
+            //Items = new ObservableRangeCollection<Tracteur>();
+            LoadItemsCommand = new Command(async () => await Refresh());
 
-            MessagingCenter.Subscribe<NewItemPage, Tracteur>(this, "AddItem", async (obj, item) =>
+
+            /*MessagingCenter.Subscribe<NewItemPage, Tracteur>(this, "AddItem", async (obj, item) =>
             {
                 var _item = item as Tracteur;
                 Items.Add(_item);
                 await DataStore.AddItemAsync(_item);
-            });
+            });*/
             
         }
 
-        async Task ExecuteLoadItemsCommand()
+        public async Task Refresh()
         {
             if (IsBusy)
                 return;
 
             IsBusy = true;
 
-            try
+            tracteur = _database.GetTracteurs();
+            foreach (Tracteur i in tracteur)
             {
-                Items.Clear();
-                var items = await DataStore.GetItemsAsync(true);
-                Items.ReplaceRange(items);
+                System.Diagnostics.Debug.WriteLine(i.Immatriculation);
             }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex);
-                MessagingCenter.Send(new MessagingCenterAlert
-                {
-                    Title = "Error",
-                    Message = "Unable to load items.",
-                    Cancel = "OK"
-                }, "message");
-            }
-            finally
-            {
-                IsBusy = false;
-            }
+
+            IsBusy = false;
         }
+
         private string recherche = "";
         public string Recherche
         {

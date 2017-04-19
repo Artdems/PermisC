@@ -1,13 +1,16 @@
 ﻿using SQLite.Net.Attributes;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace PermisC.Models
 {
-    public class Tracteur : BaseDataObject
+    public class Tracteur : INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
 
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
@@ -35,6 +38,9 @@ namespace PermisC.Models
         }
 
         string essieux;
+
+        
+
         public string Essieux
         {
             get { return essieux; }
@@ -42,6 +48,15 @@ namespace PermisC.Models
             {
                 essieux = value;
                 OnPropertyChanged();
+            }
+        }
+
+        void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            var handler = PropertyChanged;
+            if (handler != null)
+            {
+                handler(this, new PropertyChangedEventArgs(propertyName));
             }
         }
     }

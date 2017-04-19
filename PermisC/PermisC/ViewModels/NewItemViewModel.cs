@@ -1,4 +1,5 @@
-﻿using PermisC.Models;
+﻿using PermisC.Data;
+using PermisC.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,7 +33,7 @@ namespace PermisC.ViewModels
             }
         }
 
-        public Boolean Save()
+        public Boolean Save(TracteurDatabase database)
         {
             Boolean Sauver = false;
             int Num;
@@ -42,7 +43,7 @@ namespace PermisC.ViewModels
             {
                 if (RegPoid)
                 {
-                    MessagingCenter.Send(this, "AddItem", Item);
+                    database.AddTracteur(Item);
                     Sauver = true;
                 }
                 else

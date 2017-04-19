@@ -7,7 +7,6 @@ namespace PermisC.Models
     {
         public BaseDataObject()
         {
-            Id = Guid.NewGuid().ToString();
         }
 
         /// <summary>

@@ -34,16 +34,10 @@ namespace PermisC.Data
             _connection.Delete<Tracteur>(id);
         }
 
-        public void AddTracteur(string immat,string poid,string nbEss)
+        public void AddTracteur(Tracteur item)
         {
-            var newTracteur = new Tracteur
-            {
-                Immatriculation = immat,
-                PoidTracteur = poid,
-                Essieux = nbEss
-            };
 
-            _connection.Insert(newTracteur);
+            _connection.Insert(item);
         }
     }
 }
