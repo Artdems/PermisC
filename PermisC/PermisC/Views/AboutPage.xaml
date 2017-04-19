@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PermisC.Views.AboutPage"
+             xmlns:vm="clr-namespace:PermisC.ViewModels;"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="15">
+            <Label Text="Poid du Tracteur (en Kilogramme) :" FontSize="Small"/>
+            <Entry Text="{Binding PoidTrac}" FontSize="Small" />
+            <Label Text="Poid de la Remorque (en Kilogramme) :" FontSize="Small"/>
+            <Entry Text="{Binding PoidRem}" FontSize="Small" />
+            <Label Text="Nomvbe d'éssieux :" FontSize="Small"/>
+            <StackLayout Orientation = "Horizontal" HorizontalOptions="Center">
+                <Button Text="-" Clicked="Moins_Clicked"/>
+                <Label Text="{Binding NbEss}" FontSize="Small" VerticalOptions="Center"/>
+                <Button Text="+" Clicked="Plus_Clicked"/>
+            </StackLayout>
+            <Button Text="Valider" Clicked="Valider_Clicked"/>
+            <Label Text="{Binding Result}" FontSize="Medium" TextColor="{Binding Couleur}"  HorizontalOptions="Center"/>
+            <Label Text="{Binding FCOS}" FontSize="Medium" HorizontalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PermisC.Views.ItemDetailPage"
+             Title="{Binding Title}">
+    <StackLayout Spacing="20" Padding="15" HorizontalOptions="Center">
+        <StackLayout Orientation = "Horizontal" HorizontalOptions="Center">
+            <Label Text=" Immatriculation : " FontSize="Medium"/>
+            <Label Text="{Binding Item.Immatriculation}" FontSize="Medium"/>
+        </StackLayout>
+        <StackLayout Orientation = "Horizontal" HorizontalOptions="Center">
+            <Label Text=" Poid du tracteur : " FontSize="Medium"/>
+            <Label Text="{Binding Item.PoidTracteur}" FontSize="Medium"/>
+            <Label Text=" Kilogramme" FontSize="Medium"/>
+        </StackLayout>
+        <StackLayout Orientation = "Horizontal" HorizontalOptions="Center">
+            <Label Text="Nombre d'essieux : " FontSize="Medium"/>
+            <Label Text="{Binding Item.Essieux}" FontSize="Medium"/>
+        </StackLayout>
+        <Button Text="Conduire a vide" Clicked="Vide_Clicked"/>
+        <Button Text="Ajouter une remorque" Clicked="Rem_Clicked"/>
+    </StackLayout>
+</ContentPage>

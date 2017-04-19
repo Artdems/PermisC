@@ -1,0 +1,9 @@
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\UITest1\bin\Debug\UITest1.dll
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\UITest1\bin\Debug\UITest1.pdb
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\UITest1\bin\Debug\nunit.framework.dll
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\UITest1\bin\Debug\Xamarin.UITest.dll
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\UITest1\bin\Debug\nunit.framework.xml
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\UITest1\bin\Debug\Xamarin.UITest.xml
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\UITest1\obj\Debug\UITest1.csprojResolveAssemblyReference.cache
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\UITest1\obj\Debug\UITest1.dll
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\UITest1\obj\Debug\UITest1.pdb

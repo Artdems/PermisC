@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PermisC.Views.NewItemPage"
+             Title="Nouveau Camion">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Text="Sauver" Clicked="Save_Clicked" />
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<StackLayout Spacing="20" Padding="15">
+			<Label Text="Immatriculation :" FontSize="Medium" />
+			<Entry Text="{Binding Item.Immatriculation}" FontSize="Small" />
+			<Label Text="Poid du tracteur" FontSize="Medium" />
+			<Editor Text="{Binding Item.PoidTracteur}" FontSize="Small" />
+            <Label Text="Nombre d'essieux" FontSize="Medium" />
+            <StackLayout Orientation = "Horizontal" HorizontalOptions="Center">
+                <Button Text="-" Clicked="Moins_Clicked"/>
+                <Label Text="{Binding Item.Essieux}" FontSize="Small" VerticalOptions="Center" TextColor="Black"/>
+                <Button Text="+" Clicked="Plus_Clicked"/>
+            </StackLayout>
+            <Label Text="{Binding Erreur}" FontSize="Medium" TextColor="Red"/>
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>
