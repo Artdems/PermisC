@@ -1,4 +1,5 @@
-﻿using PermisC.Models;
+﻿using PermisC.Data;
+using PermisC.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,7 +33,7 @@ namespace PermisC.ViewModels
             }
         }
 
-        public Boolean Save()
+        public Boolean Save(RemorqueDatabase database)
         {
             Boolean sauver = false;
             var RegImmat = Regex.IsMatch(Item.Immatriculation, "[A-Z]{2}[-][0-9]{3}[-][A-Z]{2}");
@@ -41,7 +42,7 @@ namespace PermisC.ViewModels
             {
                 if (RegPoid)
                 {
-                    MessagingCenter.Send(this, "AddItem", Item);
+                    database.AddRemorque(Item);
                     sauver = true;
                 }
                 else

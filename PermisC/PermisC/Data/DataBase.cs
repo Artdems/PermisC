@@ -51,7 +51,7 @@ namespace PermisC.Data
             _connection.CreateTable<Remorque>();
         }
 
-        public IEnumerable<Remorque> GetRemorque()
+        public IEnumerable<Remorque> GetRemorques()
         {
             return (from t in _connection.Table<Remorque>()
                     select t).ToList();

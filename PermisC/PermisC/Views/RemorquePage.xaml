@@ -12,7 +12,7 @@
             <Entry Text="{Binding Recherche}" FontSize="Small"/>
             <Button Text="Rechercher" Clicked="Recherche_Clicked"/>
             <ListView x:Name="ItemsListView"
-		        ItemsSource="{Binding Items}"
+		        ItemsSource="{Binding remorque }"
                 VerticalOptions="FillAndExpand"
                 HasUnevenRows="true"
                 RefreshCommand="{Binding LoadItemsCommand}"

@@ -6,62 +6,51 @@ using System.Collections.Generic;
 using PermisC.Helpers;
 using PermisC.Models;
 using PermisC.Views;
+using PermisC.Data;
 
 using Xamarin.Forms;
+
 
 
 namespace PermisC.ViewModels
 {
     public class RemorqueViewModel : BaseViewModel
     {
-        public ObservableRangeCollection<Remorque> Items { get; set; }
         public ObservableRangeCollection<Remorque> Rech { get; set; }
         public Command LoadItemsCommand { get; set; }
+        public RemorqueDatabase _database;
+        private System.Collections.Generic.IEnumerable<PermisC.Models.Remorque> Remorque;
+        public System.Collections.Generic.IEnumerable<PermisC.Models.Remorque> remorque { get { return Remorque; } set { Remorque = value; OnPropertyChanged(); } }
 
 
 
         public RemorqueViewModel()
         {
+            RemorqueDatabase database = new RemorqueDatabase();
             Title = "Remorque";
-            Items = new ObservableRangeCollection<Remorque>();
-            LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
+            _database = database;
+            remorque = _database.GetRemorques();
+            //Items = new ObservableRangeCollection<Remorque>();
+            LoadItemsCommand = new Command(async () => await Refresh());
 
-            MessagingCenter.Subscribe<NewItemPage, Remorque>(this, "AddItem", async (obj, item) =>
+            /*MessagingCenter.Subscribe<NewItemPage, Remorque>(this, "AddItem", async (obj, item) =>
             {
                 var _item = item as Remorque;
                 Items.Add(_item);
                 await DataStoreRem.AddItemAsync(_item);
-            });
+            });*/
 
         }
 
-        async Task ExecuteLoadItemsCommand()
+        public async Task Refresh()
         {
             if (IsBusy)
                 return;
 
             IsBusy = true;
 
-            try
-            {
-                Items.Clear();
-                var items = await DataStoreRem.GetItemsAsync(true);
-                Items.ReplaceRange(items);
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex);
-                MessagingCenter.Send(new MessagingCenterAlert
-                {
-                    Title = "Error",
-                    Message = "Unable to load items.",
-                    Cancel = "OK"
-                }, "message");
-            }
-            finally
-            {
-                IsBusy = false;
-            }
+            remorque = _database.GetRemorques();
+            IsBusy = false;
         }
         private string recherche = "";
         public string Recherche

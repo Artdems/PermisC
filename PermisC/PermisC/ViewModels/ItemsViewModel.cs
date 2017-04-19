@@ -51,10 +51,6 @@ namespace PermisC.ViewModels
             IsBusy = true;
 
             tracteur = _database.GetTracteurs();
-            foreach (Tracteur i in tracteur)
-            {
-                System.Diagnostics.Debug.WriteLine(i.Immatriculation);
-            }
 
             IsBusy = false;
         }

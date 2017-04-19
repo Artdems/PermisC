@@ -7,7 +7,7 @@ namespace PermisC.Views
 {
     public partial class RemorqueDetailPage : ContentPage
     {
-        int i = 0;
+        
         RemorqueDetailViewModel viewModel;
 
         // Note - The Xamarin.Forms Previewer requires a default, parameterless constructor to render a page.
@@ -24,6 +24,12 @@ namespace PermisC.Views
         }
         async void Conduire_Clicked(object sender, EventArgs e)
         {
+        }
+
+        async void Delet_Clicked(object sender, EventArgs e)
+        {
+            this.viewModel.delet();
+            await Navigation.PopToRootAsync();
         }
     }
 }

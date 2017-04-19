@@ -24,7 +24,7 @@ namespace PermisC.Views
             if (item == null)
                 return;
 
-            await Navigation.PushAsync(new RemorqueDetailPage(new RemorqueDetailViewModel(item)));
+            await Navigation.PushAsync(new RemorqueDetailPage(new RemorqueDetailViewModel(item,viewModel)));
 
             // Manually deselect item
             ItemsListView.SelectedItem = null;
@@ -32,15 +32,14 @@ namespace PermisC.Views
 
         async void AddItem_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new NewRemorquePage());
+            await Navigation.PushAsync(new NewRemorquePage(viewModel,viewModel._database));
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
 
-            if (viewModel.Items.Count == 0)
-                viewModel.LoadItemsCommand.Execute(null);
+            viewModel.LoadItemsCommand.Execute(null);
         }
 
         void Recherche_Clicked(object sender, EventArgs e)

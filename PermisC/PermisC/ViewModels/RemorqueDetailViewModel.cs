@@ -4,9 +4,11 @@ namespace PermisC.ViewModels
 {
     public class RemorqueDetailViewModel : BaseViewModel
     {
+        RemorqueViewModel test;
         public Remorque Item { get; set; }
-        public RemorqueDetailViewModel(Remorque item = null)
+        public RemorqueDetailViewModel(Remorque item = null, RemorqueViewModel Rem = null)
         {
+            test = Rem;
             Title = item.Immatriculation;
             Item = item;
         }
@@ -16,6 +18,11 @@ namespace PermisC.ViewModels
         {
             get { return quantity; }
             set { SetProperty(ref quantity, value); }
+        }
+
+        public void delet()
+        {
+            test._database.DeleteRemorque(Item.ID);
         }
     }
 }
