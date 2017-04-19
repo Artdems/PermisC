@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLite.Net.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,6 +8,10 @@ namespace PermisC.Models
 {
     public class Tracteur : BaseDataObject
     {
+
+        [PrimaryKey, AutoIncrement]
+        public int ID { get; set; }
+
         string immatriculation;
         public string Immatriculation
         {
