@@ -10,7 +10,7 @@
     <ContentPage.Content>
         <StackLayout>
             <Entry Text="{Binding Recherche}" FontSize="Small"/>
-            <Button Text="Rechercher" Clicked="Recherche_Clicked"/>
+            <Button Text="Rechercher" Command ="{Binding RechercheItem}"/>
             <ListView x:Name="ItemsListView"
 		        ItemsSource="{Binding remorque }"
                 VerticalOptions="FillAndExpand"

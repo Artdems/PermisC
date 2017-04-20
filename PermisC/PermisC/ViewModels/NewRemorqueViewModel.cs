@@ -36,14 +36,22 @@ namespace PermisC.ViewModels
         public Boolean Save(CamionDatabase database)
         {
             Boolean sauver = false;
+            Remorque existant = null;
             var RegImmat = Regex.IsMatch(Item.Immatriculation, "[A-Z]{2}[-][0-9]{3}[-][A-Z]{2}");
             var RegPoid = Regex.IsMatch(Item.PoidRemorque, "[0-9]*.[0-9]*");
             if (RegImmat)
             {
                 if (RegPoid)
                 {
-                    database.AddRemorque(Item);
-                    sauver = true;
+                    if ((existant = database.GetRemorqueImmat(Item.Immatriculation)) == null)
+                    {
+                        database.AddRemorque(Item);
+                        sauver = true;
+                    }
+                    else
+                    {
+                        Erreur = "Cette imatriculation a deja été enregistré";
+                    }
                 }
                 else
                 {
