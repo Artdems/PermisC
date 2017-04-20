@@ -30,7 +30,6 @@ C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\mscorlib.dll
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\PermisC.dll
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Runtime.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.ComponentModel.Composition.dll
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Collections.dll
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Reflection.dll
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Diagnostics.Debug.dll

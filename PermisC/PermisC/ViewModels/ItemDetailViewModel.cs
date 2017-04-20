@@ -8,19 +8,23 @@ namespace PermisC.ViewModels
 {
     public class ItemDetailViewModel : NavigationPage
     {
-        public CamionDatabase _database;
+        
         public Tracteur Item { get; set; }
+        
 
         public Command vide { get; set; }
         public Command delet { get; set; }
         public Command remorque { get; set; }
 
+        public CamionDatabase _database;
         public INavigation _navigation;
+        public ItemsViewModel _viewModel;
 
-        public ItemDetailViewModel(Tracteur item = null, CamionDatabase database = null,INavigation navigation = null )
+        public ItemDetailViewModel(Tracteur item = null, ItemsViewModel viewModel = null,INavigation navigation = null )
         {
             _navigation = navigation;
-            _database = database;
+            _database = viewModel._database;
+            _viewModel = viewModel;
 
             Title = item.Immatriculation;
             Item = item;
@@ -29,10 +33,11 @@ namespace PermisC.ViewModels
             remorque = new Command(() => RemorquePage());
         }
 
-        public async void Delet()
+        public void Delet()
         {
             _database.DeleteTracteur(Item.ID);
-            await Navigation.PopToRootAsync();
+            _viewModel.Refresh();
+            _navigation.PopToRootAsync();
         }
 
         void Vide_Clicked()
