@@ -35,15 +35,6 @@ namespace PermisC.Test
         {
             app.Screenshot("First screen.");
         }
-
-        [Test]
-        public void TestSave()
-        {
-            NewRemorqueViewModel test = new NewRemorqueViewModel();
-            test.Item.Immatriculation = "Coucou";
-            test.Item.PoidRemorque = "Re-coucou";
-            test.Save();
-        }
     }
 }
 

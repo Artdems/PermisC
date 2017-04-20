@@ -18,7 +18,7 @@ namespace PermisC.ViewModels
     {
         public ObservableRangeCollection<Remorque> Rech { get; set; }
         public Command LoadItemsCommand { get; set; }
-        public RemorqueDatabase _database;
+        public CamionDatabase _database;
         private System.Collections.Generic.IEnumerable<PermisC.Models.Remorque> Remorque;
         public System.Collections.Generic.IEnumerable<PermisC.Models.Remorque> remorque { get { return Remorque; } set { Remorque = value; OnPropertyChanged(); } }
 
@@ -26,7 +26,7 @@ namespace PermisC.ViewModels
 
         public RemorqueViewModel()
         {
-            RemorqueDatabase database = new RemorqueDatabase();
+            CamionDatabase database = new CamionDatabase();
             Title = "Remorque";
             _database = database;
             remorque = _database.GetRemorques();

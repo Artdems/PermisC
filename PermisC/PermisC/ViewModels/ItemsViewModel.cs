@@ -15,9 +15,12 @@ namespace PermisC.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {
-        public ObservableRangeCollection<Tracteur> Rech { get; set; }
+
         public Command LoadItemsCommand { get; set; }
-        public TracteurDatabase _database;
+        public Command RechercheItem { get; set; }
+
+
+        public CamionDatabase _database;
         private System.Collections.Generic.IEnumerable<PermisC.Models.Tracteur> Tracteur;
         public System.Collections.Generic.IEnumerable<PermisC.Models.Tracteur> tracteur { get { return Tracteur; } set { Tracteur = value; OnPropertyChanged(); } }
 
@@ -26,12 +29,13 @@ namespace PermisC.ViewModels
 
         public ItemsViewModel()
         {
-            TracteurDatabase database = new TracteurDatabase();
+            CamionDatabase database = new CamionDatabase();
             _database = database;
             Title = "Véhicle répértorier";
             tracteur = _database.GetTracteurs();
             //Items = new ObservableRangeCollection<Tracteur>();
             LoadItemsCommand = new Command(async () => await Refresh());
+            RechercheItem = new Command(() =>  Recherche_Clicked());
 
 
             /*MessagingCenter.Subscribe<NewItemPage, Tracteur>(this, "AddItem", async (obj, item) =>
@@ -61,7 +65,12 @@ namespace PermisC.ViewModels
             get { return recherche; }
             set { recherche = value; }
         }
-        
+        void Recherche_Clicked()
+        {
+            tracteur = _database.GetRechTracteurs(recherche);
+        }
+
+
 
     }
 }

@@ -33,7 +33,7 @@ namespace PermisC.ViewModels
             }
         }
 
-        public Boolean Save(RemorqueDatabase database)
+        public Boolean Save(CamionDatabase database)
         {
             Boolean sauver = false;
             var RegImmat = Regex.IsMatch(Item.Immatriculation, "[A-Z]{2}[-][0-9]{3}[-][A-Z]{2}");

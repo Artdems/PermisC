@@ -12,10 +12,10 @@ namespace PermisC.Views
     public partial class NewItemPage : ContentPage
     {
         public ItemsViewModel _parent;
-        public TracteurDatabase _database;
+        public CamionDatabase _database;
         NewItemViewModel viewModel;
 
-        public NewItemPage(ItemsViewModel parent, TracteurDatabase database)
+        public NewItemPage(ItemsViewModel parent, CamionDatabase database)
         {
             InitializeComponent();
             _parent = parent;

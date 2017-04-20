@@ -33,7 +33,7 @@ namespace PermisC.ViewModels
             }
         }
 
-        public Boolean Save(TracteurDatabase database)
+        public Boolean Save(CamionDatabase database)
         {
             Boolean Sauver = false;
             int Num;

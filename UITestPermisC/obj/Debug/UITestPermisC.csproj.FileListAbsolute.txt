@@ -17,9 +17,6 @@ C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\UITestP
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\UITestPermisC\bin\Debug\Xamarin.Forms.Core.pdb
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\UITestPermisC\bin\Debug\Xamarin.Forms.Core.xml
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\UITestPermisC\bin\Debug\Xamarin.Forms.Platform.pdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\UITestPermisC\obj\Debug\UITestPermisC.csprojResolveAssemblyReference.cache
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\UITestPermisC\obj\Debug\UITestPermisC.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\UITestPermisC\obj\Debug\UITestPermisC.pdb
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\UITestPermisC\bin\Debug\UITestPermisC.dll
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\UITestPermisC\bin\Debug\UITestPermisC.pdb
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\UITestPermisC\bin\Debug\nunit.framework.dll
@@ -37,3 +34,6 @@ C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\UITestPermisC\b
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\UITestPermisC\bin\Debug\Xamarin.Forms.Core.pdb
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\UITestPermisC\bin\Debug\Xamarin.Forms.Core.xml
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\UITestPermisC\bin\Debug\Xamarin.Forms.Platform.pdb
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\UITestPermisC\obj\Debug\UITestPermisC.csprojResolveAssemblyReference.cache
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\UITestPermisC\obj\Debug\UITestPermisC.dll
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\UITestPermisC\obj\Debug\UITestPermisC.pdb

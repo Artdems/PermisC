@@ -8,20 +8,32 @@ using PermisC.Models;
  
 namespace PermisC.Data
 {
-    public class TracteurDatabase
+    public class CamionDatabase
     {
         private SQLiteConnection _connection;
 
-        public TracteurDatabase()
+        public CamionDatabase()
         {
             _connection = DependencyService.Get<ISQLite>().GetConnection();
             _connection.CreateTable<Tracteur>();
+            _connection.CreateTable<Remorque>();
         }
 
         public IEnumerable<Tracteur> GetTracteurs()
         {
             return (from t in _connection.Table<Tracteur>()
                     select t).ToList();
+        }
+
+        public IEnumerable<Tracteur> GetRechTracteurs(string rech)
+        {
+            return(from t in _connection.Table<Tracteur>().Where(t => t.Immatriculation.Contains(rech))
+                  select t).ToList();
+        }
+
+        public Tracteur GetTracteurImmat(String immat)
+        {
+            return _connection.Table<Tracteur>().FirstOrDefault(t => t.Immatriculation.Contains(immat));
         }
 
         public Tracteur GetTracteur(int id)
@@ -39,17 +51,6 @@ namespace PermisC.Data
 
             _connection.Insert(item);
         }
-    }
-
-    public class RemorqueDatabase
-    {
-        private SQLiteConnection _connection;
-
-        public RemorqueDatabase()
-        {
-            _connection = DependencyService.Get<ISQLite>().GetConnection();
-            _connection.CreateTable<Remorque>();
-        }
 
         public IEnumerable<Remorque> GetRemorques()
         {
@@ -57,9 +58,20 @@ namespace PermisC.Data
                     select t).ToList();
         }
 
+        public IEnumerable<Remorque> GetRechRemorque(string rech)
+        {
+            return (from t in _connection.Table<Remorque>().Where(t => t.Immatriculation.Contains(rech))
+                    select t).ToList();
+        }
+
         public Remorque GetRemorque(int id)
         {
             return _connection.Table<Remorque>().FirstOrDefault(t => t.ID == id);
+        }
+
+        public Remorque GetRemorqueImmat(String immat)
+        {
+            return _connection.Table<Remorque>().FirstOrDefault(t => t.Immatriculation.Contains(immat));
         }
 
         public void DeleteRemorque(int id)
