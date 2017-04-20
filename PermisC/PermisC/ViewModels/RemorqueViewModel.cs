@@ -20,17 +20,20 @@ namespace PermisC.ViewModels
         public Command LoadItemsCommand { get; set; }
         public Command RechercheItem { get; set; }
 
+        public INavigation _navigation;
+
         public CamionDatabase _database;
         private System.Collections.Generic.IEnumerable<PermisC.Models.Remorque> Remorque;
         public System.Collections.Generic.IEnumerable<PermisC.Models.Remorque> remorque { get { return Remorque; } set { Remorque = value; OnPropertyChanged(); } }
 
 
 
-        public RemorqueViewModel()
+        public RemorqueViewModel(INavigation navigation)
         {
             CamionDatabase database = new CamionDatabase();
             Title = "Remorque";
             _database = database;
+            _navigation = navigation;
             remorque = _database.GetRemorques();
             //Items = new ObservableRangeCollection<Remorque>();
             LoadItemsCommand = new Command(async () => await Refresh());
@@ -64,6 +67,13 @@ namespace PermisC.ViewModels
         void Recherche_Clicked()
         {
             remorque = _database.GetRechRemorque(recherche);
+        }
+
+
+
+        async void AddItem_Clicked(object sender, EventArgs e)
+        {
+            await _navigation.PushAsync(new NewRemorquePage(_database));
         }
     }
 }

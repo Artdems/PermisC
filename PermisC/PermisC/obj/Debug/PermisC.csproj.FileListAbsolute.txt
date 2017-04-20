@@ -44,7 +44,6 @@ C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\Xamarin.Forms.Xaml.pdb
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\Xamarin.Forms.Xaml.xml
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\Xamarin.UITest.xml
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.csprojResolveAssemblyReference.cache
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.App.xaml.g.cs
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.Views.AboutPage.xaml.g.cs
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.Views.ItemDetailPage.xaml.g.cs

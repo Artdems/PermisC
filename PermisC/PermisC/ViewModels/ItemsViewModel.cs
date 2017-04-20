@@ -13,11 +13,14 @@ using Xamarin.Forms;
 
 namespace PermisC.ViewModels
 {
-    public class ItemsViewModel : BaseViewModel
+    public class ItemsViewModel : NavigationPage
     {
 
         public Command LoadItemsCommand { get; set; }
         public Command RechercheItem { get; set; }
+        public Command Add { get; set; }
+
+        public INavigation _navigation;
 
 
         public CamionDatabase _database;
@@ -26,9 +29,10 @@ namespace PermisC.ViewModels
 
 
 
-
-        public ItemsViewModel()
+        public ItemsViewModel(INavigation navigation)
         {
+
+            _navigation = navigation;
             CamionDatabase database = new CamionDatabase();
             _database = database;
             Title = "Véhicle répértorier";
@@ -36,6 +40,7 @@ namespace PermisC.ViewModels
             //Items = new ObservableRangeCollection<Tracteur>();
             LoadItemsCommand = new Command(async () => await Refresh());
             RechercheItem = new Command(() =>  Recherche_Clicked());
+            Add = new Command(() => AddItem_Clicked());
 
 
             /*MessagingCenter.Subscribe<NewItemPage, Tracteur>(this, "AddItem", async (obj, item) =>
@@ -68,6 +73,11 @@ namespace PermisC.ViewModels
         void Recherche_Clicked()
         {
             tracteur = _database.GetRechTracteurs(recherche);
+        }
+
+        async void AddItem_Clicked()
+        {
+            await _navigation.PushAsync(new NewItemPage(_database));
         }
 
 

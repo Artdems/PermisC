@@ -2,7 +2,6 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PermisC.Views.AboutPage"
-             xmlns:vm="clr-namespace:PermisC.ViewModels;"
              Title="{Binding Title}">
     <ContentPage.Content>
         <StackLayout Spacing="20" Padding="15">
@@ -12,11 +11,11 @@
             <Entry Text="{Binding PoidRem}" FontSize="Small" />
             <Label Text="Nomvbe d'éssieux :" FontSize="Small"/>
             <StackLayout Orientation = "Horizontal" HorizontalOptions="Center">
-                <Button Text="-" Clicked="Moins_Clicked"/>
+                <Button Text="-" Command="{Binding moins}"/>
                 <Label Text="{Binding NbEss}" FontSize="Small" VerticalOptions="Center"/>
-                <Button Text="+" Clicked="Plus_Clicked"/>
+                <Button Text="+" Command="{Binding plus}"/>
             </StackLayout>
-            <Button Text="Valider" Clicked="Valider_Clicked"/>
+            <Button Text="Valider" Command="{Binding verifier}"/>
             <Label Text="{Binding Result}" FontSize="Medium" TextColor="{Binding Couleur}"  HorizontalOptions="Center"/>
             <Label Text="{Binding FCOS}" FontSize="Medium" HorizontalOptions="Center"/>
         </StackLayout>

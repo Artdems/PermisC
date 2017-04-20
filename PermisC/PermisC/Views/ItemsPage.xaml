@@ -5,7 +5,7 @@
              Title="{Binding Title}"
              x:Name="BrowseItemsPage">
     <ContentPage.ToolbarItems>
-  	    <ToolbarItem Text="Ajouter Camion" Clicked="AddItem_Clicked" />
+  	    <ToolbarItem Text="Ajouter Camion" Command="{Binding Add}" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>

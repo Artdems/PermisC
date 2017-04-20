@@ -22,14 +22,7 @@ namespace PermisC.Views
 
             BindingContext = this.viewModel = viewModel;
         }
-        async void Conduire_Clicked(object sender, EventArgs e)
-        {
-        }
 
-        async void Delet_Clicked(object sender, EventArgs e)
-        {
-            this.viewModel.delet();
-            await Navigation.PopToRootAsync();
-        }
+        
     }
 }

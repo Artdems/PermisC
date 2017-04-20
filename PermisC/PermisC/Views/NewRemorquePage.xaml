@@ -14,9 +14,9 @@
             <Editor Text="{Binding Item.PoidRemorque}" FontSize="Small" Margin="0" />
             <Label Text="Nombre d'essieux" FontSize="Medium" />
             <StackLayout Orientation = "Horizontal" HorizontalOptions="Center">
-                <Button Text="-" Clicked="Moins_Clicked"/>
+                <Button Text="-" Command="{Binding moins}"/>
                 <Label Text="{Binding Item.Essieux}" FontSize="Small" VerticalOptions="Center" TextColor="Black"/>
-                <Button Text="+" Clicked="Plus_Clicked"/>
+                <Button Text="+" Command="{Binding plus}"/>
             </StackLayout>
             <Label Text="{Binding Erreur}" FontSize="Medium" TextColor="Red"/>
         </StackLayout>

@@ -16,27 +16,5 @@ namespace PermisC.Views
             InitializeComponent();
             BindingContext =  viewModel = new AboutViewModel();
         }
-
-        public AboutPage(AboutViewModel viewModel)
-        {
-            InitializeComponent();
-            BindingContext = this.viewModel = viewModel;
-        }
-
-        void Valider_Clicked(object sender, EventArgs e)
-        {
-            viewModel.Verif();
-        }
-
-        void Moins_Clicked(object sender, EventArgs e)
-        {
-            viewModel.Moins();
-
-        }
-        void Plus_Clicked(object sender, EventArgs e)
-        {
-            viewModel.Plus();
-
-        }
     }
 }

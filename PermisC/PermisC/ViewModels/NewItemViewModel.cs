@@ -12,6 +12,17 @@ namespace PermisC.ViewModels
 {
     class NewItemViewModel : BaseViewModel
     {
+        public Command plus { get; set; }
+        public Command moins { get; set; }
+
+        public INavigation _navigation;
+
+        public NewItemViewModel(INavigation navigation)
+        {
+            _navigation = navigation;
+            plus = new Command(() => Plus());
+            moins = new Command(() => Moins());
+        }
         Tracteur item;
         public Tracteur Item
         {
@@ -33,9 +44,8 @@ namespace PermisC.ViewModels
             }
         }
 
-        public Boolean Save(CamionDatabase database)
+        public void Save(CamionDatabase database)
         {
-            Boolean Sauver = false;
             Tracteur existant = null;
             int Num;
             var RegImmat = Regex.IsMatch(Item.Immatriculation, "[A-Z]{2}[-][0-9]{3}[-][A-Z]{2}");
@@ -47,7 +57,7 @@ namespace PermisC.ViewModels
                     if ((existant = database.GetTracteurImmat(Item.Immatriculation)) == null)
                     {
                         database.AddTracteur(Item);
-                        Sauver = true;
+                        _navigation.PopToRootAsync();
                     }
                     else
                     {
@@ -63,8 +73,6 @@ namespace PermisC.ViewModels
             {
                 Erreur = "L'immatriculation doit etre de la frome 'AA-666-BB'";
             }
-
-            return Sauver;
         }
 
         public void Moins()

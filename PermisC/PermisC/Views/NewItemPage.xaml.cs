@@ -11,42 +11,20 @@ namespace PermisC.Views
 {
     public partial class NewItemPage : ContentPage
     {
-        public ItemsViewModel _parent;
         public CamionDatabase _database;
         NewItemViewModel viewModel;
 
-        public NewItemPage(ItemsViewModel parent, CamionDatabase database)
+        public NewItemPage(CamionDatabase database)
         {
             InitializeComponent();
-            _parent = parent;
             _database = database;
-            BindingContext = viewModel = new NewItemViewModel();
+            BindingContext = viewModel = new NewItemViewModel(this.Navigation);
 
             viewModel.Item = new Tracteur
             {
                 Immatriculation = "",
                 Essieux = "2",
             };
-        }
-
-        async void Save_Clicked(object sender, EventArgs e)
-        {
-            Boolean sauver = viewModel.Save(_database);
-            if (sauver)
-            {
-                await Navigation.PopToRootAsync();
-                _parent.Refresh();
-            }
-        }
-        void Moins_Clicked(object sender, EventArgs e)
-        {
-            viewModel.Moins();
-
-        }
-        void Plus_Clicked(object sender, EventArgs e)
-        {
-            viewModel.Plus();
-
         }
     }
 }

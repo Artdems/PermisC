@@ -16,7 +16,7 @@ namespace PermisC.Views
         {
             InitializeComponent();
 
-            BindingContext = viewModel = new ItemsViewModel();
+            BindingContext = viewModel = new ItemsViewModel(this.Navigation);
         }
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
@@ -25,27 +25,10 @@ namespace PermisC.Views
             if (item == null)
                 return;
 
-            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item,viewModel)));
+            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item,viewModel,this.Navigation)));
 
             // Manually deselect item
             ItemsListView.SelectedItem = null;
-        }
-
-        async void AddItem_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new NewItemPage(viewModel,viewModel._database));
-        }
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-
-            viewModel.LoadItemsCommand.Execute(null);
-        }
-
-        void Recherche_Clicked(object sender, EventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine(viewModel.Recherche);
         }
 
 

@@ -4,7 +4,7 @@
              x:Class="PermisC.Views.RemorqueDetailPage"
              Title="{Binding Title}">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Supprimer" Clicked="Delet_Clicked" />
+        <ToolbarItem Text="Supprimer" Command="{Binding delet}" />
     </ContentPage.ToolbarItems>
     <StackLayout Spacing="20" Padding="15" HorizontalOptions="Center">
         <StackLayout Orientation = "Horizontal" HorizontalOptions="Center">
@@ -20,6 +20,6 @@
             <Label Text="Nombre d'essieux : " FontSize="Medium"/>
             <Label Text="{Binding Item.Essieux}" FontSize="Medium"/>
         </StackLayout>
-        <Button Text="Conduire" Clicked="Conduire_Clicked"/>
+        <Button Text="Conduire" Command="{Binding conduir}"/>
     </StackLayout>
 </ContentPage>

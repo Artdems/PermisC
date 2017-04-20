@@ -15,7 +15,7 @@ namespace PermisC.Views
         {
             InitializeComponent();
 
-            BindingContext = viewModel = new RemorqueViewModel();
+            BindingContext = viewModel = new RemorqueViewModel(this.Navigation);
         }
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
@@ -28,23 +28,6 @@ namespace PermisC.Views
 
             // Manually deselect item
             ItemsListView.SelectedItem = null;
-        }
-
-        async void AddItem_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new NewRemorquePage(viewModel,viewModel._database));
-        }
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-
-            viewModel.LoadItemsCommand.Execute(null);
-        }
-
-        void Recherche_Clicked(object sender, EventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine(viewModel.Recherche);
         }
 
 

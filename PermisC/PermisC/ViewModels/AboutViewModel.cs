@@ -2,12 +2,25 @@
 using System.Windows.Input;
 using Xamarin.Forms;
 using PermisC.Models;
+using PermisC.Views;
 
 namespace PermisC.ViewModels
 {
     public class AboutViewModel : BaseViewModel
     {
-        public string Title = "Véhicule non répértorier";
+        //public string Title = "Véhicule non répértorier";
+        public Command verifier { get; set; }
+        public Command moins { get; set; }
+        public Command plus { get; set; }
+
+        public AboutViewModel()
+        {
+            Title = "Véhicule non répértorier";
+            verifier = new Command(() => Verif());
+            moins = new Command(() => Moins());
+            plus = new Command(() => Plus());
+
+        }
 
         private string poidTrac = "";
         public string PoidTrac
@@ -69,7 +82,7 @@ namespace PermisC.ViewModels
                 OnPropertyChanged();
             }
         }
-        public void Verif()
+        void Verif()
         {
             int Num;
             Boolean RegRem = int.TryParse(PoidRem, out Num);
@@ -170,7 +183,7 @@ namespace PermisC.ViewModels
             }
         }
 
-        public void Moins()
+        void Moins()
         {
             int essieux;
             essieux = int.Parse(NbEss);
@@ -181,7 +194,7 @@ namespace PermisC.ViewModels
             NbEss = essieux.ToString();
 
         }
-        public void Plus()
+        void Plus()
         {
             int essieux;
             essieux = int.Parse(NbEss);

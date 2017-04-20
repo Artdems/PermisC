@@ -12,6 +12,17 @@ namespace PermisC.ViewModels
 {
     public class NewRemorqueViewModel : BaseViewModel
     {
+
+        public Command moins { get; set; }
+        public Command plus { get; set; }
+        public INavigation _navigation;
+
+        public NewRemorqueViewModel(INavigation navigation)
+        {
+            _navigation = navigation;
+            moins = new Command(() => Moins());
+            plus = new Command(() => Plus());
+        }
         Remorque item;
         public Remorque Item
         {
@@ -33,9 +44,8 @@ namespace PermisC.ViewModels
             }
         }
 
-        public Boolean Save(CamionDatabase database)
+        public void Save(CamionDatabase database)
         {
-            Boolean sauver = false;
             Remorque existant = null;
             var RegImmat = Regex.IsMatch(Item.Immatriculation, "[A-Z]{2}[-][0-9]{3}[-][A-Z]{2}");
             var RegPoid = Regex.IsMatch(Item.PoidRemorque, "[0-9]*.[0-9]*");
@@ -46,7 +56,7 @@ namespace PermisC.ViewModels
                     if ((existant = database.GetRemorqueImmat(Item.Immatriculation)) == null)
                     {
                         database.AddRemorque(Item);
-                        sauver = true;
+                        _navigation.PopAsync();
                     }
                     else
                     {
@@ -62,8 +72,6 @@ namespace PermisC.ViewModels
             {
                 Erreur = "L'immatriculation doit etre de la frome 'AA-666-BB'";
             }
-
-            return sauver;
         }
         public void Moins()
         {
