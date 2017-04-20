@@ -14,7 +14,7 @@ namespace PermisC.ViewModels
         public Command conduir { get; set; }
         public Remorque Item { get; set; }
 
-        public RemorqueDetailViewModel(Remorque item = null, CamionDatabase database, INavigation navigation = null)
+        public RemorqueDetailViewModel(Remorque item = null, CamionDatabase database = null, INavigation navigation = null)
         {
             _database = database;
             _navigation = navigation;

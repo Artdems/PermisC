@@ -24,7 +24,7 @@ namespace PermisC.Views
             if (item == null)
                 return;
 
-            await Navigation.PushAsync(new RemorqueDetailPage(new RemorqueDetailViewModel(item,viewModel)));
+            await Navigation.PushAsync(new RemorqueDetailPage(new RemorqueDetailViewModel(item,viewModel._database)));
 
             // Manually deselect item
             ItemsListView.SelectedItem = null;

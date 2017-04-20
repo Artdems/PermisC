@@ -65,11 +65,10 @@ namespace PermisC.ViewModels
             if (RegImmat)
             {
 
+                int Num;
                 var RegPoid = int.TryParse(Item.PoidTracteur, out Num);
                 if (RegPoid)
                 {
-
-                    int Num;
                     Tracteur existant = null;
                     if ((existant = database.GetTracteurImmat(Item.Immatriculation)) == null)
                     {

@@ -17,7 +17,7 @@ namespace PermisC.ViewModels
 
         public INavigation _navigation;
 
-        public ItemDetailViewModel(Tracteur item = null, CamionDatabase database,INavigation navigation = null )
+        public ItemDetailViewModel(Tracteur item = null, CamionDatabase database = null,INavigation navigation = null )
         {
             _navigation = navigation;
             _database = database;
