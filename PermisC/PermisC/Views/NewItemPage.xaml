@@ -4,7 +4,7 @@
              x:Class="PermisC.Views.NewItemPage"
              Title="Nouveau Camion">
 	<ContentPage.ToolbarItems>
-		<ToolbarItem Text="Sauver" Clicked="Save_Clicked" />
+		<ToolbarItem Text="Sauver" Command="{Binding save}" />
 	</ContentPage.ToolbarItems>
 	<ContentPage.Content>
 		<StackLayout Spacing="20" Padding="15">

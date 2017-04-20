@@ -8,7 +8,7 @@ namespace PermisC.ViewModels
 {
     public class AboutViewModel : BaseViewModel
     {
-        //public string Title = "Véhicule non répértorier";
+        
         public Command verifier { get; set; }
         public Command moins { get; set; }
         public Command plus { get; set; }
@@ -16,6 +16,7 @@ namespace PermisC.ViewModels
         public AboutViewModel()
         {
             Title = "Véhicule non répértorier";
+
             verifier = new Command(() => Verif());
             moins = new Command(() => Moins());
             plus = new Command(() => Plus());
@@ -88,12 +89,14 @@ namespace PermisC.ViewModels
             Boolean RegRem = int.TryParse(PoidRem, out Num);
             Boolean RegTrac = int.TryParse(PoidTrac, out Num);
             Boolean RegEss = int.TryParse(NbEss, out Num);
+
             if (RegRem && RegTrac && RegEss)
             {
                 int poidRemorque, poidtracteur, essieux;
                 poidRemorque = int.Parse(PoidRem);
                 poidtracteur = int.Parse(PoidTrac);
                 essieux = int.Parse(NbEss);
+
                 if (poidRemorque < 0)
                 {
                     Couleur = "Red";

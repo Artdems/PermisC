@@ -15,14 +15,27 @@ namespace PermisC.ViewModels
 
         public Command moins { get; set; }
         public Command plus { get; set; }
-        public INavigation _navigation;
+        public Command save { get; set; }
 
-        public NewRemorqueViewModel(INavigation navigation)
+        public INavigation _navigation;
+        public CamionDatabase _database;
+
+        public NewRemorqueViewModel(INavigation navigation,CamionDatabase database)
         {
+            _database = database;
             _navigation = navigation;
+
             moins = new Command(() => Moins());
             plus = new Command(() => Plus());
+            save = new Command(() => Save());
+
+            Item = new Remorque
+            {
+                Immatriculation = "",
+                Essieux = "2",
+            };
         }
+
         Remorque item;
         public Remorque Item
         {
@@ -33,6 +46,7 @@ namespace PermisC.ViewModels
                 OnPropertyChanged();
             }
         }
+
         string erreur = "";
         public string Erreur
         {
@@ -44,18 +58,20 @@ namespace PermisC.ViewModels
             }
         }
 
-        public void Save(CamionDatabase database)
+        public void Save()
         {
-            Remorque existant = null;
             var RegImmat = Regex.IsMatch(Item.Immatriculation, "[A-Z]{2}[-][0-9]{3}[-][A-Z]{2}");
-            var RegPoid = Regex.IsMatch(Item.PoidRemorque, "[0-9]*.[0-9]*");
             if (RegImmat)
             {
+                int Num;
+                var RegPoid = int.TryParse(Item.PoidRemorque, out Num);
                 if (RegPoid)
                 {
-                    if ((existant = database.GetRemorqueImmat(Item.Immatriculation)) == null)
+
+                    Remorque existant = null;
+                    if ((existant = _database.GetRemorqueImmat(Item.Immatriculation)) == null)
                     {
-                        database.AddRemorque(Item);
+                        _database.AddRemorque(Item);
                         _navigation.PopAsync();
                     }
                     else
@@ -73,6 +89,8 @@ namespace PermisC.ViewModels
                 Erreur = "L'immatriculation doit etre de la frome 'AA-666-BB'";
             }
         }
+
+
         public void Moins()
         {
             int essieux;
@@ -84,6 +102,8 @@ namespace PermisC.ViewModels
             Item.Essieux = essieux.ToString();
 
         }
+
+        
         public void Plus()
         {
             int essieux;

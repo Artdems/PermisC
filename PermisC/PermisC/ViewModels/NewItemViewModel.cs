@@ -14,15 +14,27 @@ namespace PermisC.ViewModels
     {
         public Command plus { get; set; }
         public Command moins { get; set; }
+        public Command save { get; set; }
 
         public INavigation _navigation;
 
-        public NewItemViewModel(INavigation navigation)
+
+        public NewItemViewModel(INavigation navigation, CamionDatabase database)
         {
             _navigation = navigation;
+
             plus = new Command(() => Plus());
             moins = new Command(() => Moins());
+            save = new Command(() => Save(database));
+
+            Item = new Tracteur
+            {
+                Immatriculation = "",
+                Essieux = "2",
+            };
         }
+
+
         Tracteur item;
         public Tracteur Item
         {
@@ -33,6 +45,8 @@ namespace PermisC.ViewModels
                 OnPropertyChanged();
             }
         }
+
+
         string erreur = "";
         public string Erreur
         {
@@ -46,14 +60,17 @@ namespace PermisC.ViewModels
 
         public void Save(CamionDatabase database)
         {
-            Tracteur existant = null;
-            int Num;
+
             var RegImmat = Regex.IsMatch(Item.Immatriculation, "[A-Z]{2}[-][0-9]{3}[-][A-Z]{2}");
-            var RegPoid = int.TryParse(Item.PoidTracteur, out Num);
             if (RegImmat)
             {
+
+                var RegPoid = int.TryParse(Item.PoidTracteur, out Num);
                 if (RegPoid)
                 {
+
+                    int Num;
+                    Tracteur existant = null;
                     if ((existant = database.GetTracteurImmat(Item.Immatriculation)) == null)
                     {
                         database.AddTracteur(Item);

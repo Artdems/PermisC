@@ -1,4 +1,5 @@
-﻿using PermisC.Models;
+﻿using PermisC.Data;
+using PermisC.Models;
 using PermisC.Views;
 using System;
 using Xamarin.Forms;
@@ -7,7 +8,7 @@ namespace PermisC.ViewModels
 {
     public class ItemDetailViewModel : NavigationPage
     {
-        ItemsViewModel test;
+        public CamionDatabase _database;
         public Tracteur Item { get; set; }
 
         public Command vide { get; set; }
@@ -16,10 +17,11 @@ namespace PermisC.ViewModels
 
         public INavigation _navigation;
 
-        public ItemDetailViewModel(Tracteur item = null, ItemsViewModel Trac = null,INavigation navigation = null )
+        public ItemDetailViewModel(Tracteur item = null, CamionDatabase database,INavigation navigation = null )
         {
             _navigation = navigation;
-            test = Trac;
+            _database = database;
+
             Title = item.Immatriculation;
             Item = item;
             vide = new Command(() => Vide_Clicked());
@@ -29,7 +31,7 @@ namespace PermisC.ViewModels
 
         public async void Delet()
         {
-            test._database.DeleteTracteur(Item.ID);
+            _database.DeleteTracteur(Item.ID);
             await Navigation.PopToRootAsync();
         }
 

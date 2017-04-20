@@ -11,20 +11,13 @@ namespace PermisC.Views
 {
     public partial class NewRemorquePage : ContentPage
     {
-        public CamionDatabase _database;
         NewRemorqueViewModel viewModel;
 
         public NewRemorquePage(CamionDatabase database)
         {
             InitializeComponent();
-            _database = database;
-            BindingContext = viewModel = new NewRemorqueViewModel(this.Navigation);
+            BindingContext = viewModel = new NewRemorqueViewModel(this.Navigation,database);
 
-            viewModel.Item = new Remorque
-            {
-                Immatriculation = "",
-                Essieux = "2",
-            };
         }
     }
 }
