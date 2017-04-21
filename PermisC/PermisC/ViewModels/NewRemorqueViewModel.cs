@@ -1,11 +1,9 @@
-﻿using PermisC.Data;
+﻿using PermisC._meta;
+using PermisC.Data;
 using PermisC.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+
 using Xamarin.Forms;
 
 namespace PermisC.ViewModels
@@ -55,6 +53,18 @@ namespace PermisC.ViewModels
             {
                 erreur = value;
                 OnPropertyChanged();
+            }
+        }
+
+        public void Save(CamionDatabase database)
+        {
+            Remorque_Metadata Meta = new Remorque_Metadata();
+
+            Erreur = Meta.Remorque(Item, Erreur, database);
+
+            if (Erreur == "")
+            {
+                _navigation.PopAsync();
             }
         }
 

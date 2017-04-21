@@ -11,11 +11,11 @@ namespace PermisC.Views
     {
         RemorqueViewModel viewModel;
 
-        public RemorquePage()
+        public RemorquePage(Tracteur trac)
         {
             InitializeComponent();
 
-            BindingContext = viewModel = new RemorqueViewModel(this.Navigation);
+            BindingContext = viewModel = new RemorqueViewModel(this.Navigation,trac);
         }
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
@@ -24,7 +24,7 @@ namespace PermisC.Views
             if (item == null)
                 return;
 
-            await Navigation.PushAsync(new RemorqueDetailPage(new RemorqueDetailViewModel(item, viewModel,this.Navigation)));
+            await Navigation.PushAsync(new RemorqueDetailPage(new RemorqueDetailViewModel(item, viewModel,this.Navigation,viewModel._trac)));
 
             // Manually deselect item
             ItemsListView.SelectedItem = null;

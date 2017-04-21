@@ -42,12 +42,12 @@ namespace PermisC.ViewModels
 
         void Vide_Clicked()
         {
-
+            _navigation.PushAsync(new PermisPage(Item));
         }
 
         public async void RemorquePage()
         {
-            await _navigation.PushAsync(new RemorquePage());
+            await _navigation.PushAsync(new RemorquePage(Item));
         }
     }
 }

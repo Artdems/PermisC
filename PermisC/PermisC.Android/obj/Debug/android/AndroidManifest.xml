@@ -3,6 +3,7 @@
   <!--suppress UsesMinSdkAttributes-->
   <uses-sdk android:minSdkVersion="15" />
   <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <application android:label="@string/app_name" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
     <activity android:configChanges="orientation|screenSize" android:label="@string/app_name" android:theme="@style/MyTheme" android:name="md5da0ded1532394160cf3ea8e7d9e5253a.MainActivity">
       <intent-filter>

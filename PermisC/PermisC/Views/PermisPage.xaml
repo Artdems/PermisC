@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PermisC.Views.PermisPage">
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="15">
+            <StackLayout Orientation = "Horizontal">
+                <Label Text="Poid total (en Kilogramme) :" FontSize="Medium"/>
+                <Label Text="{Binding poidTotal}" FontSize="Medium" />
+            </StackLayout>
+            <StackLayout Orientation = "Horizontal">
+                <Label Text="Nombre total d'essieux :" FontSize="Medium"/>
+                <Label Text="{Binding essTotal}" FontSize="Medium" />
+            </StackLayout>
+            <StackLayout Orientation = "Horizontal">
+                <Label Text="Permis requi :" FontSize="Medium"/>
+                <Label Text="{Binding permis}" FontSize="Medium"/>
+            </StackLayout>
+            <StackLayout Orientation = "Horizontal">
+                <Label Text="Formation requise :" FontSize="Medium"/>
+                <Label Text="{Binding formation}" FontSize="Medium"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

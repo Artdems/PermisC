@@ -1,16 +1,14 @@
 ﻿using PermisC.Data;
 using PermisC.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using PermisC._meta;
+
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+
 using Xamarin.Forms;
 
 namespace PermisC.ViewModels
 {
-    class NewItemViewModel : BaseViewModel
+    public class NewItemViewModel : BaseViewModel
     {
         public Command plus { get; set; }
         public Command moins { get; set; }
@@ -60,34 +58,13 @@ namespace PermisC.ViewModels
 
         public void Save(CamionDatabase database)
         {
+            Tracteur_Metadata Meta = new Tracteur_Metadata();
 
-            var RegImmat = Regex.IsMatch(Item.Immatriculation, "[A-Z]{2}[-][0-9]{3}[-][A-Z]{2}");
-            if (RegImmat)
-            {
+            Erreur = Meta.Tracteur(Item, Erreur, database);
 
-                int Num;
-                var RegPoid = int.TryParse(Item.PoidTracteur, out Num);
-                if (RegPoid)
-                {
-                    Tracteur existant = null;
-                    if ((existant = database.GetTracteurImmat(Item.Immatriculation)) == null)
-                    {
-                        database.AddTracteur(Item);
-                        _navigation.PopToRootAsync();
-                    }
-                    else
-                    {
-                        Erreur = "Cette imatriculation a deja été enregistré";
-                    }
-                }
-                else
-                {
-                    Erreur = "Le poid du tracteur doit etre un chiffre";
-                }
-            }
-            else
+            if(Erreur == "")
             {
-                Erreur = "L'immatriculation doit etre de la frome 'AA-666-BB'";
+                _navigation.PopAsync();
             }
         }
 

@@ -1,16 +1,48 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Text.RegularExpressions;
 
-namespace PermisC
+using PermisC.Models;
+using PermisC.Data;
+
+
+namespace PermisC._meta
 {
-    public class Adresse_Metadata
+    public class Tracteur_Metadata
     {
-        [MaxLength(5)]
-        [RegularExpression(@"[0-9]{5}", ErrorMessage = "le code postal n'est pas valide")]
-        public string codePostal { get; set; }
+
+        public string Tracteur(Tracteur item, string erreur, CamionDatabase database)
+        {
+
+            var RegImmat = Regex.IsMatch(item.Immatriculation, "[A-Z]{2}[-][0-9]{3}[-][A-Z]{2}");
+            if (RegImmat)
+            {
+
+                int Num;
+                var RegPoid = int.TryParse(item.PoidTracteur, out Num);
+                if (RegPoid)
+                {
+                    Tracteur existant = null;
+                    if ((existant = database.GetTracteurImmat(item.Immatriculation)) == null)
+                    {
+                        database.AddTracteur(item);
+
+                    }
+                    else
+                    {
+                        erreur = "Cette imatriculation a deja été enregistré";
+                    }
+                }
+                else
+                {
+                    erreur = "Le poid du tracteur doit etre un chiffre";
+                }
+            }
+            else
+            {
+                erreur = "L'immatriculation doit etre de la frome 'AA-666-BB'";
+            }
+
+            return erreur;
+        }
     }
 }

@@ -27,12 +27,15 @@ namespace PermisC.ViewModels
         private System.Collections.Generic.IEnumerable<PermisC.Models.Remorque> Remorque;
         public System.Collections.Generic.IEnumerable<PermisC.Models.Remorque> remorque { get { return Remorque; } set { Remorque = value; OnPropertyChanged(); } }
 
+        public Tracteur _trac;
 
 
-        public RemorqueViewModel(INavigation navigation)
+
+        public RemorqueViewModel(INavigation navigation, Tracteur trac)
         {
             CamionDatabase database = new CamionDatabase();
 
+            _trac = trac;
             _database = database;
             _navigation = navigation;
             remorque = _database.GetRemorques();
