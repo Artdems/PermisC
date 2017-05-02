@@ -1,10 +1,7 @@
-﻿using System;
-
-using PermisC.Models;
+﻿using PermisC.Models;
 using PermisC.ViewModels;
 
 using Xamarin.Forms;
-using Android.Widget;
 
 namespace PermisC.Views
 {
@@ -25,7 +22,7 @@ namespace PermisC.Views
             if (item == null)
                 return;
 
-            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item,viewModel,this.Navigation)));
+            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item, viewModel, this.Navigation)));
 
             // Manually deselect item
             ItemsListView.SelectedItem = null;

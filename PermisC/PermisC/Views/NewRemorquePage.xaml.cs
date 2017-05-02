@@ -1,9 +1,5 @@
-﻿using System;
+﻿using Xamarin.Forms;
 
-using PermisC.Models;
-
-using Xamarin.Forms;
-using System.Text.RegularExpressions;
 using PermisC.ViewModels;
 using PermisC.Data;
 
@@ -13,10 +9,10 @@ namespace PermisC.Views
     {
         NewRemorqueViewModel viewModel;
 
-        public NewRemorquePage(CamionDatabase database)
+        public NewRemorquePage(CamionDatabase database, RemorqueViewModel _viewModel)
         {
             InitializeComponent();
-            BindingContext = viewModel = new NewRemorqueViewModel(this.Navigation,database);
+            BindingContext = viewModel = new NewRemorqueViewModel(this.Navigation, database, _viewModel);
 
         }
     }

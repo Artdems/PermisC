@@ -1,6 +1,6 @@
 ﻿
 using PermisC.ViewModels;
-using System;
+
 using Xamarin.Forms;
 
 namespace PermisC.Views

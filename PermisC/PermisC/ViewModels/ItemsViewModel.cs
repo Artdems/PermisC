@@ -1,15 +1,10 @@
-﻿using System;
-using System.Diagnostics;
-using System.Threading.Tasks;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-using PermisC.Helpers;
 using PermisC.Models;
 using PermisC.Views;
 using PermisC.Data;
 
 using Xamarin.Forms;
-
 
 namespace PermisC.ViewModels
 {
@@ -23,40 +18,41 @@ namespace PermisC.ViewModels
         public INavigation _navigation;
         public CamionDatabase _database;
 
-        private System.Collections.Generic.IEnumerable<PermisC.Models.Tracteur> Tracteur;
-        public System.Collections.Generic.IEnumerable<PermisC.Models.Tracteur> tracteur { get { return Tracteur; } set { Tracteur = value; OnPropertyChanged(); } }
+        private IEnumerable<Tracteur> Tracteur;
+        public IEnumerable<Tracteur> tracteur { get { return Tracteur; } set { Tracteur = value; OnPropertyChanged(); } }
+
 
 
 
         public ItemsViewModel(INavigation navigation)
         {
 
-            
+
+
+
             CamionDatabase database = new CamionDatabase();
 
             _navigation = navigation;
             _database = database;
-            tracteur = _database.GetTracteurs();
+            _database.GetTracteursAsync(this);
 
             Title = "Véhicle répértorier";
 
 
-            LoadItemsCommand = new Command(async () => await Refresh());
-            RechercheItem = new Command(() =>  Recherche_Clicked());
+            LoadItemsCommand = new Command(() => Refresh());
+            RechercheItem = new Command(() => Recherche_Clicked());
             Add = new Command(() => AddItem_Clicked());
-            
+
         }
 
-        public async Task Refresh()
+        public void Refresh()
         {
             if (IsBusy)
                 return;
 
             IsBusy = true;
 
-            tracteur = _database.GetTracteurs();
-
-            IsBusy = false;
+            _database.GetTracteursAsync(this);
         }
 
         private string recherche = "";
@@ -74,8 +70,13 @@ namespace PermisC.ViewModels
 
         async void AddItem_Clicked()
         {
-            await _navigation.PushAsync(new NewItemPage(_database));
+            await _navigation.PushAsync(new NewItemPage(_database, this));
         }
+
+
+
+
+
 
 
 

@@ -1,5 +1,4 @@
-﻿using PermisC._meta;
-using PermisC.Data;
+﻿using PermisC.Data;
 using PermisC.Models;
 
 using System.Text.RegularExpressions;
@@ -17,11 +16,13 @@ namespace PermisC.ViewModels
 
         public INavigation _navigation;
         public CamionDatabase _database;
+        public RemorqueViewModel _viewModel;
 
-        public NewRemorqueViewModel(INavigation navigation,CamionDatabase database)
+        public NewRemorqueViewModel(INavigation navigation, CamionDatabase database, RemorqueViewModel viewModel)
         {
             _database = database;
             _navigation = navigation;
+            _viewModel = viewModel;
 
             moins = new Command(() => Moins());
             plus = new Command(() => Plus());
@@ -64,6 +65,7 @@ namespace PermisC.ViewModels
 
             if (Erreur == "")
             {
+                _viewModel.Refresh();
                 _navigation.PopAsync();
             }
         }
@@ -113,7 +115,7 @@ namespace PermisC.ViewModels
 
         }
 
-        
+
         public void Plus()
         {
             int essieux;

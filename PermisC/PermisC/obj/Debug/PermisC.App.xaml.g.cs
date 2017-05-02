@@ -11,7 +11,7 @@
 namespace PermisC {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Stagiaire\\Documents\\Visual Studio 2017\\Projects\\PermisC\\PermisC\\PermisC\\" +
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("c:\\users\\stagiaire\\documents\\visual studio 2017\\Projects\\PermisC\\PermisC\\PermisC\\" +
         "App.xaml")]
     public partial class App : global::Xamarin.Forms.Application {
         

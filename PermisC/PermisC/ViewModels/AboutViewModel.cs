@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Windows.Input;
+
 using Xamarin.Forms;
-using PermisC.Models;
-using PermisC.Views;
 
 namespace PermisC.ViewModels
 {
     public class AboutViewModel : BaseViewModel
     {
-        
+
         public Command verifier { get; set; }
         public Command moins { get; set; }
         public Command plus { get; set; }
@@ -27,7 +25,8 @@ namespace PermisC.ViewModels
         public string PoidTrac
         {
             get { return poidTrac; }
-            set {
+            set
+            {
                 poidTrac = value;
             }
         }

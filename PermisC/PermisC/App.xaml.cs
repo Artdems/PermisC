@@ -1,5 +1,4 @@
 ﻿using PermisC.Views;
-using PermisC.Data;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -9,6 +8,7 @@ namespace PermisC
 {
     public partial class App : Application
     {
+
         public App()
         {
             InitializeComponent();

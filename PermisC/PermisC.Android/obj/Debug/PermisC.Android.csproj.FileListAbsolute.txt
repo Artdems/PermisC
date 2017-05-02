@@ -1,179 +1,77 @@
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\PermisC.Android.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\PermisC.Android.pdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\com.companyname.PermisC.apk
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\com.companyname.PermisC-Signed.apk
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\FormsViewGroup.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\PermisC.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.Animated.Vector.Drawable.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.Design.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.v4.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.v7.CardView.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.v7.MediaRouter.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.v7.RecyclerView.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.Vector.Drawable.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Core.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Platform.Android.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Platform.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Xaml.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\PermisC.pdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\PermisC.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\FormsViewGroup.pdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\FormsViewGroup.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Core.pdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Core.xml
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Core.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Platform.Android.pdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Platform.Android.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Xaml.pdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Xaml.xml
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Xaml.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\PermisC.Android.csprojResolveAssemblyReference.cache
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\PermisC.Android.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\PermisC.Android.pdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\android\bin\com.companyname.PermisC.apk
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\res\layout\tabbar.xml
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\res\layout\toolbar.xml
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\res\values\styles.xml
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\res\drawable\slideout.png
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\res\drawable-hdpi\profile_generic.png
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\res\drawable-mdpi\profile_generic.png
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\res\drawable-xhdpi\profile_generic.png
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\res\drawable-xxhdpi\profile_generic.png
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\res\drawable-xxxhdpi\profile_generic.png
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\res\values\strings.xml
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\R.cs.flag
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\uploadflags.txt
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\Java.Interop.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\Mono.Android.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\mscorlib.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\PermisC.Android.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\System.ComponentModel.Composition.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\System.Core.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\System.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\System.Net.Http.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\System.Runtime.Serialization.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\System.ServiceModel.Internals.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\System.Xml.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\android\assets\FormsViewGroup.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\android\assets\Java.Interop.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\android\assets\Mono.Android.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\android\assets\mscorlib.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\android\assets\PermisC.Android.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\android\assets\PermisC.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\android\assets\System.Core.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\android\assets\System.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\android\assets\System.Net.Http.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\android\assets\System.Xml.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\System.Xml.Linq.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\System.ComponentModel.DataAnnotations.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\bin\Debug\System.ComponentModel.DataAnnotations.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\android\assets\System.ComponentModel.DataAnnotations.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC.Android\obj\Debug\PermisC.Android.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\PermisC.Android.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\PermisC.Android.pdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\com.companyname.PermisC.apk
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\com.companyname.PermisC-Signed.apk
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\FormsViewGroup.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\PermisC.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\SQLite.Net.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\SQLite.Net.Platform.XamarinAndroid.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.Animated.Vector.Drawable.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.Compat.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.Core.UI.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.Core.Utils.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.Design.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.Fragment.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.Media.Compat.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.Transition.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.v4.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.v7.CardView.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.v7.MediaRouter.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.v7.Palette.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.v7.RecyclerView.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.Vector.Drawable.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Core.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Platform.Android.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Platform.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Xaml.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\PermisC.pdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\FormsViewGroup.pdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\FormsViewGroup.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Core.pdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Core.xml
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Core.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Platform.Android.pdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Platform.Android.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Xaml.pdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Xaml.xml
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Xaml.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\PermisC.Android.csprojResolveAssemblyReference.cache
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\XbdMerge\Xamarin.Android.Support.Compat.dll.stamp
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\XbdMerge\Xamarin.Android.Support.Core.UI.dll.stamp
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\XbdMerge\Xamarin.Android.Support.Core.Utils.dll.stamp
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\XbdMerge\Xamarin.Android.Support.Media.Compat.dll.stamp
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\XbdMerge\Xamarin.Android.Support.Fragment.dll.stamp
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\XbdMerge\Xamarin.Android.Support.Transition.dll.stamp
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\XbdMerge\Xamarin.Android.Support.v7.Palette.dll.stamp
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\XbdMerge\Xamarin.Android.Support.v7.RecyclerView.dll.stamp
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\XbdMerge\Xamarin.Android.Support.Vector.Drawable.dll.stamp
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\XbdMerge\Xamarin.Android.Support.Animated.Vector.Drawable.dll.stamp
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\XbdMerge\Xamarin.Android.Support.v7.AppCompat.dll.stamp
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\XbdMerge\Xamarin.Android.Support.Design.dll.stamp
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\XbdMerge\Xamarin.Android.Support.v7.MediaRouter.dll.stamp
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\XbdMerge\Xamarin.Android.Support.v4.dll.stamp
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\XbdMerge\Xamarin.Android.Support.v7.CardView.dll.stamp
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\PermisC.Android.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\PermisC.Android.pdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\bin\com.companyname.PermisC.apk
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\res\layout\tabbar.xml
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\res\layout\toolbar.xml
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\res\values\styles.xml
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\res\drawable\slideout.png
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\res\drawable-hdpi\profile_generic.png
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\res\drawable-mdpi\profile_generic.png
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\res\drawable-xhdpi\profile_generic.png
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\res\drawable-xxhdpi\profile_generic.png
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\res\drawable-xxxhdpi\profile_generic.png
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\res\values\strings.xml
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\R.cs.flag
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\uploadflags.txt
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\PermisC.Android.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\PermisC.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Java.Interop.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Mono.Android.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\mscorlib.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\System.ComponentModel.Composition.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\System.ComponentModel.DataAnnotations.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\System.Core.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\System.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\System.Net.Http.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\System.Runtime.Serialization.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\System.ServiceModel.Internals.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\System.Xml.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\FormsViewGroup.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\Java.Interop.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\Mono.Android.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\mscorlib.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\PermisC.Android.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\PermisC.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.ComponentModel.DataAnnotations.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Core.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Net.Http.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Xml.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\PermisC.Android.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\PermisC.Android.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\PermisC.Android.dll
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\PermisC.Android.pdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\com.companyname.PermisC.apk
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\com.companyname.PermisC-Signed.apk
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\FormsViewGroup.dll
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\PermisC.dll
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\SQLite.Net.dll
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\SQLite.Net.Platform.XamarinAndroid.dll
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.Animated.Vector.Drawable.dll
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.Design.dll
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.v4.dll
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.v7.CardView.dll
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.v7.MediaRouter.dll
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.v7.RecyclerView.dll
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Android.Support.Vector.Drawable.dll
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Core.dll
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Platform.Android.dll
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Platform.dll
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Xaml.dll
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\PermisC.pdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\FormsViewGroup.pdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Core.pdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Core.xml
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Platform.Android.pdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Xaml.pdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Xaml.xml
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\PermisC.Android.csprojResolveAssemblyReference.cache
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\PermisC.Android.dll
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\PermisC.Android.pdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\bin\com.companyname.PermisC.apk
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\res\layout\tabbar.xml
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\res\layout\toolbar.xml
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\res\values\styles.xml
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\res\drawable\slideout.png
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\res\drawable-hdpi\profile_generic.png
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\res\drawable-mdpi\profile_generic.png
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\res\drawable-xhdpi\profile_generic.png
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\res\drawable-xxhdpi\profile_generic.png
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\res\drawable-xxxhdpi\profile_generic.png
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\res\values\strings.xml
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\R.cs.flag
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\uploadflags.txt
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\PermisC.Android.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\PermisC.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\FormsViewGroup.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Core.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Platform.Android.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Xamarin.Forms.Xaml.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Java.Interop.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\Mono.Android.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\mscorlib.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\System.ComponentModel.Composition.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\System.Core.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\System.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\System.Net.Http.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\System.Runtime.Serialization.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\System.ServiceModel.Internals.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\System.Xml.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\FormsViewGroup.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\Java.Interop.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\Mono.Android.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\mscorlib.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\PermisC.Android.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\PermisC.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Core.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Net.Http.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Runtime.Serialization.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Xml.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\PermisC.Android.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\PermisC.Android.dll.mdb

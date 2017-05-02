@@ -1,9 +1,6 @@
-﻿using System;
-using System.Diagnostics;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using System.Collections.Generic;
 
-using PermisC.Helpers;
 using PermisC.Models;
 using PermisC.Views;
 using PermisC.Data;
@@ -24,21 +21,20 @@ namespace PermisC.ViewModels
         public INavigation _navigation;
         public CamionDatabase _database;
 
-        private System.Collections.Generic.IEnumerable<PermisC.Models.Remorque> Remorque;
-        public System.Collections.Generic.IEnumerable<PermisC.Models.Remorque> remorque { get { return Remorque; } set { Remorque = value; OnPropertyChanged(); } }
+        private IEnumerable<Remorque> Remorque;
+        public IEnumerable<Remorque> remorque { get { return Remorque; } set { Remorque = value; OnPropertyChanged(); } }
 
         public Tracteur _trac;
 
 
 
-        public RemorqueViewModel(INavigation navigation, Tracteur trac)
+        public RemorqueViewModel(INavigation navigation, Tracteur trac, CamionDatabase database)
         {
-            CamionDatabase database = new CamionDatabase();
 
             _trac = trac;
             _database = database;
             _navigation = navigation;
-            remorque = _database.GetRemorques();
+            _database.GetRemorquesAsync(this);
 
             Title = "Remorque";
 
@@ -55,8 +51,7 @@ namespace PermisC.ViewModels
 
             IsBusy = true;
 
-            remorque = _database.GetRemorques();
-            IsBusy = false;
+            _database.GetRemorquesAsync(this);
         }
 
 
@@ -75,7 +70,7 @@ namespace PermisC.ViewModels
 
         async void AddItem_Clicked()
         {
-            await _navigation.PushAsync(new NewRemorquePage(_database));
+            await _navigation.PushAsync(new NewRemorquePage(_database, this));
         }
     }
 }

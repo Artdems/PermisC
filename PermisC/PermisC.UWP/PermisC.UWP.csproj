@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{00D333A9-BA2B-4D9E-8675-1145315F00BA}</ProjectGuid>
+    <ProjectGuid>{3043A991-B16D-49C3-BE19-F42DDFF8B125}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PermisC.UWP</RootNamespace>
@@ -135,7 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PermisC\PermisC.csproj">
-      <Project>{31092069-6f8a-44ac-ab80-f822aaa199a8}</Project>
+      <Project>{bed41b2c-5732-485b-9dc8-395059bf5bbb}</Project>
       <Name>PermisC</Name>
     </ProjectReference>
   </ItemGroup>

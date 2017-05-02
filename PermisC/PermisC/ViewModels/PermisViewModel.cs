@@ -1,9 +1,4 @@
 ﻿using PermisC.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PermisC.ViewModels
 {
@@ -19,7 +14,7 @@ namespace PermisC.ViewModels
 
         public Permis(Tracteur trac = null, Remorque rem = null)
         {
-            if ( rem == null)
+            if (rem == null)
             {
                 poid = double.Parse(trac.PoidTracteur);
                 ess = int.Parse(trac.Essieux);
@@ -27,8 +22,8 @@ namespace PermisC.ViewModels
             }
             else
             {
-                poid = double.Parse(trac.PoidTracteur)+double.Parse(rem.PoidRemorque);
-                ess = int.Parse(trac.Essieux)+int.Parse(rem.Essieux);
+                poid = double.Parse(trac.PoidTracteur) + double.Parse(rem.PoidRemorque);
+                ess = int.Parse(trac.Essieux) + int.Parse(rem.Essieux);
                 poidRemorque = double.Parse(rem.PoidRemorque);
             }
 

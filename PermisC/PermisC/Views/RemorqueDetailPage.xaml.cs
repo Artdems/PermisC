@@ -1,13 +1,13 @@
 ﻿
 using PermisC.ViewModels;
-using System;
+
 using Xamarin.Forms;
 
 namespace PermisC.Views
 {
     public partial class RemorqueDetailPage : ContentPage
     {
-        
+
         RemorqueDetailViewModel viewModel;
 
         // Note - The Xamarin.Forms Previewer requires a default, parameterless constructor to render a page.
@@ -23,6 +23,6 @@ namespace PermisC.Views
             BindingContext = this.viewModel = viewModel;
         }
 
-        
+
     }
 }

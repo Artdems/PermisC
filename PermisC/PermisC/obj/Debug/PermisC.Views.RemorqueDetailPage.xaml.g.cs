@@ -11,7 +11,7 @@
 namespace PermisC.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Stagiaire\\Documents\\Visual Studio 2017\\Projects\\PermisC\\PermisC\\PermisC\\" +
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("c:\\users\\stagiaire\\documents\\visual studio 2017\\Projects\\PermisC\\PermisC\\PermisC\\" +
         "Views\\RemorqueDetailPage.xaml")]
     public partial class RemorqueDetailPage : global::Xamarin.Forms.ContentPage {
         

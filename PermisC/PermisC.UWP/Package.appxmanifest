@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="686ac57b-d765-44dc-96a7-3d11ba72b575"
-    Publisher="CN=Stagiaire"
+    Name="eb22af6b-02b8-40d5-a14d-ad44bcf81657"
+    Publisher="CN=stagiaire"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="686ac57b-d765-44dc-96a7-3d11ba72b575" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="eb22af6b-02b8-40d5-a14d-ad44bcf81657" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>PermisC.UWP</DisplayName>
-    <PublisherDisplayName>Stagiaire</PublisherDisplayName>
+    <PublisherDisplayName>stagiaire</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 

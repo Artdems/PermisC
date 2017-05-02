@@ -1,8 +1,6 @@
 ﻿
-using NUnit.Framework;
 using PermisC.ViewModels;
-using System;
-using System.Text.RegularExpressions;
+
 using Xamarin.Forms;
 
 namespace PermisC.Views
@@ -14,7 +12,7 @@ namespace PermisC.Views
         public AboutPage()
         {
             InitializeComponent();
-            BindingContext =  viewModel = new AboutViewModel();
+            BindingContext = viewModel = new AboutViewModel();
         }
     }
 }

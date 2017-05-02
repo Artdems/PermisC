@@ -1,7 +1,6 @@
-﻿using System;
-
-using PermisC.Models;
+﻿using PermisC.Models;
 using PermisC.ViewModels;
+using PermisC.Data;
 
 using Xamarin.Forms;
 
@@ -11,11 +10,11 @@ namespace PermisC.Views
     {
         RemorqueViewModel viewModel;
 
-        public RemorquePage(Tracteur trac)
+        public RemorquePage(Tracteur trac, CamionDatabase database)
         {
             InitializeComponent();
 
-            BindingContext = viewModel = new RemorqueViewModel(this.Navigation,trac);
+            BindingContext = viewModel = new RemorqueViewModel(this.Navigation, trac, database);
         }
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
@@ -24,7 +23,7 @@ namespace PermisC.Views
             if (item == null)
                 return;
 
-            await Navigation.PushAsync(new RemorqueDetailPage(new RemorqueDetailViewModel(item, viewModel,this.Navigation,viewModel._trac)));
+            await Navigation.PushAsync(new RemorqueDetailPage(new RemorqueDetailViewModel(item, viewModel, this.Navigation, viewModel._trac)));
 
             // Manually deselect item
             ItemsListView.SelectedItem = null;

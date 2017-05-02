@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using PermisC.ViewModels;
@@ -27,7 +21,7 @@ namespace PermisC.Views
         {
             InitializeComponent();
 
-            BindingContext = viewModel = new Permis(trac,rem);
+            BindingContext = viewModel = new Permis(trac, rem);
         }
     }
 }

@@ -2,8 +2,6 @@
 using PermisC.Models;
 using PermisC._meta;
 
-using System.Text.RegularExpressions;
-
 using Xamarin.Forms;
 
 namespace PermisC.ViewModels
@@ -15,11 +13,13 @@ namespace PermisC.ViewModels
         public Command save { get; set; }
 
         public INavigation _navigation;
+        ItemsViewModel _viewModel;
 
 
-        public NewItemViewModel(INavigation navigation, CamionDatabase database)
+        public NewItemViewModel(INavigation navigation, CamionDatabase database, ItemsViewModel viewModel)
         {
             _navigation = navigation;
+            _viewModel = viewModel;
 
             plus = new Command(() => Plus());
             moins = new Command(() => Moins());
@@ -62,8 +62,9 @@ namespace PermisC.ViewModels
 
             Erreur = Meta.Tracteur(Item, Erreur, database);
 
-            if(Erreur == "")
+            if (Erreur == "")
             {
+                _viewModel.Refresh();
                 _navigation.PopAsync();
             }
         }

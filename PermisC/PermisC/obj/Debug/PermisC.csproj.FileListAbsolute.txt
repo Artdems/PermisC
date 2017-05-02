@@ -1,60 +1,27 @@
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC\bin\Debug\PermisC.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC\bin\Debug\PermisC.pdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC\bin\Debug\Xamarin.Forms.Core.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC\bin\Debug\Xamarin.Forms.Platform.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC\bin\Debug\Xamarin.Forms.Xaml.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC\bin\Debug\Xamarin.Forms.Core.pdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC\bin\Debug\Xamarin.Forms.Core.xml
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC\bin\Debug\Xamarin.Forms.Platform.pdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC\bin\Debug\Xamarin.Forms.Xaml.pdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC\bin\Debug\Xamarin.Forms.Xaml.xml
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC\obj\Debug\PermisC.csprojResolveAssemblyReference.cache
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC\obj\Debug\PermisC.App.xaml.g.cs
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC\obj\Debug\PermisC.Views.AboutPage.xaml.g.cs
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC\obj\Debug\PermisC.Views.ItemDetailPage.xaml.g.cs
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC\obj\Debug\PermisC.Views.ItemsPage.xaml.g.cs
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC\obj\Debug\PermisC.Views.NewItemPage.xaml.g.cs
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC\obj\Debug\PermisC.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC\obj\Debug\PermisC.pdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC\obj\Debug\PermisC.Views.RemorquePage.xaml.g.cs
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC\obj\Debug\PermisC.Views.RemorqueDetailPage.xaml.g.cs
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC\obj\Debug\PermisC.Views.NewRemorquePage.xaml.g.cs
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC\bin\Debug\nunit.framework.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC\bin\Debug\Xamarin.UITest.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC\bin\Debug\nunit.framework.xml
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC\bin\Debug\Xamarin.UITest.xml
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC\bin\Debug\System.ComponentModel.DataAnnotations.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC\obj\Debug\PermisC.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC - Copie\PermisC\PermisC\bin\Debug\PermisC.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\PermisC.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\PermisC.pdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\Mono.Android.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\nunit.framework.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\SQLite.Net.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\System.ComponentModel.DataAnnotations.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\Xamarin.Forms.Core.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\Xamarin.Forms.Platform.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\Xamarin.Forms.Xaml.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\Xamarin.UITest.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\Mono.Android.xml
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\nunit.framework.xml
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\Xamarin.Forms.Core.pdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\Xamarin.Forms.Core.xml
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\Xamarin.Forms.Platform.pdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\Xamarin.Forms.Xaml.pdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\Xamarin.Forms.Xaml.xml
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\Xamarin.UITest.xml
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.App.xaml.g.cs
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.Views.AboutPage.xaml.g.cs
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.Views.ItemDetailPage.xaml.g.cs
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.Views.ItemsPage.xaml.g.cs
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.Views.NewItemPage.xaml.g.cs
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.Views.RemorquePage.xaml.g.cs
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.Views.RemorqueDetailPage.xaml.g.cs
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.Views.NewRemorquePage.xaml.g.cs
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.pdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.csprojResolveAssemblyReference.cache
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.Views.PermisPage.xaml.g.cs
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.dll.mdb
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\PermisC.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\PermisC.dll
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\PermisC.pdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\SQLite.Net.dll
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\Xamarin.Forms.Core.dll
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\Xamarin.Forms.Platform.dll
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\Xamarin.Forms.Xaml.dll
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\Xamarin.Forms.Core.pdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\Xamarin.Forms.Core.xml
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\Xamarin.Forms.Platform.pdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\Xamarin.Forms.Xaml.pdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\Xamarin.Forms.Xaml.xml
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.csprojResolveAssemblyReference.cache
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.App.xaml.g.cs
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.Views.AboutPage.xaml.g.cs
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.Views.ItemDetailPage.xaml.g.cs
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.Views.ItemsPage.xaml.g.cs
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.Views.NewItemPage.xaml.g.cs
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.Views.NewRemorquePage.xaml.g.cs
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.Views.PermisPage.xaml.g.cs
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.Views.RemorqueDetailPage.xaml.g.cs
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.Views.RemorquePage.xaml.g.cs
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.dll
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.pdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\PermisC.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.dll.mdb
+c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\PermisC.dll.mdb
