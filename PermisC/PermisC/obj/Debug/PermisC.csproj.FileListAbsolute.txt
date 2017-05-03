@@ -21,7 +21,6 @@ c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC
 c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.Views.RemorquePage.xaml.g.cs
 c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.dll
 c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.pdb
-c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.dll.mdb
-c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\PermisC.dll.mdb
-c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.dll.mdb
-c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\PermisC.dll.mdb
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\bouncy_castle_hmac_sha_pcl.dll
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.dll.mdb
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\PermisC.dll.mdb

@@ -73,5 +73,6 @@ c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC
 c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
 c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
-c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\PermisC.Android.dll.mdb
-c:\users\stagiaire\documents\visual studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\PermisC.Android.dll.mdb
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\bouncy_castle_hmac_sha_pcl.dll
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\PermisC.Android.dll.mdb
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\bin\Debug\PermisC.Android.dll.mdb

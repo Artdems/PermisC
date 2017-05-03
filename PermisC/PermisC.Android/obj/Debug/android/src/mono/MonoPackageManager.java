@@ -115,6 +115,7 @@ class MonoPackageManager_Resources {
 		"Xamarin.Forms.Platform.dll",
 		"Xamarin.Forms.Xaml.dll",
 		"PermisC.dll",
+		"bouncy_castle_hmac_sha_pcl.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};

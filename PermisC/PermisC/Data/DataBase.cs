@@ -6,6 +6,7 @@ using System.Linq;
 using System.Diagnostics;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Security.Cryptography;
 
 using Xamarin.Forms;
 
@@ -14,7 +15,6 @@ using SQLite.Net;
 using PermisC.Models;
 using PermisC.ViewModels;
 
-//using PCLCrypto;
 
 namespace PermisC.Data
 {
@@ -22,95 +22,82 @@ namespace PermisC.Data
     {
         private SQLiteConnection _connection;
         private bool IsOnline;
-        private HttpClient Client = new HttpClient();
-        private string user = "client";
-        private string mdp = "6wdeuv";
+        private Api api = new Api();
+        
 
 
 
         public CamionDatabase()
         {
-            Client.BaseAddress = new Uri("http://192.168.10.183/API/api.php?action=");
             _connection = DependencyService.Get<ISQLite>().GetConnection();
             _connection.CreateTable<Tracteur>();
             _connection.CreateTable<Remorque>();
             Int32 unixTimestamp = (Int32)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
+           
+
         }
 
-        //private static string hash_hmacSha1(string data, string key)
+        
+
+        //static string ByteToString(byte[] buff)
         //{
-        //    byte[] keyBytes = Encoding.UTF8.GetBytes(key);
-        //    byte[] dataBytes = Encoding.UTF8.GetBytes(data);
-
-        //    var algorithm = WinRTCrypto.MacAlgorithmProvider.OpenAlgorithm(MacAlgorithm.HmacSha1);
-
-        //    CryptographicHash hasher = algorithm.CreateHash(keyBytes);
-        //    hasher.Append(dataBytes);
-
-        //    byte[] mac = hasher.GetValueAndReset();
-
-        //    StringBuilder sBuilder = new StringBuilder();
-        //    for (int i = 0; i < mac.Length; i++)
-        //    {
-        //        sBuilder.Append(mac[i].ToString("X2"));
-        //    }
-
-        //    return sBuilder.ToString().ToLower();
+        //    string sbinary = "";
+        //    for (int i = 0; i < buff.Length; i++)
+        //        sbinary += buff[i].ToString("X2"); /* hex format */
+        //    return sbinary;
         //}
 
         public async Task GetTracteursAsync(ItemsViewModel viewModel)
         {
-            string signature = user + mdp;
-            //Debug.WriteLine(hash_hmacSha1(signature, mdp));
+            //string signature = "r";//hash_hmacSha1((Client + mdp), mdp);
+            //Debug.WriteLine("signature :");
+            //Debug.WriteLine(signature);
 
-            Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("text/html"));
-            var response = Client.GetAsync("getTracteurs").Result;
-            if (response.IsSuccessStatusCode)
+            
+
+            var json = api.GET("getTracteurs", "getTracteurs");
+            if (!string.IsNullOrWhiteSpace(json))
             {
-                var json = response.Content.ReadAsStringAsync().Result;
-                if (!string.IsNullOrWhiteSpace(json))
+                DeleteAllTract();
+                Boolean immat = false;
+                Boolean poid = false;
+                Boolean ess = false;
+                Tracteur item = new Tracteur();
+
+                Debug.WriteLine("debut foreach");
+
+                string[] tracts = json.Split('[', '{', '}', '"', ',', ':');
+                foreach (string tract in tracts)
                 {
-                    DeleteAllTract();
-                    Boolean immat = false;
-                    Boolean poid = false;
-                    Boolean ess = false;
-                    Tracteur item = new Tracteur();
-
-                    Debug.WriteLine("debut foreach");
-
-                    string[] tracts = json.Split('[', '{', '}', '"', ',', ':');
-                    foreach (string tract in tracts)
+                    if (!string.IsNullOrWhiteSpace(tract))
                     {
-                        if (!string.IsNullOrWhiteSpace(tract))
+                        if (immat)
                         {
-                            if (immat)
-                            {
-                                immat = false;
-                                item.Immatriculation = tract;
-                            }
-                            else if (poid)
-                            {
-                                poid = false;
-                                item.PoidTracteur = tract;
-                            }
-                            else if (ess)
-                            {
-                                ess = false;
-                                item.Essieux = tract;
-                                AddLocalTracteur(item);
-                            }
-                            else if (tract.Contains("Immatriculation"))
-                            {
-                                immat = true;
-                            }
-                            else if (tract.Contains("PoidTracteur"))
-                            {
-                                poid = true;
-                            }
-                            else if (tract.Contains("Essieux"))
-                            {
-                                ess = true;
-                            }
+                            immat = false;
+                            item.Immatriculation = tract;
+                        }
+                        else if (poid)
+                        {
+                            poid = false;
+                            item.PoidTracteur = tract;
+                        }
+                        else if (ess)
+                        {
+                            ess = false;
+                            item.Essieux = tract;
+                            AddLocalTracteur(item);
+                        }
+                        else if (tract.Contains("Immatriculation"))
+                        {
+                            immat = true;
+                        }
+                        else if (tract.Contains("PoidTracteur"))
+                        {
+                            poid = true;
+                        }
+                        else if (tract.Contains("Essieux"))
+                        {
+                            ess = true;
                         }
                     }
                 }
@@ -141,9 +128,11 @@ namespace PermisC.Data
 
         public void DeleteTracteur(Tracteur item)
         {
-            Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("text/html"));
-            var response = Client.GetAsync("DeleteTracteur&immat={item.Immatriculation}").Result;
-            _connection.Delete<Tracteur>(item.ID);
+            var response = api.GET("DeleteTracteur&immat={item.Immatriculation}", "DeleteTracteur");
+            if (!string.IsNullOrWhiteSpace(response))
+            {
+                _connection.Delete<Tracteur>(item.ID);
+            }
         }
         public void AddLocalTracteur(Tracteur item)
         {
@@ -153,10 +142,11 @@ namespace PermisC.Data
 
         public void AddTracteur(Tracteur item)
         {
-            int id = _connection.Table<Tracteur>().Count();
-            Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("text/html"));
-            var response = Client.GetAsync("AddTracteur&Immat={item.Immatriculation}&Poid={item.PoidTracteur}&Ess={item.Essieux}").Result;
-            _connection.Insert(item);
+            var response = api.GET("AddTracteur&Immat={item.Immatriculation}&Poid={item.PoidTracteur}&Ess={item.Essieux}", "AddTracteur");
+            if (!string.IsNullOrWhiteSpace(response))
+            {
+                _connection.Insert(item);
+            }
         }
 
         //public IEnumerable<Remorque> GetRemorques()
@@ -204,54 +194,49 @@ namespace PermisC.Data
 
         public async Task GetRemorquesAsync(RemorqueViewModel viewModel)
         {
-            Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("text/html"));
-            var response = Client.GetAsync("getRemorques").Result;
-            if (response.IsSuccessStatusCode)
+            var json = api.GET("getRemorques", "getRemorques");
+            if (!string.IsNullOrWhiteSpace(json))
             {
-                var json = response.Content.ReadAsStringAsync().Result;
-                if (!string.IsNullOrWhiteSpace(json))
+                DeleteAllRem();
+                Boolean immat = false;
+                Boolean poid = false;
+                Boolean ess = false;
+                Remorque item = new Remorque();
+
+                Debug.WriteLine("debut foreach");
+
+                string[] rems = json.Split('[', '{', '}', '"', ',', ':');
+                foreach (string rem in rems)
                 {
-                    DeleteAllRem();
-                    Boolean immat = false;
-                    Boolean poid = false;
-                    Boolean ess = false;
-                    Remorque item = new Remorque();
-
-                    Debug.WriteLine("debut foreach");
-
-                    string[] rems = json.Split('[', '{', '}', '"', ',', ':');
-                    foreach (string rem in rems)
+                    if (!string.IsNullOrWhiteSpace(rem))
                     {
-                        if (!string.IsNullOrWhiteSpace(rem))
+                        if (immat)
                         {
-                            if (immat)
-                            {
-                                immat = false;
-                                item.Immatriculation = rem;
-                            }
-                            else if (poid)
-                            {
-                                poid = false;
-                                item.PoidRemorque = rem;
-                            }
-                            else if (ess)
-                            {
-                                ess = false;
-                                item.Essieux = rem;
-                                AddLocalRemorque(item);
-                            }
-                            else if (rem.Contains("Immatriculation"))
-                            {
-                                immat = true;
-                            }
-                            else if (rem.Contains("PoidRemorque"))
-                            {
-                                poid = true;
-                            }
-                            else if (rem.Contains("Essieux"))
-                            {
-                                ess = true;
-                            }
+                            immat = false;
+                            item.Immatriculation = rem;
+                        }
+                        else if (poid)
+                        {
+                            poid = false;
+                            item.PoidRemorque = rem;
+                        }
+                        else if (ess)
+                        {
+                            ess = false;
+                            item.Essieux = rem;
+                            AddLocalRemorque(item);
+                        }
+                        else if (rem.Contains("Immatriculation"))
+                        {
+                            immat = true;
+                        }
+                        else if (rem.Contains("PoidRemorque"))
+                        {
+                            poid = true;
+                        }
+                        else if (rem.Contains("Essieux"))
+                        {
+                            ess = true;
                         }
                     }
                 }
@@ -282,9 +267,11 @@ namespace PermisC.Data
 
         public void DeleteRemorque(Remorque item)
         {
-            Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("text/html"));
-            var response = Client.GetAsync("DeleteRemorque&immat={item.Immatriculation}").Result;
-            _connection.Delete<Remorque>(item.ID);
+            var response = api.GET("DeleteRemorque&immat={item.Immatriculation}", "DeleteRemorque");
+            if (!string.IsNullOrWhiteSpace(response))
+            {
+                _connection.Delete<Remorque>(item.ID);
+            }
         }
         public void AddLocalRemorque(Remorque item)
         {
@@ -294,9 +281,11 @@ namespace PermisC.Data
 
         public void AddRemorque(Remorque item)
         {
-            Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("text/html"));
-            var response = Client.GetAsync("AddRemorque&Immat={item.Immatriculation}&Poid={item.PoidRemorque}&Ess={item.Essieux}").Result;
-            _connection.Insert(item);
+            var response = api.GET("AddRemorque&Immat={item.Immatriculation}&Poid={item.PoidRemorque}&Ess={item.Essieux}", "AddRemorque");
+            if (!string.IsNullOrWhiteSpace(response))
+            {
+                _connection.Insert(item);
+            }
         }
     }
 }

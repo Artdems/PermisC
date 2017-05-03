@@ -24658,23 +24658,23 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "c:\\users\\stagiaire\\documents\\visual studio 2017\\Projects\\PermisC\\PermisC\\PermisC.UWP\\PermisC.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\Stagiaire\\Documents\\Visual Studio 2017\\Projects\\PermisC\\PermisC\\PermisC.UWP\\PermisC.UWP.csproj",
       "projectName": "PermisC.UWP",
-      "projectPath": "c:\\users\\stagiaire\\documents\\visual studio 2017\\Projects\\PermisC\\PermisC\\PermisC.UWP\\PermisC.UWP.csproj",
-      "projectJsonPath": "c:\\users\\stagiaire\\documents\\visual studio 2017\\Projects\\PermisC\\PermisC\\PermisC.UWP\\project.json",
+      "projectPath": "C:\\Users\\Stagiaire\\Documents\\Visual Studio 2017\\Projects\\PermisC\\PermisC\\PermisC.UWP\\PermisC.UWP.csproj",
+      "projectJsonPath": "C:\\Users\\Stagiaire\\Documents\\Visual Studio 2017\\Projects\\PermisC\\PermisC\\PermisC.UWP\\project.json",
       "projectStyle": "ProjectJson",
       "frameworks": {
         "uap10.0": {
           "projectReferences": {
-            "c:\\users\\stagiaire\\documents\\visual studio 2017\\Projects\\PermisC\\PermisC\\PermisC\\PermisC.csproj": {
-              "projectPath": "c:\\users\\stagiaire\\documents\\visual studio 2017\\Projects\\PermisC\\PermisC\\PermisC\\PermisC.csproj"
+            "C:\\Users\\Stagiaire\\Documents\\Visual Studio 2017\\Projects\\PermisC\\PermisC\\PermisC\\PermisC.csproj": {
+              "projectPath": "C:\\Users\\Stagiaire\\Documents\\Visual Studio 2017\\Projects\\PermisC\\PermisC\\PermisC\\PermisC.csproj"
             }
           }
         }
       }
     },
     "dependencies": {
-      "Microsoft.NETCore.UniversalWindowsPlatform": "[5.3.3, )",
+      "Microsoft.NETCore.UniversalWindowsPlatform": "5.3.3",
       "Xamarin.Forms": "2.3.4.231"
     },
     "frameworks": {

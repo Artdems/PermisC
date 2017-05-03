@@ -5,6 +5,9 @@ using PermisC.Views;
 using PermisC.Data;
 
 using Xamarin.Forms;
+using System.Security.Cryptography;
+using System.Diagnostics;
+using System.Text;
 
 namespace PermisC.ViewModels
 {
