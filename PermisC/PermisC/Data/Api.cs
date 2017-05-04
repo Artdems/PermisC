@@ -27,6 +27,7 @@ namespace PermisC.Data
 
             Debug.WriteLine("Result : {0}", code);
 
+            Client.DefaultRequestHeaders.Accept.Clear();
             Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             var response = Client.GetAsync("http://192.168.10.183/API/api.php?action="+test +"&user="+user+"&timestamp="+timestamp+"&signature="+code).Result;
             if (response.IsSuccessStatusCode)
