@@ -1,12 +1,12 @@
 ﻿using System;
 using System.IO;
 using Xamarin.Forms;
-using PermisC.Android;
+using PermisC.Droid;
 using PermisC.Data;
 
 [assembly: Dependency(typeof(SQLite_Android))]
 
-namespace PermisC.Android
+namespace PermisC.Droid
 {
     public class SQLite_Android : ISQLite
     {

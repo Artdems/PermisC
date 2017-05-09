@@ -9,9 +9,9 @@
     <ContentPage.Content>
         <StackLayout Spacing="20" Padding="15">
             <Label Text="Immatriculation :" FontSize="Medium" />
-            <Entry Text="{Binding Item.Immatriculation}" FontSize="Small" />
+            <Entry Placeholder="AA-111-BB" Text="{Binding Item.Immatriculation}" FontSize="Small" />
             <Label Text="Poid de la remorque" FontSize="Medium" />
-            <Editor Text="{Binding Item.PoidRemorque}" FontSize="Small" Margin="0" />
+            <Editor Keyboard="Numeric" Text="{Binding Item.PoidRemorque}" FontSize="Small" Margin="0" />
             <Label Text="Nombre d'essieux" FontSize="Medium" />
             <StackLayout Orientation = "Horizontal" HorizontalOptions="Center">
                 <Button Text="-" Command="{Binding moins}"/>

@@ -6,21 +6,23 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Supprimer" Command="{Binding delet}" />
     </ContentPage.ToolbarItems>
-    <StackLayout Spacing="20" Padding="15" HorizontalOptions="Center">
-        <StackLayout Orientation = "Horizontal" HorizontalOptions="Center">
+    <ScrollView>
+        <StackLayout Spacing="20" Padding="15" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <Label Text=" Immatriculation : " FontSize="Medium"/>
-            <Label Text="{Binding Item.Immatriculation}" FontSize="Medium"/>
-        </StackLayout>
-        <StackLayout Orientation = "Horizontal" HorizontalOptions="Center">
+            <Label Text="{Binding Item.Immatriculation}" FontSize="Small"/>
             <Label Text=" Poid du tracteur : " FontSize="Medium"/>
-            <Label Text="{Binding Item.PoidTracteur}" FontSize="Medium"/>
-            <Label Text=" Kilogramme" FontSize="Medium"/>
+            <StackLayout Orientation = "Horizontal" HorizontalOptions="Start">
+                <Label Text="{Binding Item.PoidTracteur}" FontSize="Small"/>
+                <Label Text=" Kilogramme" FontSize="Small"/>
+            </StackLayout>
+            <StackLayout Orientation = "Horizontal" HorizontalOptions="Start">
+                <Label Text="Nombre d'essieux : " FontSize="Medium"/>
+                <Label Text="{Binding Item.Essieux}" FontSize="Medium"/>
+            </StackLayout>
+            <StackLayout HorizontalOptions="FillAndExpand">
+                <Button Text="Conduire" Command="{Binding vide}"/>
+                <Button Text="Ajouter un Remorque" Command="{Binding remorque}"/>
+            </StackLayout>
         </StackLayout>
-        <StackLayout Orientation = "Horizontal" HorizontalOptions="Center">
-            <Label Text="Nombre d'essieux : " FontSize="Medium"/>
-            <Label Text="{Binding Item.Essieux}" FontSize="Medium"/>
-        </StackLayout>
-        <Button Text="Conduire a vide" Command="{Binding vide}"/>
-        <Button Text="Ajouter une remorque" Command="{Binding remorque}"/>
-    </StackLayout>
+    </ScrollView>
 </ContentPage>

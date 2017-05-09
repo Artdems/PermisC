@@ -6,20 +6,22 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Supprimer" Command="{Binding delet}" />
     </ContentPage.ToolbarItems>
-    <StackLayout Spacing="20" Padding="15" HorizontalOptions="Center">
-        <StackLayout Orientation = "Horizontal" HorizontalOptions="Center">
+    <ScrollView>
+        <StackLayout Spacing="20" Padding="15" HorizontalOptions="Start">
             <Label Text=" Immatriculation : " FontSize="Medium"/>
-            <Label Text="{Binding Item.Immatriculation}" FontSize="Medium"/>
-        </StackLayout>
-        <StackLayout Orientation = "Horizontal" HorizontalOptions="Center">
+            <Label Text="{Binding Item.Immatriculation}" FontSize="Small"/>
             <Label Text=" Poid du tracteur : " FontSize="Medium"/>
-            <Label Text="{Binding Item.PoidTracteur}" FontSize="Medium"/>
-            <Label Text=" Kilogramme" FontSize="Medium"/>
+            <StackLayout Orientation = "Horizontal" HorizontalOptions="Start">
+                <Label Text="{Binding Item.PoidRemorque}" FontSize="Small"/>
+                <Label Text=" Kilogramme" FontSize="Small"/>
+            </StackLayout>
+            <StackLayout Orientation = "Horizontal" HorizontalOptions="Start">
+                <Label Text="Nombre d'essieux : " FontSize="Medium"/>
+                <Label Text="{Binding Item.Essieux}" FontSize="Medium"/>
+            </StackLayout>
+            <StackLayout Orientation = "Horizontal" HorizontalOptions="Center">
+                <Button Text="Conduire" Command="{Binding conduir}"/>
+            </StackLayout>
         </StackLayout>
-        <StackLayout Orientation = "Horizontal" HorizontalOptions="Center">
-            <Label Text="Nombre d'essieux : " FontSize="Medium"/>
-            <Label Text="{Binding Item.Essieux}" FontSize="Medium"/>
-        </StackLayout>
-        <Button Text="Conduire" Command="{Binding conduir}"/>
-    </StackLayout>
+    </ScrollView>
 </ContentPage>

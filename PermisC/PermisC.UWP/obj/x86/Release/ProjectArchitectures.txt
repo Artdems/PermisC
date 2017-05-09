@@ -1,0 +1,2 @@
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\PermisC.UWP.csproj;x86
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\PermisC.csproj;neutral

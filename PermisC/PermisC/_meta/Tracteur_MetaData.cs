@@ -12,33 +12,54 @@ namespace PermisC._meta
         public string Tracteur(Tracteur item, string erreur, CamionDatabase database)
         {
 
-            var RegImmat = Regex.IsMatch(item.Immatriculation, "[A-Z]{2}[-][0-9]{3}[-][A-Z]{2}");
+            var RegImmat = Regex.IsMatch(item.Immatriculation, "[a-zA-Z]{2}[-][0-9]{3}[-][a-zA-Z]{2}");
+            int Num;
+            var RegPoid = int.TryParse(item.PoidTracteur, out Num);
             if (RegImmat)
             {
-
-                int Num;
-                var RegPoid = int.TryParse(item.PoidTracteur, out Num);
+                item.Immatriculation = item.Immatriculation.ToUpper();
+                
                 if (RegPoid)
                 {
-                    Tracteur existant = null;
-                    if ((existant = database.GetTracteurImmat(item.Immatriculation)) == null)
+                    var RegNull = int.Parse(item.PoidTracteur);
+                    if (RegNull != 0)
                     {
-                        database.AddTracteur(item);
+                        Tracteur existant = null;
+                        if ((existant = database.GetTracteurImmat(item.Immatriculation)) == null)
+                        {
+                            database.AddTracteur(item);
 
+                        }
+                        else
+                        {
+                            erreur = "-Cette imatriculation a deja été enregistré";
+                        }
                     }
                     else
                     {
-                        erreur = "Cette imatriculation a deja été enregistré";
+                        erreur = "-Le poid du tracteur ne peut pas etre null";
                     }
                 }
                 else
                 {
-                    erreur = "Le poid du tracteur doit etre un chiffre";
+                    erreur = "-Le poid du tracteur ne peut pas etre null";
+                }
+            }
+            else if (RegPoid)
+            {
+                var RegNull = int.Parse(item.PoidTracteur);
+                if (RegNull != 0)
+                {
+                    erreur = "-L'immatriculation doit etre de la frome 'AA-666-BB'";
+                }
+                else
+                {
+                    erreur = "-L'immatriculation doit etre de la frome 'AA-666-BB'\n-Le poid du tracteur ne peut pas etre null";
                 }
             }
             else
             {
-                erreur = "L'immatriculation doit etre de la frome 'AA-666-BB'";
+                erreur = "-L'immatriculation doit etre de la frome 'AA-666-BB'\n-Le poid du tracteur ne peut pas etre null";
             }
 
             return erreur;

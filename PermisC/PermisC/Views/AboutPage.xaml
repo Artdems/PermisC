@@ -4,20 +4,22 @@
              x:Class="PermisC.Views.AboutPage"
              Title="{Binding Title}">
     <ContentPage.Content>
-        <StackLayout Spacing="20" Padding="15">
-            <Label Text="Poid du Tracteur (en Kilogramme) :" FontSize="Small"/>
-            <Entry Text="{Binding PoidTrac}" FontSize="Small" />
-            <Label Text="Poid de la Remorque (en Kilogramme) :" FontSize="Small"/>
-            <Entry Text="{Binding PoidRem}" FontSize="Small" />
-            <Label Text="Nomvbe d'éssieux :" FontSize="Small"/>
-            <StackLayout Orientation = "Horizontal" HorizontalOptions="Center">
-                <Button Text="-" Command="{Binding moins}"/>
-                <Label Text="{Binding NbEss}" FontSize="Small" VerticalOptions="Center"/>
-                <Button Text="+" Command="{Binding plus}"/>
+        <ScrollView>
+            <StackLayout Spacing="20" Padding="15">
+                <Label Text="Poid du Tracteur (en Kilogramme) :" FontSize="Small"/>
+                <Entry Keyboard="Numeric" Text="{Binding PoidTrac}" FontSize="Small" />
+                <Label Text="Poid de la Remorque (en Kilogramme) :" FontSize="Small"/>
+                <Entry Keyboard="Numeric" Text="{Binding PoidRem}" FontSize="Small"/>
+                <Label Text="Nomvbe d'éssieux :" FontSize="Small"/>
+                <StackLayout Orientation = "Horizontal" HorizontalOptions="Center">
+                    <Button Text="-" Command="{Binding moins}"/>
+                    <Label Text="{Binding NbEss}" FontSize="Small" VerticalOptions="Center"/>
+                    <Button Text="+" Command="{Binding plus}"/>
+                </StackLayout>
+                <Button Text="Valider" Command="{Binding verifier}"/>
+                <Label Text="{Binding Result}" FontSize="Medium" TextColor="{Binding Couleur}"  HorizontalOptions="Center"/>
+                <Label Text="{Binding FCOS}" FontSize="Medium" HorizontalOptions="Center"/>
             </StackLayout>
-            <Button Text="Valider" Command="{Binding verifier}"/>
-            <Label Text="{Binding Result}" FontSize="Medium" TextColor="{Binding Couleur}"  HorizontalOptions="Center"/>
-            <Label Text="{Binding FCOS}" FontSize="Medium" HorizontalOptions="Center"/>
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

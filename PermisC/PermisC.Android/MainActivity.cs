@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using System;
 
 namespace PermisC.Droid
 {
@@ -13,7 +14,8 @@ namespace PermisC.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
-
+            //bool co = Connection.IsConnected(Android.App.Application.Context);
+            //Console.WriteLine(co);
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
             LoadApplication(new App());

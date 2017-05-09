@@ -3,11 +3,11 @@ using System.IO;
 using SQLite;
 using Xamarin.Forms;
 using PermisC.Data;
-using PerisC.IOS;
+using PermisC.IOS;
 
 [assembly: Dependency(typeof(SQLite_iOS))]
 
-namespace PerisC.IOS
+namespace PermisC.IOS
 {
     public class SQLite_iOS : ISQLite
     {

@@ -64,8 +64,6 @@ namespace PermisC.Data
                 Boolean ess = false;
                 Tracteur item = new Tracteur();
 
-                Debug.WriteLine("debut foreach");
-
                 string[] tracts = json.Split('[', '{', '}', '"', ',', ':');
                 foreach (string tract in tracts)
                 {
@@ -128,7 +126,7 @@ namespace PermisC.Data
 
         public void DeleteTracteur(Tracteur item)
         {
-            var response = api.GET("DeleteTracteur&immat={item.Immatriculation}", "DeleteTracteur");
+            var response = api.GET("DeleteTracteur&immat="+item.Immatriculation, "DeleteTracteur");
             if (!string.IsNullOrWhiteSpace(response))
             {
                 _connection.Delete<Tracteur>(item.ID);
@@ -142,7 +140,7 @@ namespace PermisC.Data
 
         public void AddTracteur(Tracteur item)
         {
-            var response = api.GET("AddTracteur&Immat={item.Immatriculation}&Poid={item.PoidTracteur}&Ess={item.Essieux}", "AddTracteur");
+            var response = api.GET("AddTracteur&Immat="+item.Immatriculation+"&Poid="+item.PoidTracteur+"&Ess="+item.Essieux, "AddTracteur");
             if (!string.IsNullOrWhiteSpace(response))
             {
                 _connection.Insert(item);
@@ -202,8 +200,6 @@ namespace PermisC.Data
                 Boolean poid = false;
                 Boolean ess = false;
                 Remorque item = new Remorque();
-
-                Debug.WriteLine("debut foreach");
 
                 string[] rems = json.Split('[', '{', '}', '"', ',', ':');
                 foreach (string rem in rems)
@@ -267,7 +263,7 @@ namespace PermisC.Data
 
         public void DeleteRemorque(Remorque item)
         {
-            var response = api.GET("DeleteRemorque&immat={item.Immatriculation}", "DeleteRemorque");
+            var response = api.GET("DeleteRemorque&immat="+item.Immatriculation, "DeleteRemorque");
             if (!string.IsNullOrWhiteSpace(response))
             {
                 _connection.Delete<Remorque>(item.ID);
@@ -281,7 +277,7 @@ namespace PermisC.Data
 
         public void AddRemorque(Remorque item)
         {
-            var response = api.GET("AddRemorque&Immat={item.Immatriculation}&Poid={item.PoidRemorque}&Ess={item.Essieux}", "AddRemorque");
+            var response = api.GET("AddRemorque&Immat="+item.Immatriculation+"&Poid="+item.PoidRemorque+"&Ess="+item.Essieux, "AddRemorque");
             if (!string.IsNullOrWhiteSpace(response))
             {
                 _connection.Insert(item);

@@ -24,8 +24,7 @@ namespace PermisC.Data
             string sign = user + mdp + methode + timestamp;
 
             var code = Hashage(sign);
-
-            Debug.WriteLine("Result : {0}", code);
+            
 
             Client.DefaultRequestHeaders.Accept.Clear();
             Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
@@ -52,7 +51,6 @@ namespace PermisC.Data
         static string GetTimestamp()
         {
             var timestamp = (Int32)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
-            Debug.WriteLine("timestamp : {0}", timestamp.ToString());
             return timestamp.ToString();
         }
 

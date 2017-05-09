@@ -6,6 +6,7 @@ using System.Runtime.CompilerServices;
 
 namespace PermisC.Models
 {
+
     public class Tracteur : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;

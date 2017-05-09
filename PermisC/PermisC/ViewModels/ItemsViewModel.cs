@@ -8,10 +8,12 @@ using Xamarin.Forms;
 using System.Security.Cryptography;
 using System.Diagnostics;
 using System.Text;
+using System.Runtime.CompilerServices;
+using System.ComponentModel;
 
 namespace PermisC.ViewModels
 {
-    public class ItemsViewModel : NavigationPage
+    public class ItemsViewModel :BaseViewModel
     {
 
         public Command LoadItemsCommand { get; set; }
@@ -20,6 +22,12 @@ namespace PermisC.ViewModels
 
         public INavigation _navigation;
         public CamionDatabase _database;
+
+        //string title = string.Empty;public string Title
+        //{
+        //    get { return title; }
+        //    set { title = value; }
+        //}
 
         private IEnumerable<Tracteur> Tracteur;
         public IEnumerable<Tracteur> tracteur { get { return Tracteur; } set { Tracteur = value; OnPropertyChanged(); } }
@@ -75,8 +83,6 @@ namespace PermisC.ViewModels
         {
             await _navigation.PushAsync(new NewItemPage(_database, this));
         }
-
-
 
 
 

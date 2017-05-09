@@ -7,18 +7,20 @@
         <ToolbarItem Text="Sauver" Command="{Binding save}" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout Spacing="20" Padding="15">
-            <Label Text="Immatriculation :" FontSize="Medium" />
-            <Entry Text="{Binding Item.Immatriculation}" FontSize="Small" />
-            <Label Text="Poid du tracteur" FontSize="Medium" />
-            <Editor Text="{Binding Item.PoidTracteur}" FontSize="Small" />
-            <Label Text="Nombre d'essieux" FontSize="Medium" />
-            <StackLayout Orientation = "Horizontal" HorizontalOptions="Center">
-                <Button Text="-" Command="{Binding moins}"/>
-                <Label Text="{Binding Item.Essieux}" FontSize="Small" VerticalOptions="Center" TextColor="Black"/>
-                <Button Text="+" Command="{Binding plus}"/>
+        <ScrollView>
+            <StackLayout Spacing="20" Padding="15">
+                <Label Text="Immatriculation :" FontSize="Medium" />
+                <Entry Placeholder="AA-111-BB" Text="{Binding Item.Immatriculation}" FontSize="Small" />
+                <Label Text="Poid du tracteur" FontSize="Medium" />
+                <Editor Keyboard="Numeric" Text="{Binding Item.PoidTracteur}" FontSize="Small" />
+                <Label Text="Nombre d'essieux" FontSize="Medium" />
+                <StackLayout Orientation = "Horizontal" HorizontalOptions="Center">
+                    <Button Text="-" Command="{Binding moins}"/>
+                    <Label Text="{Binding Item.Essieux}" FontSize="Small" VerticalOptions="Center" TextColor="Black"/>
+                    <Button Text="+" Command="{Binding plus}"/>
+                </StackLayout>
+                <Label Text="{Binding Erreur}" FontSize="Medium" TextColor="Red"/>
             </StackLayout>
-            <Label Text="{Binding Erreur}" FontSize="Medium" TextColor="Red"/>
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

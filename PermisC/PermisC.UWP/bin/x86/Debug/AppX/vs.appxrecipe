@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>2B1CE36E6AE457842278D7D5D466AAA2EEBD1CC171135AEA97E1B48DD08D0761</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>7F6F11E2F3A9B8191883A4821DBFA020E091844533ADD8056682CEDF932B8031</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>eb22af6b-02b8-40d5-a14d-ad44bcf81657_1.0.0.0_x86__d1mcs3406sg6m</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>eb22af6b-02b8-40d5-a14d-ad44bcf81657_d1mcs3406sg6m!App</RegisteredUserModeAppID>
     <RegisteredPackageID>eb22af6b-02b8-40d5-a14d-ad44bcf81657</RegisteredPackageID>
@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-04T14:19:10.696</Modified>
+      <Modified>2017-05-09T13:34:21.437</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\bin\x86\Debug\PermisC.UWP.exe">
       <PackagePath>entrypoint\PermisC.UWP.exe</PackagePath>
-      <Modified>2017-05-04T14:19:04.761</Modified>
+      <Modified>2017-05-09T13:34:20.166</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Stagiaire\.nuget\packages\Microsoft.CSharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -521,45 +521,53 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\PermisC.dll">
       <PackagePath>PermisC.dll</PackagePath>
-      <Modified>2017-05-04T14:19:01.022</Modified>
+      <Modified>2017-05-09T13:32:48.575</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\bouncy_castle_hmac_sha_pcl.dll">
       <PackagePath>bouncy_castle_hmac_sha_pcl.dll</PackagePath>
       <Modified>2017-05-04T14:11:04.968</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UAP\v0.8.0.0\ExtensionSDKs\SQLite.UWP.2015\3.18.0\Redist\Debug\x86\sqlite3.dll">
+      <PackagePath>sqlite3.dll</PackagePath>
+      <Modified>2017-05-05T13:00:21.894</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.15063.0\\redist\Debug\x86\ucrtbased.dll">
+      <PackagePath>ucrtbased.dll</PackagePath>
+      <Modified>2017-03-29T22:42:12.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2017-05-04T14:11:03.783</Modified>
+      <Modified>2017-05-05T10:14:33.147</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-04T14:11:03.785</Modified>
+      <Modified>2017-05-05T10:05:02.760</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-04T14:11:03.788</Modified>
+      <Modified>2017-05-05T10:06:09.490</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-04T14:11:03.790</Modified>
+      <Modified>2017-05-05T10:07:41.769</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-04T14:11:03.792</Modified>
+      <Modified>2017-05-05T10:08:01.122</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-04T14:11:03.794</Modified>
+      <Modified>2017-05-05T10:08:22.596</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-04T14:11:03.796</Modified>
+      <Modified>2017-05-05T10:15:00.916</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\profile_generic.png">
       <PackagePath>profile_generic.png</PackagePath>
@@ -577,10 +585,6 @@
       <PackagePath>PermisC.UWP.xr.xml</PackagePath>
       <Modified>2017-05-04T14:19:04.509</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.15063.0\\redist\Debug\x86\ucrtbased.dll">
-      <PackagePath>ucrtbased.dll</PackagePath>
-      <Modified>2017-03-29T22:42:12.000</Modified>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2017-05-04T13:47:04.683</Modified>
@@ -596,11 +600,11 @@
     <AppxPackagedFile Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-04T14:19:09.140</Modified>
+      <Modified>2017-05-09T13:34:21.045</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\bin\x86\Debug\Core\PermisC.UWP.exe">
       <PackagePath>PermisC.UWP.exe</PackagePath>
-      <Modified>2017-05-04T14:19:10.682</Modified>
+      <Modified>2017-05-09T13:34:21.422</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
