@@ -10,6 +10,7 @@ using System.Diagnostics;
 using System.Text;
 using System.Runtime.CompilerServices;
 using System.ComponentModel;
+using System;
 
 namespace PermisC.ViewModels
 {
@@ -35,13 +36,13 @@ namespace PermisC.ViewModels
 
 
 
-        public ItemsViewModel(INavigation navigation)
+        public ItemsViewModel(INavigation navigation,Boolean isConnect)
         {
 
 
 
 
-            CamionDatabase database = new CamionDatabase();
+            CamionDatabase database = new CamionDatabase(isConnect);
 
             _navigation = navigation;
             _database = database;

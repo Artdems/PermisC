@@ -1,6 +1,6 @@
 ﻿using PermisC.Models;
 using PermisC.ViewModels;
-
+using System;
 using Xamarin.Forms;
 
 namespace PermisC.Views
@@ -9,11 +9,11 @@ namespace PermisC.Views
     {
         ItemsViewModel viewModel;
 
-        public ItemsPage()
+        public ItemsPage(Boolean isConnect)
         {
             InitializeComponent();
 
-            BindingContext = viewModel = new ItemsViewModel(this.Navigation);
+            BindingContext = viewModel = new ItemsViewModel(this.Navigation,isConnect);
         }
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)

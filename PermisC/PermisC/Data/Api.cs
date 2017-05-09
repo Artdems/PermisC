@@ -17,26 +17,33 @@ namespace PermisC.Data
         private const string mdp = "6wdeuv";
         private static readonly Encoding encoding = Encoding.UTF8;
 
-        public string GET(string test, string methode)
+        public string GET(string test, string methode,Boolean isConnect)
         {
-            var timestamp = GetTimestamp();
-
-            string sign = user + mdp + methode + timestamp;
-
-            var code = Hashage(sign);
-            
-
-            Client.DefaultRequestHeaders.Accept.Clear();
-            Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            var response = Client.GetAsync("http://192.168.10.183/API/api.php?action="+test +"&user="+user+"&timestamp="+timestamp+"&signature="+code).Result;
-            if (response.IsSuccessStatusCode)
+            if (isConnect)
             {
-                var json = response.Content.ReadAsStringAsync().Result;
-                if (!string.IsNullOrWhiteSpace(json))
-                {
-                    return json;
-                }
+                var timestamp = GetTimestamp();
 
+                string sign = user + mdp + methode + timestamp;
+
+                var code = Hashage(sign);
+
+
+                Client.DefaultRequestHeaders.Accept.Clear();
+                Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                var response = Client.GetAsync("http://192.168.10.183/API/api.php?action=" + test + "&user=" + user + "&timestamp=" + timestamp + "&signature=" + code).Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    var json = response.Content.ReadAsStringAsync().Result;
+                    if (!string.IsNullOrWhiteSpace(json))
+                    {
+                        return json;
+                    }
+
+                    else
+                    {
+                        return "";
+                    }
+                }
                 else
                 {
                     return "";

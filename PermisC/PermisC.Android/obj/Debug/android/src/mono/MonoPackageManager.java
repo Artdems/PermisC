@@ -100,6 +100,8 @@ class MonoPackageManager_Resources {
 		/* We need to ensure that "PermisC.Android.dll" comes first in this list. */
 		"PermisC.Android.dll",
 		"FormsViewGroup.dll",
+		"Plugin.Connectivity.Abstractions.dll",
+		"Plugin.Connectivity.dll",
 		"SQLite.Net.dll",
 		"SQLite.Net.Platform.XamarinAndroid.dll",
 		"Xamarin.Android.Support.Animated.Vector.Drawable.dll",

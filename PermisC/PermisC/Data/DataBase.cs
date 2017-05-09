@@ -23,15 +23,17 @@ namespace PermisC.Data
         private SQLiteConnection _connection;
         private bool IsOnline;
         private Api api = new Api();
+        private Boolean _isConnect;
         
 
 
 
-        public CamionDatabase()
+        public CamionDatabase(Boolean isConnect)
         {
             _connection = DependencyService.Get<ISQLite>().GetConnection();
             _connection.CreateTable<Tracteur>();
             _connection.CreateTable<Remorque>();
+            _isConnect = isConnect;
             Int32 unixTimestamp = (Int32)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
            
 
@@ -55,7 +57,7 @@ namespace PermisC.Data
 
             
 
-            var json = api.GET("getTracteurs", "getTracteurs");
+            var json = api.GET("getTracteurs", "getTracteurs",_isConnect);
             if (!string.IsNullOrWhiteSpace(json))
             {
                 DeleteAllTract();
@@ -126,11 +128,8 @@ namespace PermisC.Data
 
         public void DeleteTracteur(Tracteur item)
         {
-            var response = api.GET("DeleteTracteur&immat="+item.Immatriculation, "DeleteTracteur");
-            if (!string.IsNullOrWhiteSpace(response))
-            {
-                _connection.Delete<Tracteur>(item.ID);
-            }
+            var response = api.GET("DeleteTracteur&immat="+item.Immatriculation, "DeleteTracteur",_isConnect);
+            _connection.Delete<Tracteur>(item.ID);
         }
         public void AddLocalTracteur(Tracteur item)
         {
@@ -140,11 +139,8 @@ namespace PermisC.Data
 
         public void AddTracteur(Tracteur item)
         {
-            var response = api.GET("AddTracteur&Immat="+item.Immatriculation+"&Poid="+item.PoidTracteur+"&Ess="+item.Essieux, "AddTracteur");
-            if (!string.IsNullOrWhiteSpace(response))
-            {
-                _connection.Insert(item);
-            }
+            var response = api.GET("AddTracteur&Immat="+item.Immatriculation+"&Poid="+item.PoidTracteur+"&Ess="+item.Essieux, "AddTracteur",_isConnect);
+            _connection.Insert(item);
         }
 
         //public IEnumerable<Remorque> GetRemorques()
@@ -192,7 +188,7 @@ namespace PermisC.Data
 
         public async Task GetRemorquesAsync(RemorqueViewModel viewModel)
         {
-            var json = api.GET("getRemorques", "getRemorques");
+            var json = api.GET("getRemorques", "getRemorques",_isConnect);
             if (!string.IsNullOrWhiteSpace(json))
             {
                 DeleteAllRem();
@@ -263,11 +259,8 @@ namespace PermisC.Data
 
         public void DeleteRemorque(Remorque item)
         {
-            var response = api.GET("DeleteRemorque&immat="+item.Immatriculation, "DeleteRemorque");
-            if (!string.IsNullOrWhiteSpace(response))
-            {
-                _connection.Delete<Remorque>(item.ID);
-            }
+            var response = api.GET("DeleteRemorque&immat="+item.Immatriculation, "DeleteRemorque",_isConnect);
+            _connection.Delete<Remorque>(item.ID);
         }
         public void AddLocalRemorque(Remorque item)
         {
@@ -277,11 +270,8 @@ namespace PermisC.Data
 
         public void AddRemorque(Remorque item)
         {
-            var response = api.GET("AddRemorque&Immat="+item.Immatriculation+"&Poid="+item.PoidRemorque+"&Ess="+item.Essieux, "AddRemorque");
-            if (!string.IsNullOrWhiteSpace(response))
-            {
-                _connection.Insert(item);
-            }
+            var response = api.GET("AddRemorque&Immat="+item.Immatriculation+"&Poid="+item.PoidRemorque+"&Ess="+item.Essieux, "AddRemorque",_isConnect);
+            _connection.Insert(item);
         }
     }
 }

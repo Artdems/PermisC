@@ -1,5 +1,7 @@
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\PermisC.Android.dll
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\FormsViewGroup.dll
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\Plugin.Connectivity.Abstractions.dll
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\Plugin.Connectivity.dll
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\SQLite.Net.dll
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\SQLite.Net.Platform.XamarinAndroid.dll
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\Xamarin.Android.Support.Animated.Vector.Drawable.dll
@@ -24,6 +26,9 @@ C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\PermisC.dll
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Runtime.dll
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.ComponentModel.Composition.dll
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Resources.ResourceManager.dll
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Threading.Tasks.dll
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Threading.dll
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Collections.dll
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Reflection.dll
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Diagnostics.Debug.dll
@@ -32,9 +37,7 @@ C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Linq.dll
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Reflection.Extensions.dll
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Globalization.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Threading.dll
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Text.Encoding.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Threading.Tasks.dll
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.ObjectModel.dll
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.ComponentModel.dll
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Xml.ReaderWriter.dll
@@ -45,6 +48,5 @@ C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Text.RegularExpressions.dll
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Collections.Concurrent.dll
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Runtime.InteropServices.dll
-C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Resources.ResourceManager.dll
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\System.Diagnostics.Tools.dll
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.Android\obj\Debug\android\assets\bouncy_castle_hmac_sha_pcl.dll

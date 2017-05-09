@@ -220,3 +220,7 @@ C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\obj\x86\Debug\Xamarin.Forms.Platform.UAP.pri.xml
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\bin\x86\Debug\Plugin.Connectivity.Abstractions.dll
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\bin\x86\Debug\Plugin.Connectivity.Abstractions.pdb
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\bin\x86\Debug\Plugin.Connectivity.dll
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\bin\x86\Debug\Plugin.Connectivity.pdb

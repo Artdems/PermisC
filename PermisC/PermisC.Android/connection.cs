@@ -4,6 +4,7 @@ using Android.Net;
 using Android.Telephony;
 using Java.IO;
 using Java.Net;
+using Android.App;
 
 namespace PermisC.Droid
 {
@@ -13,193 +14,46 @@ namespace PermisC.Droid
 	 * @author emil http://stackoverflow.com/users/220710/emil
 	 *
 	 */
-    public static class Connection
+    public class Connection
     {
-
-        /**
-	     * Get the network info
-	     * @param context
-	     * @return
-	     */
-        public static NetworkInfo GetNetworkInfo(Context context)
+        private NetworkState _state;
+        
+        public NetworkState State
         {
-            ConnectivityManager cm = (ConnectivityManager)context.GetSystemService(Context.ConnectivityService);
-            return cm.ActiveNetworkInfo;
-        }
-
-        /**
-	     * Check if there is any connectivity
-	     * @param context
-	     * @return
-	     */
-        public static bool IsConnected(Context context)
-        {
-            NetworkInfo info = Connection.GetNetworkInfo(context);
-            return (info != null && info.IsConnected);
-        }
-
-        /**
-	     * Check if there is any connectivity to a Wifi network
-	     * @param context
-	     // @param type
-	     * @return
-	     */
-        public static bool IsConnectedWifi(Context context)
-        {
-            NetworkInfo info = Connection.GetNetworkInfo(context);
-            return (info != null && info.IsConnected && info.Type == ConnectivityType.Wifi);
-        }
-
-        /**
-	     * Check if there is any connectivity to a mobile network
-	     * @param context
-	     // @param type
-	     * @return
-	     */
-        public static bool IsConnectedMobile(Context context)
-        {
-            NetworkInfo info = Connection.GetNetworkInfo(context);
-            return (info != null && info.IsConnected && info.Type == ConnectivityType.Mobile);
-        }
-
-        /**
-	     * Check if there is fast connectivity
-	     * @param context
-	     * @return
-	     */
-        public static bool IsConnectedFast(Context context)
-        {
-            NetworkInfo info = Connection.GetNetworkInfo(context);
-            TelephonyManager tm = TelephonyManager.FromContext(context);
-            return (info != null && info.IsConnected && Connection.IsConnectionFast(info.Type, tm.NetworkType));
-        }
-
-        /**
-	     * Check if the connection is fast
-	     * @param type
-	     * @param subType
-	     * @return
-	     */
-        public static bool IsConnectionFast(ConnectivityType type, NetworkType subType)
-        {
-            if (type == ConnectivityType.Wifi)
+            get
             {
-                return true;
+                UpdateNetworkStatus();
+                return _state;
             }
-            else if (type == ConnectivityType.Mobile)
+        }
+        public void UpdateNetworkStatus()
+        {
+            _state = NetworkState.Unknown;
+            // Retrieve the connectivity manager service
+            var connectivityManager = (ConnectivityManager)
+                Application.Context.GetSystemService(
+                    Context.ConnectivityService);
+            // Check if the network is connected or connecting.
+            // This means that it will be available,
+            // or become available in a few seconds.
+            var activeNetworkInfo = connectivityManager.ActiveNetworkInfo;
+            if (activeNetworkInfo != null &&  activeNetworkInfo.IsConnectedOrConnecting)
             {
-                switch (subType)
-                {
-                    //case TelephonyManager.NETWORK_TYPE_1xRTT:
-                    case NetworkType.OneXrtt:
-                        return false; // ~ 50-100 kbps
-                                      //case TelephonyManager.NETWORK_TYPE_CDMA:
-                    case NetworkType.Cdma:
-                        return false; // ~ 14-64 kbps
-                                      //case TelephonyManager.NETWORK_TYPE_EDGE:
-                    case NetworkType.Edge:
-                        return false; // ~ 50-100 kbps
-                                      //case TelephonyManager.NETWORK_TYPE_EVDO_0:
-                    case NetworkType.Evdo0:
-                        return true; // ~ 400-1000 kbps
-                                     //case TelephonyManager.NETWORK_TYPE_EVDO_A:
-                    case NetworkType.EvdoA:
-                        return true; // ~ 600-1400 kbps
-                                     //case TelephonyManager.NETWORK_TYPE_GPRS:
-                    case NetworkType.Gprs:
-                        return false; // ~ 100 kbps
-                                      //case TelephonyManager.NETWORK_TYPE_HSDPA:
-                    case NetworkType.Hsdpa:
-                        return true; // ~ 2-14 Mbps
-                                     //case TelephonyManager.NETWORK_TYPE_HSPA:
-                    case NetworkType.Hspa:
-                        return true; // ~ 700-1700 kbps
-                                     //case TelephonyManager.NETWORK_TYPE_HSUPA:
-                    case NetworkType.Hsupa:
-                        return true; // ~ 1-23 Mbps
-                                     //case TelephonyManager.NETWORK_TYPE_UMTS:
-                    case NetworkType.Umts:
-                        return true; // ~ 400-7000 kbps
-                                     /*
-                                      * Above API level 7, make sure to set android:targetSdkVersion
-                                      * to appropriate level to use these
-                                      */
-                                     //case TelephonyManager.NETWORK_TYPE_EHRPD: // API level 11
-                    case NetworkType.Ehrpd:
-                        return true; // ~ 1-2 Mbps
-                                     //case TelephonyManager.NETWORK_TYPE_EVDO_B: // API level 9
-                    case NetworkType.EvdoB:
-                        return true; // ~ 5 Mbps
-                                     //case TelephonyManager.NETWORK_TYPE_HSPAP: // API level 13
-                    case NetworkType.Hspap:
-                        return true; // ~ 10-20 Mbps
-                                     //case TelephonyManager.NETWORK_TYPE_IDEN: // API level 8
-                    case NetworkType.Iden:
-                        return false; // ~25 kbps
-                                      //case TelephonyManager.NETWORK_TYPE_LTE: // API level 11
-                    case NetworkType.Lte:
-                        return true; // ~ 10+ Mbps
-                                     // Unknown
-                                     //case TelephonyManager.NETWORK_TYPE_UNKNOWN:
-                    case NetworkType.Unknown:
-                        return false;
-                    default:
-                        return false;
-                }
+                // Now that we know it's connected, determine if we're on WiFi or something else.
+                _state = activeNetworkInfo.Type == ConnectivityType.Wifi ?
+                    NetworkState.ConnectedWifi : NetworkState.ConnectedData;
             }
             else
             {
-                return false;
+                _state = NetworkState.Disconnected;
             }
         }
-
-        public static bool IsHostReachable(string host)
-        {
-            if (string.IsNullOrEmpty(host))
-                return false;
-
-            bool isReachable = true;
-
-            Thread thread = new Thread(() =>
-            {
-                try
-                {
-                    //isReachable = InetAddress.GetByName(host).IsReachable(2000);
-
-                    /* 
-                     * It's important to note that isReachable tries ICMP ping and then TCP echo (port 7).
-                     * These are often closed down on HTTP servers.
-                     * So a perfectly good working API with a web server on port 80 will be reported as unreachable
-                     * if ICMP and TCP port 7 are filtered out!
-                     */
-
-                    //if (!isReachable){
-                    URL url = new URL("http://" + host);
-
-                    URLConnection connection = url.OpenConnection();
-
-                    //if(connection.ContentLength != -1){
-                    //isReachable = true;
-                    if (connection.ContentLength == -1)
-                    {
-                        isReachable = false;
-                    }
-                    //}
-
-                }
-                catch (UnknownHostException e)
-                {
-                    isReachable = false;
-                }
-                catch (IOException e)
-                {
-                    isReachable = false;
-                }
-
-            });
-            thread.Start();
-
-            return isReachable;
-        }
+    }
+    public enum NetworkState
+    {
+        Unknown,
+        ConnectedWifi,
+        ConnectedData,
+        Disconnected
     }
 }
