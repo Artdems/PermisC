@@ -28,6 +28,7 @@ namespace PermisC.ViewModels
             save = new Command(() => Save(database));
 
             Item = _item;
+            sauve = _item;
 
 
            

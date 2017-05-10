@@ -12,7 +12,7 @@
                 <Label Text="Immatriculation :" FontSize="Medium" />
                 <Entry Text="{Binding Item.Immatriculation}" FontSize="Small" />
                 <Label Text="Poid de la remorque" FontSize="Medium" />
-                <Editor Keyboard="Numeric" Text="{Binding Item.PoidRemroque}" FontSize="Small" />
+                <Editor Keyboard="Numeric" Text="{Binding Item.PoidRemorque}" FontSize="Small" />
                 <Label Text="Nombre d'essieux" FontSize="Medium" />
                 <StackLayout Orientation = "Horizontal" HorizontalOptions="Center">
                     <Button Text="-" Command="{Binding moins}"/>
