@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-09T13:34:21.437</Modified>
+      <Modified>2017-05-10T14:45:13.910</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\bin\x86\Debug\PermisC.UWP.exe">
       <PackagePath>entrypoint\PermisC.UWP.exe</PackagePath>
-      <Modified>2017-05-09T13:34:20.166</Modified>
+      <Modified>2017-05-10T14:45:12.405</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Stagiaire\.nuget\packages\Microsoft.CSharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -521,11 +521,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\PermisC.dll">
       <PackagePath>PermisC.dll</PackagePath>
-      <Modified>2017-05-09T13:32:48.575</Modified>
+      <Modified>2017-05-10T14:25:17.059</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\bouncy_castle_hmac_sha_pcl.dll">
       <PackagePath>bouncy_castle_hmac_sha_pcl.dll</PackagePath>
       <Modified>2017-05-04T14:11:04.968</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\PermisC.dll.config">
+      <PackagePath>PermisC.dll.config</PackagePath>
+      <Modified>2017-05-10T12:02:12.916</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UAP\v0.8.0.0\ExtensionSDKs\SQLite.UWP.2015\3.18.0\Redist\Debug\x86\sqlite3.dll">
       <PackagePath>sqlite3.dll</PackagePath>
@@ -600,11 +604,11 @@
     <AppxPackagedFile Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-09T13:34:21.045</Modified>
+      <Modified>2017-05-10T14:45:13.449</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\bin\x86\Debug\Core\PermisC.UWP.exe">
       <PackagePath>PermisC.UWP.exe</PackagePath>
-      <Modified>2017-05-09T13:34:21.422</Modified>
+      <Modified>2017-05-10T14:45:13.895</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

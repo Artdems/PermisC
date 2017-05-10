@@ -9,9 +9,9 @@
     </ContentPage.ToolbarItems>
     <ScrollView>
         <StackLayout Spacing="20" Padding="15" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-            <Label Text=" Immatriculation : " FontSize="Medium"/>
+            <Label Text="Immatriculation : " FontSize="Medium"/>
             <Label Text="{Binding Item.Immatriculation}" FontSize="Small"/>
-            <Label Text=" Poid du tracteur : " FontSize="Medium"/>
+            <Label Text="Poid du tracteur : " FontSize="Medium"/>
             <StackLayout Orientation = "Horizontal" HorizontalOptions="Start">
                 <Label Text="{Binding Item.PoidTracteur}" FontSize="Small"/>
                 <Label Text=" Kilogramme" FontSize="Small"/>
