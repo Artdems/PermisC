@@ -15,6 +15,7 @@ namespace PermisC.ViewModels
         public Command vide { get; set; }
         public Command delet { get; set; }
         public Command remorque { get; set; }
+        public Command modif { get; set; }
 
         public CamionDatabase _database;
         public INavigation _navigation;
@@ -31,6 +32,7 @@ namespace PermisC.ViewModels
             vide = new Command(() => Vide_Clicked());
             delet = new Command(() => Delet());
             remorque = new Command(() => RemorquePage());
+            modif = new Command(() => ModifPage());
         }
 
         public void Delet()
@@ -48,6 +50,11 @@ namespace PermisC.ViewModels
         public async void RemorquePage()
         {
             await _navigation.PushAsync(new RemorquePage(Item, _database));
+        }
+
+        public async void ModifPage()
+        {
+            await _navigation.PushAsync(new ModifItemPage(_database, this, Item));
         }
     }
 }
