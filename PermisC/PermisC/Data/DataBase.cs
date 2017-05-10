@@ -205,7 +205,7 @@ namespace PermisC.Data
                 foreach (Remorque t in _connection.Table<Remorque>())
                 {
                     var existe = api.GET("getRemorqueImmat&Immat=" + t.Immatriculation, "getRemorqueImmat", _isConnect);
-                    if (existe.Contains(""))
+                    if (existe.Contains("null"))
                     {
                         var response = api.GET("AddRemorque&Immat=" + t.Immatriculation + "&Poid=" + t.PoidRemorque + "&Ess=" + t.Essieux, "AddRemorque", _isConnect);
                     }

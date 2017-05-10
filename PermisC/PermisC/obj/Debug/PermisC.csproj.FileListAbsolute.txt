@@ -33,5 +33,6 @@ C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\PermisC.dll.config
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\ExifLib.dll
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.Views.ModifItemPage.xaml.g.cs
+C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.Views.ModifRemorquePage.xaml.g.cs
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\obj\Debug\PermisC.dll.mdb
 C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\PermisC.dll.mdb

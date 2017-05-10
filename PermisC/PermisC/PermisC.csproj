@@ -54,6 +54,7 @@
     <Compile Include="ViewModels\ItemDetailViewModel.cs" />
     <Compile Include="ViewModels\ItemsViewModel.cs" />
     <Compile Include="ViewModels\ModifItemViewModel.cs" />
+    <Compile Include="ViewModels\ModifRemorqueViewModel.cs" />
     <Compile Include="ViewModels\NewItemViewModel.cs" />
     <Compile Include="ViewModels\NewRemorqueViewModel.cs" />
     <Compile Include="ViewModels\PermisViewModel.cs" />
@@ -70,6 +71,9 @@
     </Compile>
     <Compile Include="Views\ModifItemPage.xaml.cs">
       <DependentUpon>ModifItemPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ModifRemorquePage.xaml.cs">
+      <DependentUpon>ModifRemorquePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\NewItemPage.xaml.cs">
       <DependentUpon>NewItemPage.xaml</DependentUpon>
@@ -170,6 +174,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\ModifItemPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ModifRemorquePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

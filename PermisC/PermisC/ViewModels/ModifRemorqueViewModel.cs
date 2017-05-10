@@ -6,19 +6,19 @@ using Xamarin.Forms;
 
 namespace PermisC.ViewModels
 {
-    public class ModifItemViewModel : BaseViewModel
+    public class ModifRemorqueViewModel : BaseViewModel
     {
         public Command plus { get; set; }
         public Command moins { get; set; }
         public Command save { get; set; }
 
         public INavigation _navigation;
-        ItemDetailViewModel _viewModel;
+        RemorqueDetailViewModel _viewModel;
 
-        Tracteur sauve;
+        Remorque sauve;
 
 
-        public ModifItemViewModel(INavigation navigation, CamionDatabase database, ItemDetailViewModel viewModel,Tracteur _item)
+        public ModifRemorqueViewModel(INavigation navigation, CamionDatabase database, RemorqueDetailViewModel viewModel, Remorque _item)
         {
             _navigation = navigation;
             _viewModel = viewModel;
@@ -28,14 +28,14 @@ namespace PermisC.ViewModels
             save = new Command(() => Save(database));
 
             Item = _item;
+            sauve = _item;
 
 
-           
         }
 
 
-        Tracteur item;
-        public Tracteur Item
+        Remorque item;
+        public Remorque Item
         {
             get { return item; }
             set
@@ -59,18 +59,20 @@ namespace PermisC.ViewModels
 
         public void Save(CamionDatabase database)
         {
-            Tracteur_Metadata Meta = new Tracteur_Metadata();
+            Remorque_Metadata Meta = new Remorque_Metadata();
 
-            database.DeleteTracteur(sauve);
-            Erreur = Meta.Tracteur(Item, Erreur, database);
+            database.DeleteRemorque(sauve);
+
+            Erreur = Meta.Remorque(Item, Erreur, database);
 
             if (Erreur == "")
             {
+                
                 _navigation.PopAsync();
             }
             else
             {
-                database.AddTracteur(sauve);
+                database.AddRemorque(sauve);
             }
         }
 

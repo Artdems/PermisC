@@ -37,6 +37,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <Button Text="Rafraichire" Command="{Binding LoadItemCommand}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

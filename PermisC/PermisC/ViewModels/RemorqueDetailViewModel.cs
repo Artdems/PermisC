@@ -15,6 +15,7 @@ namespace PermisC.ViewModels
 
         public Command delet { get; set; }
         public Command conduir { get; set; }
+        public Command modif { get; set; }
         public Remorque Item { get; set; }
 
         public RemorqueDetailViewModel(Remorque item = null, RemorqueViewModel viewModel = null, INavigation navigation = null, Tracteur trac = null)
@@ -29,6 +30,7 @@ namespace PermisC.ViewModels
 
             delet = new Command(() => Delet());
             conduir = new Command(() => Conduire());
+            modif = new Command(() => ModifPage());
         }
 
         public void Delet()
@@ -41,6 +43,11 @@ namespace PermisC.ViewModels
         public void Conduire()
         {
             _navigation.PushAsync(new PermisPage(_trac, Item));
+        }
+
+        public async void ModifPage()
+        {
+            await _navigation.PushAsync(new ModifRemorquePage(_database, this, Item));
         }
     }
 }
