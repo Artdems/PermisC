@@ -60,6 +60,16 @@ namespace PermisC.Data
             var json = api.GET("getTracteurs", "getTracteurs",_isConnect);
             if (!string.IsNullOrWhiteSpace(json))
             {
+                foreach (Tracteur t in _connection.Table<Tracteur>())
+                {
+                    var existe = api.GET("getTracteurImmat&Immat=" + t.Immatriculation, "getTracteurImmat", _isConnect);
+                    if (existe.Contains("null"))
+                    {
+                        var response = api.GET("AddTracteur&Immat=" + t.Immatriculation + "&Poid=" + t.PoidTracteur + "&Ess=" + t.Essieux, "AddTracteur", _isConnect);
+                    }
+                    await Task.Delay(1);
+                }
+
                 DeleteAllTract();
                 Boolean immat = false;
                 Boolean poid = false;
@@ -69,6 +79,7 @@ namespace PermisC.Data
                 string[] tracts = json.Split('[', '{', '}', '"', ',', ':');
                 foreach (string tract in tracts)
                 {
+                    
                     if (!string.IsNullOrWhiteSpace(tract))
                     {
                         if (immat)
@@ -191,6 +202,15 @@ namespace PermisC.Data
             var json = api.GET("getRemorques", "getRemorques",_isConnect);
             if (!string.IsNullOrWhiteSpace(json))
             {
+                foreach (Remorque t in _connection.Table<Remorque>())
+                {
+                    var existe = api.GET("getRemorqueImmat&Immat=" + t.Immatriculation, "getRemorqueImmat", _isConnect);
+                    if (existe.Contains(""))
+                    {
+                        var response = api.GET("AddRemorque&Immat=" + t.Immatriculation + "&Poid=" + t.PoidRemorque + "&Ess=" + t.Essieux, "AddRemorque", _isConnect);
+                    }
+                    await Task.Delay(1);
+                }
                 DeleteAllRem();
                 Boolean immat = false;
                 Boolean poid = false;

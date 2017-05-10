@@ -57,7 +57,7 @@ namespace PermisC.Data
 
         static string GetTimestamp()
         {
-            var timestamp = (Int32)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
+            var timestamp = (Int64)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalMilliseconds;
             return timestamp.ToString();
         }
 

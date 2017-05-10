@@ -32,6 +32,11 @@ namespace PermisC
                         Title = "Véhicule non répértorier",
                         Icon = Device.OnPlatform("tab_about.png",null,null)
                     },
+                    new NavigationPage(new PhotoPage())
+                    {
+                        Title = "recherche par photo",
+                        Icon = Device.OnPlatform("tab_feed.png",null,null)
+                    },
                 }
             };
         }

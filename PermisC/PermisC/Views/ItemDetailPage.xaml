@@ -5,6 +5,7 @@
              Title="{Binding Title}">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Supprimer" Command="{Binding delet}" />
+        <ToolbarItem Text="Modifier" Command="{Binding delet}" />
     </ContentPage.ToolbarItems>
     <ScrollView>
         <StackLayout Spacing="20" Padding="15" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
