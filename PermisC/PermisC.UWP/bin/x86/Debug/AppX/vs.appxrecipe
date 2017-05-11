@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-10T14:45:13.910</Modified>
+      <Modified>2017-05-11T09:20:48.326</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\bin\x86\Debug\PermisC.UWP.exe">
       <PackagePath>entrypoint\PermisC.UWP.exe</PackagePath>
-      <Modified>2017-05-10T14:45:12.405</Modified>
+      <Modified>2017-05-11T09:20:44.552</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Stagiaire\.nuget\packages\Microsoft.CSharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -521,7 +521,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\PermisC.dll">
       <PackagePath>PermisC.dll</PackagePath>
-      <Modified>2017-05-10T14:25:17.059</Modified>
+      <Modified>2017-05-11T09:13:49.547</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\bouncy_castle_hmac_sha_pcl.dll">
       <PackagePath>bouncy_castle_hmac_sha_pcl.dll</PackagePath>
@@ -608,7 +608,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\bin\x86\Debug\Core\PermisC.UWP.exe">
       <PackagePath>PermisC.UWP.exe</PackagePath>
-      <Modified>2017-05-10T14:45:13.895</Modified>
+      <Modified>2017-05-11T09:20:48.321</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

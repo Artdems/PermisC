@@ -3,24 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PermisC.Views.PermisPage"
              Title="Permis">
-    <ContentPage.Content>
-        <StackLayout Spacing="20" Padding="15">
-            <StackLayout Orientation = "Horizontal">
-                <Label Text="Poid total (en Kilogramme) :" FontSize="Medium"/>
-                <Label Text="{Binding poidTotal}" FontSize="Medium" />
-            </StackLayout>
-            <StackLayout Orientation = "Horizontal">
-                <Label Text="Nombre total d'essieux :" FontSize="Medium"/>
-                <Label Text="{Binding essTotal}" FontSize="Medium" />
-            </StackLayout>
-            <StackLayout Orientation = "Horizontal">
-                <Label Text="Permis requis :" FontSize="Medium"/>
-                <Label Text="{Binding permis}" FontSize="Medium"/>
-            </StackLayout>
-            <StackLayout Orientation = "Horizontal">
-                <Label Text="Formation requise :" FontSize="Medium"/>
-                <Label Text="{Binding formation}" FontSize="Medium"/>
-            </StackLayout>
+    <ScrollView>
+        <StackLayout Spacing="10" Padding="15">
+            <Label Text="Poid total" FontSize="Medium"/>
+            <Label Text="(en Kilogramme) :" FontSize="Medium"/>
+            <Label Text="{Binding poidTotal}" FontSize="Small" />
+            <Label Text="Nombre total d'essieux :" FontSize="Medium"/>
+            <Label Text="{Binding essTotal}" FontSize="Small" />
+            <Label Text="Permis requis :" FontSize="Medium"/>
+            <Label Text="{Binding permis}" FontSize="Small"/>
+            <Label Text="Formation requise :" FontSize="Medium"/>
+            <Label Text="{Binding formation}" FontSize="Small"/>
         </StackLayout>
-    </ContentPage.Content>
+    </ScrollView>
 </ContentPage>

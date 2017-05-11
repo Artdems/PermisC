@@ -183,7 +183,7 @@ namespace PermisC.ViewModels
             else
             {
                 Couleur = "Red";
-                Result = "Les poids entré doivent être des chiffre";
+                Result = "Les poids entré doivent être des chiffres";
                 FCOS = "";
             }
         }
