@@ -2,6 +2,7 @@
 
 using PermisC.Data;
 using PermisC.Models;
+using PermisC._meta;
 
 
 namespace PermisC.ViewModels
@@ -62,11 +63,11 @@ namespace PermisC.ViewModels
         //si le nouvelle item na pas les bonne caractéristique, c'est l'ancien qui est réstoré
         public void Save(CamionDatabase database)
         {
-            Remorque_Metadata Meta = new Remorque_Metadata();
+            _Metadata Meta = new _Metadata();
 
             database.DeleteRemorque(sauve);
 
-            Erreur = Meta.Remorque(Item, Erreur, database);
+            Erreur = Meta.meta(Erreur, database, Item, null);
 
             if (Erreur == "")
             {

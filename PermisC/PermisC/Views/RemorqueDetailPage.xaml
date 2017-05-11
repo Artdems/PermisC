@@ -8,7 +8,7 @@
         <ToolbarItem Text="Modifier" Command="{Binding modif}" />
     </ContentPage.ToolbarItems>
     <ScrollView>
-        <StackLayout Spacing="20" Padding="15" HorizontalOptions="Start">
+        <StackLayout Spacing="20" Padding="15" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <Label Text="Immatriculation : " FontSize="Medium"/>
             <Label Text="{Binding Item.Immatriculation}" FontSize="Small"/>
             <Label Text="Poid du tracteur : " FontSize="Medium"/>
@@ -20,7 +20,7 @@
                 <Label Text="Nombre d'essieux : " FontSize="Medium"/>
                 <Label Text="{Binding Item.Essieux}" FontSize="Medium"/>
             </StackLayout>
-            <StackLayout Orientation = "Horizontal" HorizontalOptions="Center">
+            <StackLayout HorizontalOptions="FillAndExpand">
                 <Button Text="Conduire" Command="{Binding conduir}"/>
             </StackLayout>
         </StackLayout>

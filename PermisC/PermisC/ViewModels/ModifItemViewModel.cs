@@ -63,10 +63,10 @@ namespace PermisC.ViewModels
         //si le nouvelle item na pas les bonne caractéristique, c'est l'ancien qui est réstoré
         public void Save(CamionDatabase database)
         {
-            Tracteur_Metadata Meta = new Tracteur_Metadata();
+            _Metadata Meta = new _Metadata();
 
             database.DeleteTracteur(sauve);
-            Erreur = Meta.Tracteur(Item, Erreur, database);
+            Erreur = Meta.meta(Erreur, database, null, Item);
 
             if (Erreur == "")
             {

@@ -90,7 +90,7 @@
     <Compile Include="Views\RemorquePage.xaml.cs">
       <DependentUpon>RemorquePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="_meta\Remorque_MetaData.cs" />
+    <Compile Include="_meta\_MetaData.cs" />
     <Compile Include="_meta\Tracteur_MetaData.cs" />
   </ItemGroup>
   <ItemGroup>

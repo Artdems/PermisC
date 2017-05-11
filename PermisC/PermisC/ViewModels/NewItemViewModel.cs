@@ -60,9 +60,9 @@ namespace PermisC.ViewModels
         //Verifi les entré de l'utilisateur et sauvgarde l'items dans la base de donné si les entré sont correcte
         public void Save(CamionDatabase database)
         {
-            Tracteur_Metadata Meta = new Tracteur_Metadata();
+            _Metadata Meta = new _Metadata();
 
-            Erreur = Meta.Tracteur(Item, Erreur, database);
+            Erreur = Meta.meta(Erreur, database, null, Item);
 
             if (Erreur == "")
             {

@@ -8,7 +8,7 @@
         <ToolbarItem Text="Modifier" Command="{Binding modif}" />
     </ContentPage.ToolbarItems>
     <ScrollView>
-        <StackLayout Spacing="20" Padding="15" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <StackLayout Spacing="20" Padding="15"  >
             <Label Text="Immatriculation : " FontSize="Medium"/>
             <Label Text="{Binding Item.Immatriculation}" FontSize="Small"/>
             <Label Text="Poid du tracteur : " FontSize="Medium"/>

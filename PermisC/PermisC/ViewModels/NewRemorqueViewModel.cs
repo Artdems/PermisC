@@ -4,6 +4,7 @@ using Xamarin.Forms;
 
 using PermisC.Data;
 using PermisC.Models;
+using PermisC._meta;
 
 
 namespace PermisC.ViewModels
@@ -62,9 +63,9 @@ namespace PermisC.ViewModels
         //Permet de vérifié si les valeur rentré par l'utilisateur son correcte et d'enregistré l'entré dans la base de donné si les valeur sont correcte.
         public void Save(CamionDatabase database)
         {
-            Remorque_Metadata Meta = new Remorque_Metadata();
+            _Metadata Meta = new _Metadata();
 
-            Erreur = Meta.Remorque(Item, Erreur, database);
+            Erreur = Meta.meta(Erreur, database, Item, null);
 
             if (Erreur == "")
             {
