@@ -1,19 +1,16 @@
 ﻿using System;
 using System.Threading.Tasks;
-using System.Net.Http;
 using System.Collections.Generic;
 using System.Linq;
-using System.Diagnostics;
-using System.Net.Http.Headers;
-using System.Text;
-using System.Security.Cryptography;
 
 using Xamarin.Forms;
 
-using SQLite.Net;
-
 using PermisC.Models;
 using PermisC.ViewModels;
+
+using SQLite.Net;
+
+
 
 
 namespace PermisC.Data
@@ -39,21 +36,8 @@ namespace PermisC.Data
 
         }
 
-        
-
-        //static string ByteToString(byte[] buff)
-        //{
-        //    string sbinary = "";
-        //    for (int i = 0; i < buff.Length; i++)
-        //        sbinary += buff[i].ToString("X2"); /* hex format */
-        //    return sbinary;
-        //}
-
         public async Task GetTracteursAsync(ItemsViewModel viewModel)
         {
-            //string signature = "r";//hash_hmacSha1((Client + mdp), mdp);
-            //Debug.WriteLine("signature :");
-            //Debug.WriteLine(signature);
 
             
 
@@ -153,39 +137,6 @@ namespace PermisC.Data
             var response = api.GET("AddTracteur&Immat="+item.Immatriculation+"&Poid="+item.PoidTracteur+"&Ess="+item.Essieux, "AddTracteur",_isConnect);
             _connection.Insert(item);
         }
-
-        //public IEnumerable<Remorque> GetRemorques()
-        //{
-        //    return (from t in _connection.Table<Remorque>()
-        //            select t).ToList();
-        //}
-
-        //public IEnumerable<Remorque> GetRechRemorque(string rech)
-        //{
-        //    return (from t in _connection.Table<Remorque>().Where(t => t.Immatriculation.Contains(rech))
-        //            select t).ToList();
-        //}
-
-        //public Remorque GetRemorque(int id)
-        //{
-        //    return _connection.Table<Remorque>().FirstOrDefault(t => t.ID == id);
-        //}
-
-        //public Remorque GetRemorqueImmat(String immat)
-        //{
-        //    return _connection.Table<Remorque>().FirstOrDefault(t => t.Immatriculation.Contains(immat));
-        //}
-
-        //public void DeleteRemorque(int id)
-        //{
-        //    _connection.Delete<Remorque>(id);
-        //}
-
-        //public void AddRemorque(Remorque item)
-        //{
-
-        //    _connection.Insert(item);
-        //}
 
         public void DeleteAllTract()
         {

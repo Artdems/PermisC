@@ -12,7 +12,8 @@ namespace PermisC.ViewModels
         public string permis { get; set; }
         public string formation { get; set; }
 
-        public Permis(Tracteur trac = null, Remorque rem = null)
+        //Affiche les condition requise pour conduire le tracteur et la remorque séléctionné si il y en a une
+        public Permis(Tracteur trac, Remorque rem = null)
         {
             if (rem == null)
             {
@@ -49,12 +50,12 @@ namespace PermisC.ViewModels
                 if (poidRemorque <= 750)
                 {
                     permis = "Premis C1";
-                    formation = "FCOS requi de moins de 5 ans";
+                    formation = "FCOS requis de moins de 5 ans";
                 }
                 else if (poidRemorque > 750)
                 {
                     permis = "Premis C1E";
-                    formation = "FCOS requi de moins de 5 ans";
+                    formation = "FCOS requis de moins de 5 ans";
                 }
 
 
@@ -73,24 +74,24 @@ namespace PermisC.ViewModels
                 }
                 if (poid > 3500)
                 {
-                    formation = "FCOS requi de moins de 5 ans";
+                    formation = "FCOS requis de moins de 5 ans";
                 }
 
             }
             else if (ess >= 5 && poid <= 48000)
             {
-                permis = "Convoit exeptionnel de Catégorie 1";
-                formation = "Permis CE et FCOS requi de moins de 5 ans";
+                permis = "Convoi exceptionnel de Catégorie 1";
+                formation = "Permis CE et FCOS requis de moins de 5 ans";
             }
             else if (ess >= 5 && poid <= 72000)
             {
-                permis = "Convoit exeptionnel de Catégorie 2";
-                formation = "Permis CE et FCOS requi de moins de 5 ans";
+                permis = "Convoi exceptionnel de Catégorie 2";
+                formation = "Permis CE et FCOS requis de moins de 5 ans";
             }
             else
             {
-                permis = "Convoit exeptionnel de Catégorie 3";
-                formation = "Permis CE et FCOS requi de moins de 5 ans";
+                permis = "Convoi exceptionnel de Catégorie 3";
+                formation = "Permis CE et FCOS requis de moins de 5 ans";
             }
         }
     }

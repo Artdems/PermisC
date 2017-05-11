@@ -10,7 +10,7 @@
                 <Entry Keyboard="Numeric" Text="{Binding PoidTrac}" FontSize="Small" />
                 <Label Text="Poid de la Remorque (en Kilogramme) :" FontSize="Small"/>
                 <Entry Keyboard="Numeric" Text="{Binding PoidRem}" FontSize="Small"/>
-                <Label Text="Nomvbe d'éssieux :" FontSize="Small"/>
+                <Label Text="Nombre d'éssieux :" FontSize="Small"/>
                 <StackLayout Orientation = "Horizontal" HorizontalOptions="Center">
                     <Button Text="-" Command="{Binding moins}"/>
                     <Label Text="{Binding NbEss}" FontSize="Small" VerticalOptions="Center"/>

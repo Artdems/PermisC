@@ -1,8 +1,8 @@
-﻿using PermisC.Helpers;
+﻿using Xamarin.Forms;
+
+using PermisC.Helpers;
 using PermisC.Models;
 using PermisC.Services;
-
-using Xamarin.Forms;
 
 namespace PermisC.ViewModels
 {

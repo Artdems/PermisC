@@ -1,8 +1,8 @@
-﻿using PermisC.Data;
-using PermisC.Models;
-using PermisC._meta;
+﻿using Xamarin.Forms;
 
-using Xamarin.Forms;
+using PermisC.Data;
+using PermisC.Models;
+
 
 namespace PermisC.ViewModels
 {
@@ -57,6 +57,9 @@ namespace PermisC.ViewModels
             }
         }
 
+
+        //détruit la version précédente de l'item, vérifie que le nouvel item a bien les bonne caractéristique et le sauvgarde.
+        //si le nouvelle item na pas les bonne caractéristique, c'est l'ancien qui est réstoré
         public void Save(CamionDatabase database)
         {
             Remorque_Metadata Meta = new Remorque_Metadata();
@@ -76,6 +79,8 @@ namespace PermisC.ViewModels
             }
         }
 
+
+        //Ces deux fonction permete d'incrémenté et de décrémenté le nombre d'essieux a l'aide de bouton
         public void Moins()
         {
             int essieux;

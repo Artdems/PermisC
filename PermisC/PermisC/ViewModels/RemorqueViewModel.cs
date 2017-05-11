@@ -1,11 +1,13 @@
 ﻿using System.Threading.Tasks;
 using System.Collections.Generic;
 
+using Xamarin.Forms;
+
 using PermisC.Models;
 using PermisC.Views;
 using PermisC.Data;
 
-using Xamarin.Forms;
+
 
 
 
@@ -44,6 +46,8 @@ namespace PermisC.ViewModels
 
         }
 
+
+        //Recharge le contenue de la liste view
         public async Task Refresh()
         {
             if (IsBusy)
@@ -63,6 +67,7 @@ namespace PermisC.ViewModels
         }
 
 
+        //Recherche dans la liste view toute les immatriculation contenant la variable 'recherche'
         void Recherche_Clicked()
         {
             remorque = _database.GetRechRemorque(recherche);

@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PermisC.Views.PermisPage">
+             x:Class="PermisC.Views.PermisPage"
+             Title="Permis">
     <ContentPage.Content>
         <StackLayout Spacing="20" Padding="15">
             <StackLayout Orientation = "Horizontal">
@@ -13,7 +14,7 @@
                 <Label Text="{Binding essTotal}" FontSize="Medium" />
             </StackLayout>
             <StackLayout Orientation = "Horizontal">
-                <Label Text="Permis requi :" FontSize="Medium"/>
+                <Label Text="Permis requis :" FontSize="Medium"/>
                 <Label Text="{Binding permis}" FontSize="Medium"/>
             </StackLayout>
             <StackLayout Orientation = "Horizontal">

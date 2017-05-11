@@ -1,9 +1,10 @@
-﻿using PermisC.Data;
-using PermisC.Models;
-
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 
 using Xamarin.Forms;
+
+using PermisC.Data;
+using PermisC.Models;
+
 
 namespace PermisC.ViewModels
 {
@@ -26,7 +27,7 @@ namespace PermisC.ViewModels
 
             moins = new Command(() => Moins());
             plus = new Command(() => Plus());
-            save = new Command(() => Save());
+            save = new Command(() => Save(database));
 
             Item = new Remorque
             {
@@ -57,6 +58,8 @@ namespace PermisC.ViewModels
             }
         }
 
+
+        //Permet de vérifié si les valeur rentré par l'utilisateur son correcte et d'enregistré l'entré dans la base de donné si les valeur sont correcte.
         public void Save(CamionDatabase database)
         {
             Remorque_Metadata Meta = new Remorque_Metadata();
@@ -70,39 +73,7 @@ namespace PermisC.ViewModels
             }
         }
 
-        public void Save()
-        {
-            var RegImmat = Regex.IsMatch(Item.Immatriculation, "[A-Z]{2}[-][0-9]{3}[-][A-Z]{2}");
-            if (RegImmat)
-            {
-                int Num;
-                var RegPoid = int.TryParse(Item.PoidRemorque, out Num);
-                if (RegPoid)
-                {
-
-                    Remorque existant = null;
-                    if ((existant = _database.GetRemorqueImmat(Item.Immatriculation)) == null)
-                    {
-                        _database.AddRemorque(Item);
-                        _navigation.PopAsync();
-                    }
-                    else
-                    {
-                        Erreur = "Cette imatriculation a deja été enregistré";
-                    }
-                }
-                else
-                {
-                    Erreur = "Le poid de la remorque doit etre un chiffre";
-                }
-            }
-            else
-            {
-                Erreur = "L'immatriculation doit etre de la frome 'AA-666-BB'";
-            }
-        }
-
-
+        //Ces deux fonction permet l'incrémentation du nombre d'essieux a l'aide de bouton
         public void Moins()
         {
             int essieux;

@@ -1,7 +1,7 @@
-﻿using SQLite.Net.Attributes;
-
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
+
+using SQLite.Net.Attributes;
 
 
 namespace PermisC.Models

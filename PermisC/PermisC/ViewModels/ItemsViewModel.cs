@@ -1,16 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+
+using Xamarin.Forms;
 
 using PermisC.Models;
 using PermisC.Views;
 using PermisC.Data;
-
-using Xamarin.Forms;
-using System.Security.Cryptography;
-using System.Diagnostics;
-using System.Text;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
-using System;
 
 namespace PermisC.ViewModels
 {
@@ -48,7 +43,7 @@ namespace PermisC.ViewModels
             _database = database;
             _database.GetTracteursAsync(this);
 
-            Title = "Véhicle répértorier";
+            Title = "Véhicule répértorier";
 
 
             LoadItemsCommand = new Command(() => Refresh());
@@ -57,6 +52,8 @@ namespace PermisC.ViewModels
 
         }
 
+
+        //Permet de recharger la ListView a l'aide de la base de donné
         public void Refresh()
         {
             if (IsBusy)
@@ -74,12 +71,14 @@ namespace PermisC.ViewModels
             set { recherche = value; }
         }
 
-
+        //Recherche dans la base de donné toute les entré dont l'immatriculation contient la variable recherche
         void Recherche_Clicked()
         {
             tracteur = _database.GetRechTracteurs(recherche);
         }
 
+
+        //Permet d'ajouté une nouvelle entré a la base de donné
         async void AddItem_Clicked()
         {
             await _navigation.PushAsync(new NewItemPage(_database, this));

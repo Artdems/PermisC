@@ -1,8 +1,9 @@
-﻿using PermisC.Data;
+﻿using Xamarin.Forms;
+
+using PermisC.Data;
 using PermisC.Models;
 using PermisC.Views;
 
-using Xamarin.Forms;
 
 namespace PermisC.ViewModels
 {
@@ -35,6 +36,8 @@ namespace PermisC.ViewModels
             modif = new Command(() => ModifPage());
         }
 
+
+        //Permet de supprimé l'entré séléctionné et de renvoyer a a listeview
         public void Delet()
         {
             _database.DeleteTracteur(Item);
@@ -42,16 +45,22 @@ namespace PermisC.ViewModels
             _navigation.PopToRootAsync();
         }
 
+
+        //Permet de voir les condition requise pour conduire se tracteur sans remorque
         void Vide_Clicked()
         {
             _navigation.PushAsync(new PermisPage(Item));
         }
 
+
+        //Permet de choisir un remorque a ajouter avec le tracteur
         public async void RemorquePage()
         {
             await _navigation.PushAsync(new RemorquePage(Item, _database));
         }
 
+
+        //Permet de modifié l'entré de la base séléctionné
         public async void ModifPage()
         {
             await _navigation.PushAsync(new ModifItemPage(_database, this, Item));

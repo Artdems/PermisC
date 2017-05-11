@@ -33,6 +33,8 @@ namespace PermisC.ViewModels
             modif = new Command(() => ModifPage());
         }
 
+
+        //Supprime cette entré de la base local et distant, et renvois a la liste view
         public void Delet()
         {
             _database.DeleteRemorque(Item);
@@ -40,11 +42,15 @@ namespace PermisC.ViewModels
             _navigation.PopToRootAsync();
         }
 
+
+        //Permet de voire de condition requi pour conduire cette remorque avec le tracteur séléctionné precedament
         public void Conduire()
         {
             _navigation.PushAsync(new PermisPage(_trac, Item));
         }
 
+
+        //Permet de modifié l'entré de la base de donné.
         public async void ModifPage()
         {
             await _navigation.PushAsync(new ModifRemorquePage(_database, this, Item));

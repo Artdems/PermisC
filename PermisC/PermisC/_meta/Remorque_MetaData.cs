@@ -1,7 +1,7 @@
-﻿using PermisC.Models;
-using PermisC.Data;
+﻿using System.Text.RegularExpressions;
 
-using System.Text.RegularExpressions;
+using PermisC.Models;
+using PermisC.Data;
 
 namespace PermisC
 {
@@ -30,7 +30,7 @@ namespace PermisC
                         }
                         else
                         {
-                            erreur = "-Cette imatriculation a deja été enregistré";
+                            erreur = "-Cette immatriculation a déjà été enregistré";
                         }
                     }
                     else
@@ -48,16 +48,16 @@ namespace PermisC
                 var RegNull = int.Parse(item.PoidRemorque);
                 if (RegNull != 0)
                 {
-                    erreur = "-L'immatriculation doit etre de la frome 'AA-666-BB'";
+                    erreur = "-L'immatriculation doit être de la frome 'AA-666-BB'";
                 }
                 else
                 {
-                    erreur = "-L'immatriculation doit etre de la frome 'AA-666-BB'\n-Le poid de la remorque ne peut pas etre null";
+                    erreur = "-L'immatriculation doit être de la frome 'AA-666-BB'\n-Le poid de la remorque ne peut pas être null";
                 }
             }
             else
             {
-                erreur = "-L'immatriculation doit etre de la frome 'AA-666-BB'\n-Le poid de la remorque ne peut pas etre null";
+                erreur = "-L'immatriculation doit être de la frome 'AA-666-BB'\n-Le poid de la remorque ne peut pas être null";
             }
 
             return erreur;

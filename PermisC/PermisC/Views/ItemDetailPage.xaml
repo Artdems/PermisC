@@ -22,7 +22,7 @@
             </StackLayout>
             <StackLayout HorizontalOptions="FillAndExpand">
                 <Button Text="Conduire" Command="{Binding vide}"/>
-                <Button Text="Ajouter un Remorque" Command="{Binding remorque}"/>
+                <Button Text="Ajouter une Remorque" Command="{Binding remorque}"/>
             </StackLayout>
         </StackLayout>
     </ScrollView>

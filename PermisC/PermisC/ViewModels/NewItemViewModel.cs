@@ -1,8 +1,9 @@
-﻿using PermisC.Data;
+﻿using Xamarin.Forms;
+
+using PermisC.Data;
 using PermisC.Models;
 using PermisC._meta;
 
-using Xamarin.Forms;
 
 namespace PermisC.ViewModels
 {
@@ -56,6 +57,7 @@ namespace PermisC.ViewModels
             }
         }
 
+        //Verifi les entré de l'utilisateur et sauvgarde l'items dans la base de donné si les entré sont correcte
         public void Save(CamionDatabase database)
         {
             Tracteur_Metadata Meta = new Tracteur_Metadata();
@@ -69,6 +71,8 @@ namespace PermisC.ViewModels
             }
         }
 
+
+        //Ces deux fonction permete d'incrémenté et de décrémenté le nombre d'essieux a l'aide de bouton
         public void Moins()
         {
             int essieux;

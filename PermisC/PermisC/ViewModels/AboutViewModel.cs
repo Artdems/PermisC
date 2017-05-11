@@ -82,6 +82,9 @@ namespace PermisC.ViewModels
                 OnPropertyChanged();
             }
         }
+
+        //Vérifie que toute les entré sont bien correcte et affiche les condition pour conduire le véhicule dont l'utilisateur a entré les donné
+        //Sinon, affiche des erreur pour permetre a l'utilisateur de les corrigé
         void Verif()
         {
             int Num;
@@ -99,13 +102,13 @@ namespace PermisC.ViewModels
                 if (poidRemorque < 0)
                 {
                     Couleur = "Red";
-                    Result = "Veuillez rentrer le poid de la remorque. Entré 0 si il n'y a pas de remorque";
+                    Result = "Veuillez entrer le poid de la remorque. Enter 0 si il n'y a pas de remorque";
                     FCOS = "";
                 }
                 else if (poidtracteur <= 0)
                 {
                     Couleur = "Red";
-                    Result = "Le poid du tracteur ne peut pas etre null";
+                    Result = "Le poid du tracteur ne peut pas être null";
                     FCOS = "";
                 }
                 else if (essieux == 2 && (poidRemorque + poidtracteur) < 3500)
@@ -128,12 +131,12 @@ namespace PermisC.ViewModels
                     if (poidRemorque <= 750)
                     {
                         Result = "Premis C1";
-                        FCOS = "FCOS requi de moins de 5 ans";
+                        FCOS = "FCOS requis de moins de 5 ans";
                     }
                     else if (poidRemorque > 750)
                     {
                         Result = "Premis C1E";
-                        FCOS = "FCOS requi de moins de 5 ans";
+                        FCOS = "FCOS requis de moins de 5 ans";
                     }
                     Couleur = "Black";
 
@@ -153,38 +156,40 @@ namespace PermisC.ViewModels
                     }
                     if ((poidRemorque + poidtracteur) > 3500)
                     {
-                        FCOS = "FCOS requi de moins de 5 ans";
+                        FCOS = "FCOS requis de moins de 5 ans";
                     }
                     Couleur = "Black";
 
                 }
                 else if (essieux >= 5 && (poidRemorque + poidtracteur) <= 48000)
                 {
-                    Result = "Convoit exeptionnel de Catégorie 1";
-                    FCOS = "Permis CE et FCOS requi de moins de 5 ans";
+                    Result = "Convoi exceptionnel de Catégorie 1";
+                    FCOS = "Permis CE et FCOS requis de moins de 5 ans";
                     Couleur = "Black";
                 }
                 else if (essieux >= 5 && (poidRemorque + poidtracteur) <= 72000)
                 {
-                    Result = "Convoit exeptionnel de Catégorie 2";
-                    FCOS = "Permis CE et FCOS requi de moins de 5 ans";
+                    Result = "Convoi exceptionnel de Catégorie 2";
+                    FCOS = "Permis CE et FCOS requis de moins de 5 ans";
                     Couleur = "Black";
                 }
                 else
                 {
-                    Result = "Convoit exeptionnel de Catégorie 3";
-                    FCOS = "Permis CE et FCOS requi de moins de 5 ans";
+                    Result = "Convoi exceptionnel de Catégorie 3";
+                    FCOS = "Permis CE et FCOS requis de moins de 5 ans";
                     Couleur = "Black";
                 }
             }
             else
             {
                 Couleur = "Red";
-                Result = "Les poids rentré doive etre des chiffre";
+                Result = "Les poids entré doivent être des chiffre";
                 FCOS = "";
             }
         }
 
+
+        //Ces deux fonction permete d'incrémenté et de décrémenté le nombre d'essieux a l'aide de bouton
         void Moins()
         {
             int essieux;

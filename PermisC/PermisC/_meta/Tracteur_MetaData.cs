@@ -32,17 +32,17 @@ namespace PermisC._meta
                         }
                         else
                         {
-                            erreur = "-Cette imatriculation a deja été enregistré";
+                            erreur = "-Cette immatriculation a déjà été enregistré";
                         }
                     }
                     else
                     {
-                        erreur = "-Le poid du tracteur ne peut pas etre null";
+                        erreur = "-Le poid du tracteur ne peut pas être null";
                     }
                 }
                 else
                 {
-                    erreur = "-Le poid du tracteur ne peut pas etre null";
+                    erreur = "-Le poid du tracteur ne peut pas être null";
                 }
             }
             else if (RegPoid)
@@ -50,16 +50,16 @@ namespace PermisC._meta
                 var RegNull = int.Parse(item.PoidTracteur);
                 if (RegNull != 0)
                 {
-                    erreur = "-L'immatriculation doit etre de la frome 'AA-666-BB'";
+                    erreur = "-L'immatriculation doit être de la frome 'AA-666-BB'";
                 }
                 else
                 {
-                    erreur = "-L'immatriculation doit etre de la frome 'AA-666-BB'\n-Le poid du tracteur ne peut pas etre null";
+                    erreur = "-L'immatriculation doit être de la frome 'AA-666-BB'\n-Le poid du tracteur ne peut pas être null";
                 }
             }
             else
             {
-                erreur = "-L'immatriculation doit etre de la frome 'AA-666-BB'\n-Le poid du tracteur ne peut pas etre null";
+                erreur = "-L'immatriculation doit être de la frome 'AA-666-BB'\n-Le poid du tracteur ne peut pas être null";
             }
 
             return erreur;
