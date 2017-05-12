@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace PermisC.ViewModels
 {
-    public class RemorqueDetailViewModel : BaseViewModel
+    public class RemorqueDetailViewModel : Page
     {
         public CamionDatabase _database;
         public INavigation _navigation;
@@ -37,9 +37,17 @@ namespace PermisC.ViewModels
         //Supprime cette entré de la base local et distant, et renvois a la liste view
         public void Delet()
         {
-            _database.DeleteRemorque(Item);
-            _viewModel.Refresh();
-            _navigation.PopToRootAsync();
+            if (_database.droit.Contains("admin"))
+            {
+                _database.DeleteRemorque(Item);
+                _viewModel.Refresh();
+                _navigation.PopToRootAsync();
+            }
+            else
+            {
+                DisplayAlert("Attention", "vous n'avez pas les droit pour effectué cette action", "OK");
+            }
+           
         }
 
 
@@ -53,7 +61,14 @@ namespace PermisC.ViewModels
         //Permet de modifié l'entré de la base de donné.
         public async void ModifPage()
         {
-            await _navigation.PushAsync(new ModifRemorquePage(_database, this, Item));
+            if (_database.droit.Contains("admin"))
+            {
+                await _navigation.PushAsync(new ModifRemorquePage(_database, this, Item));
+            }
+            else
+            {
+                await DisplayAlert("Attention", "vous n'avez pas les droit pour effectué cette action", "OK");
+            }
         }
     }
 }

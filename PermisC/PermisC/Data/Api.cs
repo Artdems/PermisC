@@ -6,6 +6,9 @@ using System.Net.Http.Headers;
 using System.Security.Cryptography;
 using System.Text;
 
+
+using Xamarin.Forms;
+
 namespace PermisC.Data
 {
     class Api

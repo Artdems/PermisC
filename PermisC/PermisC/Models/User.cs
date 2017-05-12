@@ -47,6 +47,17 @@ namespace PermisC.Models
             }
         }
 
+        string droit;
+        public string Droit
+        {
+            get { return droit; }
+            set
+            {
+                droit = value;
+                OnPropertyChanged();
+            }
+        }
+
         void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             var handler = PropertyChanged;

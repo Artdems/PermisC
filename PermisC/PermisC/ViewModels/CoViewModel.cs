@@ -61,7 +61,7 @@ namespace PermisC.ViewModels
 
             if (existe != null && existe.MDP == Utilisateur.MDP)
             {
-                Utilisateur.Entreprise = existe.Entreprise;
+                Utilisateur = existe;
                 _database.connect(Utilisateur);
                 _navigation.PopAsync();
 

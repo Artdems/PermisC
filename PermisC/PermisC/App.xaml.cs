@@ -10,11 +10,11 @@ namespace PermisC
     
     public partial class App : Application
     {
-        public App(Boolean isConnect)
+        public App(/*Boolean isConnect*/)
         {
             InitializeComponent();
 
-            SetMainPage(isConnect);
+            SetMainPage(true);
         }
 
         public static void SetMainPage(Boolean isConnect)

@@ -13,7 +13,7 @@ using PermisC.Data;
 
 namespace PermisC.ViewModels
 {
-    public class RemorqueViewModel : BaseViewModel
+    public class RemorqueViewModel : Page
     {
 
         public Command LoadItemsCommand { get; set; }
@@ -75,8 +75,16 @@ namespace PermisC.ViewModels
 
         async void AddItem_Clicked()
         {
-            await _navigation.PushAsync(new NewRemorquePage(_database, this));
-            Refresh();
+            if (_database.droit.Contains("admin"))
+            {
+                await _navigation.PushAsync(new NewRemorquePage(_database, this));
+                Refresh();
+            }
+            else
+            {
+                await DisplayAlert("Attention", "vous n'avez pas les droit pour effectué cette action", "OK");
+            }
+            
         }
     }
 }

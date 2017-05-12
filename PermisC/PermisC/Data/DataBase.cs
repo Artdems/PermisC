@@ -20,6 +20,7 @@ namespace PermisC.Data
         private SQLiteConnection _connection;
         private bool IsOnline;
         private string entre;
+        public string droit;
         private Api api = new Api();
         private Boolean _isConnect;
         
@@ -28,6 +29,8 @@ namespace PermisC.Data
 
         public CamionDatabase(Boolean isConnect)
         {
+            droit = "utilisateur";
+
             _connection = DependencyService.Get<ISQLite>().GetConnection();
             _connection.CreateTable<Tracteur>();
             _connection.CreateTable<Remorque>();
@@ -272,9 +275,37 @@ namespace PermisC.Data
             }
             else if (_isConnect)
             {
-                string[] rems = response.Split('[', '{', '}', '"', ',', ':');
-                user.Entreprise = response;
-                entre = response;
+                Boolean ent = false;
+                Boolean droi = false;
+
+                string[] données = response.Split('[', '{', '}', '"', ',', ':');
+                foreach (string donnée in données)
+                {
+
+                    if (!string.IsNullOrWhiteSpace(donnée))
+                    {
+                        if (ent)
+                        {
+                            ent = false;
+                            user.Entreprise = donnée;
+                        }
+                        else if (droi)
+                        {
+                            droi = false;
+                            user.Droit = donnée;
+                        }
+                        else if (donnée.Contains("entreprise"))
+                        {
+                            ent = true;
+                        }
+                        else if (donnée.Contains("droit"))
+                        {
+                            droi = true;
+                        }
+                    }
+                }
+                entre =user.Entreprise;
+                droit = user.Droit;
                 AddUser(user);
                 return true;
             }
@@ -288,6 +319,7 @@ namespace PermisC.Data
         {
             api.connect(user.Name,user.MDP);
             entre = user.Entreprise;
+            droit = user.Droit;
         }
     }
 }

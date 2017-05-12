@@ -40,9 +40,16 @@ namespace PermisC.ViewModels
         //Permet de supprimé l'entré séléctionné et de renvoyer a a listeview
         public void Delet()
         {
-            _database.DeleteTracteur(Item);
-            _viewModel.Refresh();
-            _navigation.PopToRootAsync();
+            if (_database.droit.Contains("admin"))
+            {
+                _database.DeleteTracteur(Item);
+                _viewModel.Refresh();
+                _navigation.PopToRootAsync();
+            }
+            else
+            {
+                DisplayAlert("Attention", "vous n'avez pas les droit pour effectué cette action", "OK");
+            }
         }
 
 
@@ -63,7 +70,14 @@ namespace PermisC.ViewModels
         //Permet de modifié l'entré de la base séléctionné
         public async void ModifPage()
         {
-            await _navigation.PushAsync(new ModifItemPage(_database, this, Item));
+            if (_database.droit.Contains("admin"))
+            {
+                await _navigation.PushAsync(new ModifItemPage(_database, this, Item));
+            }
+            else
+            {
+                await DisplayAlert("Attention", "vous n'avez pas les droit pour effectué cette action", "OK");
+            }
         }
     }
 }

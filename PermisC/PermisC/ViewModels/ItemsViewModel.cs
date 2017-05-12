@@ -10,7 +10,7 @@ using System.Diagnostics;
 
 namespace PermisC.ViewModels
 {
-    public class ItemsViewModel :BaseViewModel
+    public class ItemsViewModel :Page
     {
 
         public Command LoadItemsCommand { get; set; }
@@ -97,8 +97,15 @@ namespace PermisC.ViewModels
         //Permet d'ajouté une nouvelle entré a la base de donné
         async void AddItem_Clicked()
         {
-            await _navigation.PushAsync(new NewItemPage(_database, this));
-            Refresh();
+            if (_database.droit.Contains("admin"))
+            {
+                await _navigation.PushAsync(new NewItemPage(_database, this));
+                Refresh();
+            }
+            else
+            {
+                await DisplayAlert("Attention", "vous n'avez pas les droit pour effectué cette action", "OK");
+            }
         }
 
         async void BaseConnect()
@@ -114,6 +121,7 @@ namespace PermisC.ViewModels
                 {
                     Name = "",
                     MDP = "",
+                    Droit = "utilisateur",
                 };
                 _database.connect(user);
             }
