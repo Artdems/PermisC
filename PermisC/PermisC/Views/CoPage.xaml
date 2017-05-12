@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PermisC.Views.CoPage">
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="15" HorizontalOptions="Center">
+            <Label Text="Identifiant : " FontSize="Medium"/>
+            <Entry Text="{Binding Utilisateur.Name}" FontSize="Small"/>
+            <Label Text="mots de passe :" FontSize="Medium"/>
+            <Entry Text="{Binding Utilisateur.MDP}" FontSize="Small" IsPassword="True"/>
+            <Button Text="Connexion" Command="{Binding Connection}"/>
+            <Label Text="{Binding Erreur}" TextColor="Red" FontSize="Medium"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -13,6 +13,7 @@ namespace PermisC
         public App(Boolean isConnect)
         {
             InitializeComponent();
+
             SetMainPage(isConnect);
         }
 

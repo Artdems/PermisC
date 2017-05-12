@@ -76,6 +76,7 @@ namespace PermisC.ViewModels
         async void AddItem_Clicked()
         {
             await _navigation.PushAsync(new NewRemorquePage(_database, this));
+            Refresh();
         }
     }
 }

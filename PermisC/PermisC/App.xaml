@@ -16,4 +16,23 @@
             </Style>
         </ResourceDictionary>
     </Application.Resources>
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PermisC.Views.App"
+             Title="Connexion"
+             x:Name="BrowseItemsPage">
+        <ContentPage.ToolbarItems>
+            <ToolbarItem Text="Inscription"/>
+        </ContentPage.ToolbarItems>
+        <ContentPage.Content>
+            <StackLayout>
+                <Label Text="Identifiant :" FontSize="Medium"/>
+                <Entry Text="" FontSize="Small"/>
+                <Label Text="Mots de passe :" FontSize="Medium"/>
+                <Entry Text="" FontSize="Small"/>
+                <Button Text="Connexion"/>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
 </Application>
+

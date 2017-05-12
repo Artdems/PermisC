@@ -4,45 +4,34 @@ using System.Runtime.CompilerServices;
 using SQLite.Net.Attributes;
 
 
-
 namespace PermisC.Models
 {
-    public class Remorque : INotifyPropertyChanged
+
+    public class User : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
 
-        string immatriculation;
-        public string Immatriculation
+        string name;
+        public string Name
         {
-            get { return immatriculation; }
+            get { return name; }
             set
             {
-                immatriculation = value;
+                name = value;
                 OnPropertyChanged();
             }
         }
 
-        string poidRemorque;
-        public string PoidRemorque
+        string mdp;
+        public string MDP
         {
-            get { return poidRemorque; }
+            get { return mdp; }
             set
             {
-                poidRemorque = value;
-                OnPropertyChanged();
-            }
-        }
-
-        string essieux;
-        public string Essieux
-        {
-            get { return essieux; }
-            set
-            {
-                essieux = value;
+                mdp = value;
                 OnPropertyChanged();
             }
         }

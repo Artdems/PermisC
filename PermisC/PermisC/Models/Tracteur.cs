@@ -49,6 +49,17 @@ namespace PermisC.Models
             }
         }
 
+        string entreprise;
+        public string Entreprise
+        {
+            get { return entreprise; }
+            set
+            {
+                entreprise = value;
+                OnPropertyChanged();
+            }
+        }
+
         void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             var handler = PropertyChanged;

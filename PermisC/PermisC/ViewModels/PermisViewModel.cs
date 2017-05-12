@@ -11,6 +11,7 @@ namespace PermisC.ViewModels
         int ess;
         public string permis { get; set; }
         public string formation { get; set; }
+        public string attention { get; set; }
 
         //Affiche les condition requise pour conduire le tracteur et la remorque séléctionné si il y en a une
         public Permis(Tracteur trac, Remorque rem = null)
@@ -80,18 +81,21 @@ namespace PermisC.ViewModels
             }
             else if (ess >= 5 && poid <= 48000)
             {
-                permis = "Convoi exceptionnel de Catégorie 1";
-                formation = "Permis CE et FCOS requis de moins de 5 ans";
+                permis = "Permis CE";
+                formation = "FCOS requis de moins de 5 ans";
+                attention = "Convoi exceptionnel de Catégorie 1";
             }
             else if (ess >= 5 && poid <= 72000)
             {
-                permis = "Convoi exceptionnel de Catégorie 2";
-                formation = "Permis CE et FCOS requis de moins de 5 ans";
+                permis = "Permis CE";
+                formation = "FCOS requis de moins de 5 ans";
+                attention = "Convoi exceptionnel de Catégorie 2\n1 voiture Pilote peut être requise";
             }
             else
             {
-                permis = "Convoi exceptionnel de Catégorie 3";
-                formation = "Permis CE et FCOS requis de moins de 5 ans";
+                permis = "Permis CE";
+                formation = "FCOS requis de moins de 5 ans";
+                attention = "Convoi exceptionnel de Catégorie 3\nDeux voiture de protection obligatoire";
             }
         }
     }

@@ -19,6 +19,7 @@ namespace PermisC.Data
     {
         private SQLiteConnection _connection;
         private bool IsOnline;
+        private string entre;
         private Api api = new Api();
         private Boolean _isConnect;
         
@@ -30,6 +31,7 @@ namespace PermisC.Data
             _connection = DependencyService.Get<ISQLite>().GetConnection();
             _connection.CreateTable<Tracteur>();
             _connection.CreateTable<Remorque>();
+            _connection.CreateTable<User>();
             _isConnect = isConnect;
             Int32 unixTimestamp = (Int32)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
            
@@ -44,7 +46,7 @@ namespace PermisC.Data
             var json = api.GET("getTracteurs", "getTracteurs",_isConnect);
             if (!string.IsNullOrWhiteSpace(json))
             {
-                foreach (Tracteur t in _connection.Table<Tracteur>())
+                foreach (Tracteur t in _connection.Table<Tracteur>().Where(t => t.Entreprise.Contains(entre)))
                 {
                     var existe = api.GET("getTracteurImmat&Immat=" + t.Immatriculation, "getTracteurImmat", _isConnect);
                     if (existe.Contains("null"))
@@ -98,7 +100,7 @@ namespace PermisC.Data
                 }
             }
 
-            viewModel.tracteur = (from t in _connection.Table<Tracteur>()
+            viewModel.tracteur = (from t in _connection.Table<Tracteur>().Where(t => t.Entreprise.Contains(entre))
                                   select t).ToList();
             viewModel.IsBusy = false;
         }
@@ -107,18 +109,18 @@ namespace PermisC.Data
 
         public IEnumerable<Tracteur> GetRechTracteurs(string rech)
         {
-            return (from t in _connection.Table<Tracteur>().Where(t => t.Immatriculation.Contains(rech))
+            return (from t in _connection.Table<Tracteur>().Where(t => t.Immatriculation.Contains(rech) && t.Entreprise.Contains(entre))
                     select t).ToList();
         }
 
         public Tracteur GetTracteurImmat(String immat)
         {
-            return _connection.Table<Tracteur>().FirstOrDefault(t => t.Immatriculation.Contains(immat));
+            return _connection.Table<Tracteur>().FirstOrDefault(t => t.Immatriculation.Contains(immat) && t.Entreprise.Contains(entre));
         }
 
         public Tracteur GetTracteur(int id)
         {
-            return _connection.Table<Tracteur>().FirstOrDefault(t => t.ID == id);
+            return _connection.Table<Tracteur>().FirstOrDefault(t => t.ID == id && t.Entreprise.Contains(entre));
         }
 
         public void DeleteTracteur(Tracteur item)
@@ -128,12 +130,13 @@ namespace PermisC.Data
         }
         public void AddLocalTracteur(Tracteur item)
         {
-
+            item.Entreprise = entre;
             _connection.Insert(item);
         }
 
         public void AddTracteur(Tracteur item)
         {
+            item.Entreprise = entre;
             var response = api.GET("AddTracteur&Immat="+item.Immatriculation+"&Poid="+item.PoidTracteur+"&Ess="+item.Essieux, "AddTracteur",_isConnect);
             _connection.Insert(item);
         }
@@ -145,7 +148,7 @@ namespace PermisC.Data
 
         public void DeleteAllRem()
         {
-            _connection.DeleteAll<Remorque>();
+            _connection.DeleteAll<Remorque>() ;
         }
 
         public async Task GetRemorquesAsync(RemorqueViewModel viewModel)
@@ -214,18 +217,18 @@ namespace PermisC.Data
 
         public IEnumerable<Remorque> GetRechRemorque(string rech)
         {
-            return (from t in _connection.Table<Remorque>().Where(t => t.Immatriculation.Contains(rech))
+            return (from t in _connection.Table<Remorque>().Where(t => t.Immatriculation.Contains(rech) && t.Entreprise.Contains(entre))
                     select t).ToList();
         }
 
         public Remorque GetRemorqueImmat(String immat)
         {
-            return _connection.Table<Remorque>().FirstOrDefault(t => t.Immatriculation.Contains(immat));
+            return _connection.Table<Remorque>().FirstOrDefault(t => t.Immatriculation.Contains(immat) && t.Entreprise.Contains(entre));
         }
 
         public Remorque GetRemorque(int id)
         {
-            return _connection.Table<Remorque>().FirstOrDefault(t => t.ID == id);
+            return _connection.Table<Remorque>().FirstOrDefault(t => t.ID == id && t.Entreprise.Contains(entre));
         }
 
         public void DeleteRemorque(Remorque item)
@@ -235,14 +238,52 @@ namespace PermisC.Data
         }
         public void AddLocalRemorque(Remorque item)
         {
-
+            item.Entreprise = entre;
             _connection.Insert(item);
         }
 
         public void AddRemorque(Remorque item)
         {
+            item.Entreprise = entre;
             var response = api.GET("AddRemorque&Immat="+item.Immatriculation+"&Poid="+item.PoidRemorque+"&Ess="+item.Essieux, "AddRemorque",_isConnect);
             _connection.Insert(item);
+        }
+
+        public User GetUserName(string name)
+        {
+            return _connection.Table<User>().FirstOrDefault(t => t.Name.Contains(name));
+        }
+
+        public void AddUser(User user)
+        {
+            _connection.Insert(user);
+        }
+
+        public Boolean GetUser(User user)
+        {
+            api.connect(user.Name, user.MDP);
+            var response = api.GET("GetUser", "GetUser", _isConnect);
+            if (response.Contains("null"))
+            {
+                api.connect("", "");
+                return false;
+                entre = "null";
+                
+            }
+            else
+            {
+                string[] rems = response.Split('[', '{', '}', '"', ',', ':');
+                user.Entreprise = response;
+                entre = response;
+                AddUser(user);
+                return true;
+            }
+        }
+
+        public void connect(User user)
+        {
+            api.connect(user.Name,user.MDP);
+            entre = user.Entreprise;
         }
     }
 }

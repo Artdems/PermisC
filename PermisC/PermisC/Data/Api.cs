@@ -11,32 +11,39 @@ namespace PermisC.Data
     class Api
     {
         private HttpClient Client = new HttpClient();
-        private const string user = "client";
-        private const string mdp = "6wdeuv";
+        private string user = "";
+        private string mdp = "";
         private static readonly Encoding encoding = Encoding.UTF8;
 
-        public string GET(string test, string methode,Boolean isConnect)
+        public string GET(string test, string methode,Boolean isConnect,Boolean go = false)
         {
             if (isConnect)
             {
-                var timestamp = GetTimestamp();
+                if (!string.IsNullOrWhiteSpace(user) || go)
+                { 
+                    var timestamp = GetTimestamp();
 
-                string sign = user + mdp + methode + timestamp;
+                    string sign = user + mdp + methode + timestamp;
 
-                var code = Hashage(sign);
+                    var code = Hashage(sign, mdp);
 
 
-                Client.DefaultRequestHeaders.Accept.Clear();
-                Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                var response = Client.GetAsync("http://192.168.10.183/API/api.php?action=" + test + "&user=" + user + "&timestamp=" + timestamp + "&signature=" + code).Result;
-                if (response.IsSuccessStatusCode)
-                {
-                    var json = response.Content.ReadAsStringAsync().Result;
-                    if (!string.IsNullOrWhiteSpace(json))
+                    Client.DefaultRequestHeaders.Accept.Clear();
+                    Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                    var response = Client.GetAsync("http://192.168.10.183/API/api.php?action=" + test + "&user=" + user + "&timestamp=" + timestamp + "&signature=" + code).Result;
+                    if (response.IsSuccessStatusCode)
                     {
-                        return json;
-                    }
+                        var json = response.Content.ReadAsStringAsync().Result;
+                        if (!string.IsNullOrWhiteSpace(json))
+                        {
+                            return json;
+                        }
 
+                        else
+                        {
+                            return "";
+                        }
+                    }
                     else
                     {
                         return "";
@@ -59,7 +66,7 @@ namespace PermisC.Data
             return timestamp.ToString();
         }
 
-        static string Hashage(string sign)
+        static string Hashage(string sign,string mdp)
         {
             using (var hmac = new HMACSHA256(Encoding.UTF8.GetBytes(mdp)))
             {
@@ -70,6 +77,12 @@ namespace PermisC.Data
         static string ByteToString(IEnumerable<byte> data)
         {
             return string.Concat(data.Select(b => b.ToString("x2")));
+        }
+
+        public void connect(String _user, String _mdp)
+        {
+            user = _user;
+            mdp = _mdp;
         }
     }
 }

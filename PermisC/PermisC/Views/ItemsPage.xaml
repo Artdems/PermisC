@@ -2,14 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PermisC.Views.ItemsPage"
-             Title="{Binding Title}"
-             x:Name="BrowseItemsPage">
+             Title="{Binding Title}">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Ajouter Tracteur" Command="{Binding Add}" />
+        <ToolbarItem Text="{Binding connexion}" Command="{Binding Connect}"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
-            <Entry Text="{Binding Recherche}" FontSize="Small"/>
+            <Entry Keyboard="Telephone" Text="{Binding Recherche}" FontSize="Small"/>
             <Button Text="Rechercher" Command ="{Binding RechercheItem}"/>
             <ListView x:Name="ItemsListView"
 		        ItemsSource="{Binding tracteur}"

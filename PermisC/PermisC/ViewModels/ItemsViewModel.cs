@@ -6,6 +6,7 @@ using Xamarin.Forms;
 using PermisC.Models;
 using PermisC.Views;
 using PermisC.Data;
+using System.Diagnostics;
 
 namespace PermisC.ViewModels
 {
@@ -15,6 +16,20 @@ namespace PermisC.ViewModels
         public Command LoadItemsCommand { get; set; }
         public Command RechercheItem { get; set; }
         public Command Add { get; set; }
+        public Command Connect { get; set; }
+        private string Connexion;
+        public string connexion
+        {
+            get
+            {
+                return Connexion;
+            }
+            set
+            {
+                Connexion = value;
+                OnPropertyChanged();
+            }
+        }
 
         public INavigation _navigation;
         public CamionDatabase _database;
@@ -34,7 +49,7 @@ namespace PermisC.ViewModels
         public ItemsViewModel(INavigation navigation,Boolean isConnect)
         {
 
-
+            connexion = "Connection";
 
 
             CamionDatabase database = new CamionDatabase(isConnect);
@@ -49,8 +64,9 @@ namespace PermisC.ViewModels
             LoadItemsCommand = new Command(() => Refresh());
             RechercheItem = new Command(() => Recherche_Clicked());
             Add = new Command(() => AddItem_Clicked());
+            Connect = new Command(() => BaseConnect());
 
-        }
+    }
 
 
         //Permet de recharger la ListView a l'aide de la base de donné
@@ -82,6 +98,25 @@ namespace PermisC.ViewModels
         async void AddItem_Clicked()
         {
             await _navigation.PushAsync(new NewItemPage(_database, this));
+            Refresh();
+        }
+
+        async void BaseConnect()
+        {
+            if (connexion.Contains("Connection")){
+                connexion = "Deconnection";
+                await _navigation.PushAsync(new CoPage(_database));
+                Refresh();
+            }
+            else{
+                connexion = "Connection";
+                User user = new User
+                {
+                    Name = "",
+                    MDP = "",
+                };
+                _database.connect(user);
+            }
         }
 
 
