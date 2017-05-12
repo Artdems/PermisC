@@ -263,20 +263,24 @@ namespace PermisC.Data
         {
             api.connect(user.Name, user.MDP);
             var response = api.GET("GetUser", "GetUser", _isConnect);
-            if (response.Contains("null"))
+            if (response.Contains("false"))
             {
                 api.connect("", "");
                 return false;
                 entre = "null";
                 
             }
-            else
+            else if (_isConnect)
             {
                 string[] rems = response.Split('[', '{', '}', '"', ',', ':');
                 user.Entreprise = response;
                 entre = response;
                 AddUser(user);
                 return true;
+            }
+            else
+            {
+                return false;
             }
         }
 
