@@ -28,7 +28,9 @@ namespace PermisC.Views
             ItemsListView.SelectedItem = null;
         }
 
+        private void Entry_ChildAdded(object sender, ElementEventArgs e)
+        {
 
-
+        }
     }
 }

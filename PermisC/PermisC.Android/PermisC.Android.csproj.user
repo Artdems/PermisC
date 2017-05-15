@@ -3,5 +3,6 @@
   <PropertyGroup>
     <SelectedDevice> 5.7" KitKat %284.4%29 XXHDPI Phone</SelectedDevice>
     <DefaultDevice>EmulateurPerso</DefaultDevice>
+    <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
   </PropertyGroup>
 </Project>

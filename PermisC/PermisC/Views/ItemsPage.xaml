@@ -9,7 +9,10 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
-            <Entry Keyboard="Telephone" Text="{Binding Recherche}" FontSize="Small"/>
+            <StackLayout Orientation = "Horizontal" HorizontalOptions="FillAndExpand">
+                <Entry Text="{Binding Recherche}" FontSize="Small" HorizontalOptions="FillAndExpand" />
+                <Button Image="photo.png" BackgroundColor="#FAFAFA" Command="{Binding photo}" IsEnabled="{Binding Enabled}"/>
+            </StackLayout>
             <Button Text="Rechercher" Command ="{Binding RechercheItem}"/>
             <ListView x:Name="ItemsListView"
 		        ItemsSource="{Binding tracteur}"

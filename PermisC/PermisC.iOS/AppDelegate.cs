@@ -1,5 +1,6 @@
 ﻿
 using Foundation;
+using System;
 using UIKit;
 
 namespace PermisC.iOS
@@ -9,9 +10,9 @@ namespace PermisC.iOS
 	{
 		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 		{
-
+            Boolean test = true;
             global::Xamarin.Forms.Forms.Init();
-			LoadApplication(new App());
+			LoadApplication(new App(test));
 
             
 

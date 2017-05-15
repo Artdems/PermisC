@@ -2,6 +2,12 @@
 using Android.Content.PM;
 using Android.OS;
 using System;
+using Tesseract;
+using Tesseract.Droid;
+using TinyIoC;
+using XLabs.Ioc;
+using XLabs.Ioc.TinyIOC;
+using XLabs.Platform.Device;
 
 namespace PermisC.Droid
 {
@@ -14,6 +20,15 @@ namespace PermisC.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
+            var container = TinyIoCContainer.Current;
+
+            container.Register<IDevice>(AndroidDevice.CurrentDevice);
+            container.Register<ITesseractApi>((cont, parameters) =>
+            {
+                return new TesseractApi(ApplicationContext, AssetsDeployment.OncePerInitialization);
+            });
+
+            Resolver.SetResolver(new TinyResolver(container));
 
             Connection co = new Connection();
 
@@ -31,7 +46,7 @@ namespace PermisC.Droid
             //Console.WriteLine(co);
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
-            LoadApplication(new App(isConnect));
+            LoadApplication(new App());
         }
     }
 }
