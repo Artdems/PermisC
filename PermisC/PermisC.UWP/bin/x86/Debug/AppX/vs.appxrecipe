@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-11T14:51:42.037</Modified>
+      <Modified>2017-05-12T14:33:29.179</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\bin\x86\Debug\PermisC.UWP.exe">
       <PackagePath>entrypoint\PermisC.UWP.exe</PackagePath>
-      <Modified>2017-05-11T14:51:41.214</Modified>
+      <Modified>2017-05-12T14:33:27.398</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Stagiaire\.nuget\packages\Microsoft.CSharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -521,7 +521,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\PermisC.dll">
       <PackagePath>PermisC.dll</PackagePath>
-      <Modified>2017-05-11T14:51:38.687</Modified>
+      <Modified>2017-05-12T13:59:23.787</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC\bin\Debug\bouncy_castle_hmac_sha_pcl.dll">
       <PackagePath>bouncy_castle_hmac_sha_pcl.dll</PackagePath>
@@ -604,11 +604,11 @@
     <AppxPackagedFile Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-11T11:44:55.740</Modified>
+      <Modified>2017-05-12T14:33:28.815</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Stagiaire\Documents\Visual Studio 2017\Projects\PermisC\PermisC\PermisC.UWP\bin\x86\Debug\Core\PermisC.UWP.exe">
       <PackagePath>PermisC.UWP.exe</PackagePath>
-      <Modified>2017-05-11T14:51:42.023</Modified>
+      <Modified>2017-05-12T14:33:29.166</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

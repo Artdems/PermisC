@@ -41,6 +41,8 @@ namespace PermisC.Data
 
         }
 
+        //remplis la base de donné distant avec les nouvel entré de tracteur de la base de donné local, vide la base de donné local
+        //et la reremplis avec la base de donné distante en fonction de l'entreprise de l'utilisateur actuelr
         public async Task GetTracteursAsync(ItemsViewModel viewModel)
         {
 
@@ -109,34 +111,43 @@ namespace PermisC.Data
         }
 
 
-
+        //récupére les tracteur dont l'immatriculation correspond a la recherche sur la base de donné local
         public IEnumerable<Tracteur> GetRechTracteurs(string rech)
         {
             return (from t in _connection.Table<Tracteur>().Where(t => t.Immatriculation.Contains(rech) && t.Entreprise.Contains(entre))
                     select t).ToList();
         }
 
+
+        //récupére un tracteur sur la base donné distante en fonction de sont immatriculation
         public Tracteur GetTracteurImmat(String immat)
         {
             return _connection.Table<Tracteur>().FirstOrDefault(t => t.Immatriculation.Contains(immat) && t.Entreprise.Contains(entre));
         }
 
+        //récuppére un tracteur de la base de donné local grace a sont ID
         public Tracteur GetTracteur(int id)
         {
             return _connection.Table<Tracteur>().FirstOrDefault(t => t.ID == id && t.Entreprise.Contains(entre));
         }
 
+
+        //supprime un tracteur de la base de donné local
         public void DeleteTracteur(Tracteur item)
         {
             var response = api.GET("DeleteTracteur&immat="+item.Immatriculation, "DeleteTracteur",_isConnect);
             _connection.Delete<Tracteur>(item.ID);
         }
+
+        //ajoute un tracteur uniquement sur la base donné local
         public void AddLocalTracteur(Tracteur item)
         {
             item.Entreprise = entre;
             _connection.Insert(item);
         }
 
+
+        //ajoute un tracteur sur la base de donné local et distant
         public void AddTracteur(Tracteur item)
         {
             item.Entreprise = entre;
@@ -144,16 +155,21 @@ namespace PermisC.Data
             _connection.Insert(item);
         }
 
+        //supprime toute les remorque de la base de donné local
         public void DeleteAllTract()
         {
             _connection.DeleteAll<Tracteur>();
         }
 
+        //suprime toute les remorque de la base de donné local
         public void DeleteAllRem()
         {
             _connection.DeleteAll<Remorque>() ;
         }
 
+
+        //remplis la base de donné distant avec les nouvel entré de la base de donné local, vide la base de donné local
+        //et la reremplis avec la base de donné distante en fonction de l'entreprise de l'utilisateur actuele
         public async Task GetRemorquesAsync(RemorqueViewModel viewModel)
         {
             var json = api.GET("getRemorques", "getRemorques",_isConnect);
@@ -217,34 +233,42 @@ namespace PermisC.Data
         }
 
 
-
+        //rencherche des remoque dont l'immatriculation correspond a la recherche sur la base de donné local
         public IEnumerable<Remorque> GetRechRemorque(string rech)
         {
             return (from t in _connection.Table<Remorque>().Where(t => t.Immatriculation.Contains(rech) && t.Entreprise.Contains(entre))
                     select t).ToList();
         }
 
+        //récuppére une remorque sur la base de donné distante en fonction de sont immatriculation
         public Remorque GetRemorqueImmat(String immat)
         {
             return _connection.Table<Remorque>().FirstOrDefault(t => t.Immatriculation.Contains(immat) && t.Entreprise.Contains(entre));
         }
 
+
+        //récupére une remorque de la base de donné local avec son ID
         public Remorque GetRemorque(int id)
         {
             return _connection.Table<Remorque>().FirstOrDefault(t => t.ID == id && t.Entreprise.Contains(entre));
         }
 
+        //supprime une remorque de la base de donné local et distant
         public void DeleteRemorque(Remorque item)
         {
             var response = api.GET("DeleteRemorque&immat="+item.Immatriculation, "DeleteRemorque",_isConnect);
             _connection.Delete<Remorque>(item.ID);
         }
+
+        //ajoute une remorque uniquement a la base de donné local
         public void AddLocalRemorque(Remorque item)
         {
             item.Entreprise = entre;
             _connection.Insert(item);
         }
 
+
+        //Ajoute un remorque a la base deonné local et distante
         public void AddRemorque(Remorque item)
         {
             item.Entreprise = entre;
@@ -252,16 +276,21 @@ namespace PermisC.Data
             _connection.Insert(item);
         }
 
+        //vérifie si l'utilisateur existe deja dans la base donné local
         public User GetUserName(string name)
         {
             return _connection.Table<User>().FirstOrDefault(t => t.Name.Contains(name));
         }
 
+
+        //ajoute un utilisateur dans la base de donné local
         public void AddUser(User user)
         {
             _connection.Insert(user);
         }
 
+
+        //récupére l'utilisateur sur la base de donné distant, met a jour la variable entreprise et la variable droit
         public Boolean GetUser(User user)
         {
             api.connect(user.Name, user.MDP);
@@ -315,6 +344,8 @@ namespace PermisC.Data
             }
         }
 
+
+        //enregistre le user et le mdp le l'utilisateur courant, pour permetre le hashage des url et la securisation de l'api
         public void connect(User user)
         {
             api.connect(user.Name,user.MDP);

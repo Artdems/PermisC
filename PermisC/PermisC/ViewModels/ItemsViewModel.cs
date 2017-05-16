@@ -17,6 +17,10 @@ namespace PermisC.ViewModels
         public Command RechercheItem { get; set; }
         public Command Add { get; set; }
         public Command Connect { get; set; }
+        public Command photo { get; set; }
+
+        PhotoAndroid ocr = new PhotoAndroid();
+
         private string Connexion;
         public string connexion
         {
@@ -27,6 +31,20 @@ namespace PermisC.ViewModels
             set
             {
                 Connexion = value;
+                OnPropertyChanged();
+            }
+        }
+
+        Boolean enable;
+        public Boolean Enable
+        {
+            get
+            {
+                return enable;
+            }
+            set
+            {
+                enable = value;
                 OnPropertyChanged();
             }
         }
@@ -48,6 +66,18 @@ namespace PermisC.ViewModels
 
         public ItemsViewModel(INavigation navigation,Boolean isConnect)
         {
+            switch (Device.RuntimePlatform)
+            {
+                case Device.iOS:
+                case Device.Android:
+                    Enable = true;
+                    break;
+                case Device.WinPhone:
+                case Device.Windows:
+                default:
+                    Enable = false;
+                    break;
+            }
 
             connexion = "Connection";
 
@@ -65,6 +95,7 @@ namespace PermisC.ViewModels
             RechercheItem = new Command(() => Recherche_Clicked());
             Add = new Command(() => AddItem_Clicked());
             Connect = new Command(() => BaseConnect());
+            photo = new Command(() => TakePhoto());
 
     }
 
@@ -108,6 +139,8 @@ namespace PermisC.ViewModels
             }
         }
 
+
+        //Connexion pour accedé au vehicule grace a l'entreprise, et au modification, ajout et suppresion grace au droit de l'utilisateur
         async void BaseConnect()
         {
             if (connexion.Contains("Connection")){
@@ -125,6 +158,24 @@ namespace PermisC.ViewModels
                 };
                 _database.connect(user);
             }
+        }
+
+        public async void TakePhoto()
+        {
+            switch (Device.RuntimePlatform)
+            {
+                case Device.iOS:
+                case Device.Android:
+                    Recherche = await ocr.TakePhoto_Clicked();
+                    Debug.WriteLine(Recherche);
+                    break;
+                case Device.WinPhone:
+                case Device.Windows:
+                default:
+                    Debug.WriteLine("Sa ne marche pas...");
+                    break;
+            }
+            
         }
 
 

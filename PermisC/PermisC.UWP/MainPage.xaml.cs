@@ -1,4 +1,5 @@
 ﻿using System;
+using PermisC;
 
 namespace PermisC.UWP
 {
@@ -9,7 +10,7 @@ namespace PermisC.UWP
 
             Boolean isConnect = connection.IsInternet();
             this.InitializeComponent();
-            LoadApplication(new PermisC.App(isConnect));
+            LoadApplication(new PermisC.App());
         }
     }
 }

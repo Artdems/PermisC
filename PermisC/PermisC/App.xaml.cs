@@ -3,6 +3,8 @@ using System;
 using System.Diagnostics;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Tesseract;
+
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace PermisC
@@ -10,11 +12,12 @@ namespace PermisC
     
     public partial class App : Application
     {
-        public App(/*Boolean isConnect*/)
+        public App()
         {
+            Boolean isConnect = true;
             InitializeComponent();
 
-            SetMainPage(true);
+            SetMainPage(isConnect);
         }
 
         public static void SetMainPage(Boolean isConnect)
@@ -33,6 +36,13 @@ namespace PermisC
                         Title = "Véhicule non répértorier",
                         Icon = Device.OnPlatform("tab_about.png",null,null)
                     },
+#if __ANDROID__
+                    new NavigationPage(new PhotoPage())
+                    {
+                        Title = "Véhicule non répértorier",
+                        Icon = Device.OnPlatform("tab_about.png",null,null)
+                    },
+#endif
                 }
             };
         }

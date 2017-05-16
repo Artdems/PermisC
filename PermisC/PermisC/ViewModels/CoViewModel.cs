@@ -54,7 +54,8 @@ namespace PermisC.ViewModels
             _navigation = navigation;
         }
 
-
+        //vérifie si l'utilisateur existe deja dans la base de donné local, sinon, regarde si il existe sur la base d onné distant.
+        //si il existe sur la base de donné distant, l'ajoute a la base donné locale, sinon, erreur de login
         public void testConnection()
         {
             User existe = _database.GetUserName(Utilisateur.Name);
